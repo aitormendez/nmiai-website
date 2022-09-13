@@ -4,9 +4,7 @@
 wordpress_sites:
   nomanisanisland.com:
     site_hosts:
-    - canonical: nomanisanisland.com
-      redirects:
-      - www.nomanisanisland.com
+    - canonical: nmiai.e451.net
     local_path: ../site
     branch: master
     repo: git@github.com:aitormendez/nmiai-website.git
