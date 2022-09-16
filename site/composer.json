@@ -23,13 +23,56 @@
     "issues": "https://github.com/roots/bedrock/issues",
     "forum": "https://discourse.roots.io/category/bedrock"
   },
-  "repositories": [
-    {
+  "repositories": {
+    "satispress": {
+      "type": "composer",
+      "url": "https://plugins.e451.net/satispress/"
+    },
+    "wpackagist": {
       "type": "composer",
       "url": "https://wpackagist.org",
       "only": ["wpackagist-plugin/*", "wpackagist-theme/*"]
+    },
+    "1": {
+      "type": "package",
+      "package": {
+        "name": "advanced-custom-fields/advanced-custom-fields-pro",
+        "version": "5.12.3",
+        "type": "wordpress-plugin",
+        "dist": {
+          "type": "zip",
+          "url": "https://connect.advancedcustomfields.com/v2/plugins/download?p=pro&k={%ACF_PRO_KEY}&t={%version}"
+        },
+        "require": {
+          "composer/installers": "^2.2"
+        }
+      }
+    },
+    "2": {
+      "type": "package",
+      "package": {
+        "name": "analogmemory/wp-sync-db",
+        "type": "wordpress-plugin",
+        "version": "1.6",
+        "dist": {
+          "type": "zip",
+          "url": "https://github.com/AnalogMemory/wp-sync-db/archive/master.zip"
+        }
+      }
+    },
+    "3": {
+      "type": "package",
+      "package": {
+        "name": "wp-sync-db/wp-sync-db-media-files",
+        "type": "wordpress-plugin",
+        "version": "master",
+        "dist": {
+          "type": "zip",
+          "url": "https://github.com/wp-sync-db/wp-sync-db-media-files/archive/master.zip"
+        }
+      }
     }
-  ],
+  },
   "require": {
     "php": ">=7.4",
     "composer/installers": "^2.2",
@@ -41,7 +84,25 @@
     "roots/wp-config": "1.0.0",
     "roots/wp-password-bcrypt": "1.1.0",
     "wpackagist-theme/twentytwentytwo": "^1.2",
-    "roots/acorn": "^2.1"
+    "roots/acorn": "^2.1",
+    "cedaro/satispress": "^1.0",
+    "satispress/sitepress-multilingual-cms": "4.5.2",
+    "satispress/wpml-wpforms": "*",
+    "satispress/acfml": "*",
+    "satispress/woocommerce-multilingual": "*",
+    "satispress/wpml-media-translation": "*",
+    "satispress/wpml-string-translation": "*",
+    "wpackagist-plugin/html-forms": "*",
+    "wpackagist-plugin/gdpr-cookie-compliance": "*",
+    "wpackagist-plugin/autodescription": "*",
+    "wpackagist-plugin/schema-and-structured-data-for-wp": "*",
+    "wpackagist-plugin/wp-mail-smtp": "*",
+    "soberwp/intervention": "dev-main",
+    "wp-sync-db/wp-sync-db-media-files": "dev-master",
+    "analogmemory/wp-sync-db": "1.6",
+    "wpackagist-plugin/query-monitor": "*",
+    "advanced-custom-fields/advanced-custom-fields-pro": "*",
+    "wpackagist-plugin/favicon-by-realfavicongenerator": "*"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.7.1",
@@ -52,7 +113,8 @@
     "preferred-install": "dist",
     "allow-plugins": {
       "composer/installers": true,
-      "roots/wordpress-core-installer": true
+      "roots/wordpress-core-installer": true,
+      "ffraenz/private-composer-installer": true
     }
   },
   "minimum-stability": "dev",
