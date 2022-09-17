@@ -12,6 +12,14 @@
   @endif
 
   @while(have_posts()) @php(the_post())
+
+  <x-icon-example />
+  <x-heroicon-o-arrow-left />
+  <x-heroicon-s-menu />
+
+  @svg('example')
+  @svg('heroicon-s-menu')
+
     @includeFirst(['partials.content-' . get_post_type(), 'partials.content'])
   @endwhile
 
