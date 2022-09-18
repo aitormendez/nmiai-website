@@ -39,5 +39,17 @@ export default async (app) => {
     /**
      * URI of the `public` directory
      */
-    .setPublicPath("/app/themes/sage/public/");
+    .setPublicPath("/app/themes/sage/public/")
+
+
+    /**
+     * theme.jsond & tailwind setup
+     */
+    .wpjson
+      .useTailwindColors()
+      .useTailwindFontSize()
+      .useTailwindFontFamily()
+      .setOption('typography.fontWeight', false)
+      .enable()
+    ;
 };
