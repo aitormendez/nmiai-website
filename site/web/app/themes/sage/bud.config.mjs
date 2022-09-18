@@ -41,9 +41,8 @@ export default async (app) => {
      */
     .setPublicPath("/app/themes/sage/public/")
 
-
     /**
-     * theme.jsond & tailwind setup
+     * theme.json & tailwind setup
      */
     .wpjson
       .useTailwindColors()

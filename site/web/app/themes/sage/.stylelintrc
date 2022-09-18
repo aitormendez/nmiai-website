@@ -1,4 +1,6 @@
 {
+  "plugins": ["stylelint-scss"],
+  "customSyntax": "postcss-scss",
   "extends": [
     "@roots/bud-sass/stylelint-config",
     "@roots/sage/stylelint-config"
