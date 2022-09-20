@@ -29,7 +29,7 @@ export default async (app) => {
     /**
      * Proxy origin (`WP_HOME`)
      */
-    .proxy("http://nomanisanisland.test")
+    .proxy("http://example.test")
 
     /**
      * Development origin
@@ -39,16 +39,5 @@ export default async (app) => {
     /**
      * URI of the `public` directory
      */
-    .setPublicPath("/app/themes/sage/public/")
-
-    /**
-     * theme.json & tailwind setup
-     */
-    .wpjson
-      .useTailwindColors()
-      .useTailwindFontSize()
-      .useTailwindFontFamily()
-      .setOption('typography.fontWeight', false)
-      .enable()
-    ;
+    .setPublicPath("/app/themes/sage/public/");
 };
