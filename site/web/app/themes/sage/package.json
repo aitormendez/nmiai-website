@@ -24,5 +24,7 @@
     "@roots/eslint-config": "^6.4.0",
     "@roots/sage": "^6.4.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "gsap": "^3.11.1"
+  }
 }
