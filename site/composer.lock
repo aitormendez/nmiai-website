@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ef88f0c665e363a72327da3360466712",
+    "content-hash": "e7f6ecddbefd806743c882991c53b874",
     "packages": [
         {
             "name": "advanced-custom-fields/advanced-custom-fields-pro",
@@ -3134,120 +3134,6 @@
                 }
             ],
             "time": "2021-10-31T01:18:58+00:00"
-        },
-        {
-            "name": "satispress/acfml",
-            "version": "1.10.2",
-            "dist": {
-                "type": "zip",
-                "url": "https://plugins.e451.net/satispress/acfml/1.10.2",
-                "shasum": "a89fba641efacaa862ec98e9f28d22312baa8326"
-            },
-            "require": {
-                "composer/installers": "^1.0 || ^2.0"
-            },
-            "type": "wordpress-plugin",
-            "authors": {
-                "name": "OnTheGoSystems",
-                "homepage": "http://www.onthegosystems.com/"
-            },
-            "description": "Adds compatibility between WPML and Advanced Custom Fields | <a href=\"https://wpml.org/documentation/related-projects/translate-sites-built-with-acf/?utm_source=plugin&utm_medium=gui&utm_campaign=acfml\">Documentation</a>",
-            "homepage": "https://wpml.org/"
-        },
-        {
-            "name": "satispress/sitepress-multilingual-cms",
-            "version": "4.5.2",
-            "dist": {
-                "type": "zip",
-                "url": "https://plugins.e451.net/satispress/sitepress-multilingual-cms/4.5.2",
-                "shasum": "4e24f049ad3fb6369567000260d2cfa51ed87b6e"
-            },
-            "require": {
-                "composer/installers": "^1.0 || ^2.0"
-            },
-            "type": "wordpress-plugin",
-            "authors": {
-                "name": "OnTheGoSystems",
-                "homepage": "http://www.onthegosystems.com/"
-            },
-            "description": "WPML Multilingual CMS | <a href=\"https://wpml.org\">Documentation</a> | <a href=\"https://wpml.org/version/wpml-4-4-12/\">WPML 4.4.12 release notes</a>",
-            "homepage": "https://wpml.org/"
-        },
-        {
-            "name": "satispress/woocommerce-multilingual",
-            "version": "5.0.2",
-            "dist": {
-                "type": "zip",
-                "url": "https://plugins.e451.net/satispress/woocommerce-multilingual/5.0.2",
-                "shasum": "b2d99ff2dfce9bf2b9b32923a3d7ca3ed9a2a59f"
-            },
-            "require": {
-                "composer/installers": "^1.0 || ^2.0"
-            },
-            "type": "wordpress-plugin",
-            "authors": {
-                "name": "OnTheGoSystems",
-                "homepage": "http://www.onthegosystems.com/"
-            },
-            "description": "Make your store multilingual and enable multiple currencies | <a href=\"https://wpml.org/documentation/related-projects/woocommerce-multilingual/?utm_source=plugin&utm_medium=gui&utm_campaign=wcml\">Documentation</a>",
-            "homepage": "https://wpml.org/documentation/related-projects/woocommerce-multilingual/?utm_source=plugin&utm_medium=gui&utm_campaign=wcml"
-        },
-        {
-            "name": "satispress/wpml-media-translation",
-            "version": "2.7.0",
-            "dist": {
-                "type": "zip",
-                "url": "https://plugins.e451.net/satispress/wpml-media-translation/2.7.0",
-                "shasum": "6956225a2b44232d2473b86941ca1bd67e56f126"
-            },
-            "require": {
-                "composer/installers": "^1.0 || ^2.0"
-            },
-            "type": "wordpress-plugin",
-            "authors": {
-                "name": "OnTheGoSystems",
-                "homepage": "http://www.onthegosystems.com/"
-            },
-            "description": "Add multilingual support for Media files | <a href=\"https://wpml.org/?page_id=113610\">Documentation</a> | <a href=\"https://wpml.org/version/media-translation-2-6-5/\">WPML Media Translation 2.6.5 release notes</a>",
-            "homepage": "https://wpml.org/"
-        },
-        {
-            "name": "satispress/wpml-string-translation",
-            "version": "3.2.1",
-            "dist": {
-                "type": "zip",
-                "url": "https://plugins.e451.net/satispress/wpml-string-translation/3.2.1",
-                "shasum": "f5fedd97cb84e4d8197bd4bb555aa926e5a4f38f"
-            },
-            "require": {
-                "composer/installers": "^1.0 || ^2.0"
-            },
-            "type": "wordpress-plugin",
-            "authors": {
-                "name": "OnTheGoSystems",
-                "homepage": "http://www.onthegosystems.com/"
-            },
-            "description": "Adds theme and plugins localization capabilities to WPML | <a href=\"https://wpml.org\">Documentation</a> | <a href=\"https://wpml.org/version/string-translation-3-1-10/\">WPML String Translation 3.1.10 release notes</a>",
-            "homepage": "https://wpml.org/"
-        },
-        {
-            "name": "satispress/wpml-wpforms",
-            "version": "0.2.0",
-            "dist": {
-                "type": "zip",
-                "url": "https://plugins.e451.net/satispress/wpml-wpforms/0.2.0",
-                "shasum": "9d51e24a21ab215a024b5177a368f181c782dec1"
-            },
-            "require": {
-                "composer/installers": "^1.0 || ^2.0"
-            },
-            "type": "wordpress-plugin",
-            "authors": {
-                "name": "OnTheGoSystems",
-                "homepage": "https://www.onthegosystems.com/"
-            },
-            "description": "Add multilingual support for WPForms | <a href=\"https://wpml.org/documentation/related-projects/creating-multilingual-forms-using-wpforms-and-wpml/?utm_source=plugin&utm_medium=gui&utm_campaign=wpforms\">Documentation</a>",
-            "homepage": "https://wpml.org/documentation/related-projects/creating-multilingual-forms-using-wpforms-and-wpml/?utm_source=plugin&utm_medium=gui&utm_campaign=wpforms"
         },
         {
             "name": "soberwp/intervention",
