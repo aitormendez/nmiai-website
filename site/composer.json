@@ -45,7 +45,7 @@
         },
         "require": {
           "composer/installers": "^2.2",
-          "ffraenz/private-composer-installer": "^5.0.1"
+          "ffraenz/private-composer-installer": "^5.0.1"          
         }
       }
     },
@@ -87,6 +87,12 @@
     "wpackagist-theme/twentytwentytwo": "^1.2",
     "roots/acorn": "^2.1",
     "cedaro/satispress": "^1.0",
+    "satispress/sitepress-multilingual-cms": "4.5.2",
+    "satispress/wpml-wpforms": "*",
+    "satispress/acfml": "*",
+    "satispress/woocommerce-multilingual": "*",
+    "satispress/wpml-media-translation": "*",
+    "satispress/wpml-string-translation": "*",
     "wpackagist-plugin/html-forms": "*",
     "wpackagist-plugin/gdpr-cookie-compliance": "*",
     "wpackagist-plugin/autodescription": "*",
@@ -96,6 +102,7 @@
     "wp-sync-db/wp-sync-db-media-files": "dev-master",
     "analogmemory/wp-sync-db": "1.6",
     "wpackagist-plugin/query-monitor": "*",
+    "advanced-custom-fields/advanced-custom-fields-pro": "*",
     "wpackagist-plugin/favicon-by-realfavicongenerator": "*",
     "log1x/navi": "^2.0"
   },
