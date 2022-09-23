@@ -87,6 +87,7 @@
     "wpackagist-theme/twentytwentytwo": "^1.2",
     "roots/acorn": "^2.1",
     "advanced-custom-fields/advanced-custom-fields-pro": "*",
+    "wpackagist-plugin/favicon-by-realfavicongenerator": "*",
     "log1x/navi": "^2.0"
   },
   "require-dev": {
