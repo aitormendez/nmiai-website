@@ -4,20 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e7f6ecddbefd806743c882991c53b874",
+    "content-hash": "6a6527213c53abd41b0ebef8ab8091ac",
     "packages": [
-        {
-            "name": "advanced-custom-fields/advanced-custom-fields-pro",
-            "version": "5.12.3",
-            "dist": {
-                "type": "zip",
-                "url": "https://connect.advancedcustomfields.com/v2/plugins/download?p=pro&k={%ACF_PRO_KEY}&t={%version}"
-            },
-            "require": {
-                "composer/installers": "^2.2"
-            },
-            "type": "wordpress-plugin"
-        },
         {
             "name": "analogmemory/wp-sync-db",
             "version": "1.6",

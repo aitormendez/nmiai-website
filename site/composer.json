@@ -95,7 +95,6 @@
     "wp-sync-db/wp-sync-db-media-files": "dev-master",
     "analogmemory/wp-sync-db": "1.6",
     "wpackagist-plugin/query-monitor": "*",
-    "advanced-custom-fields/advanced-custom-fields-pro": "*",
     "wpackagist-plugin/favicon-by-realfavicongenerator": "*",
     "log1x/navi": "^2.0"
   },
