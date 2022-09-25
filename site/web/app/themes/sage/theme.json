@@ -1,19 +1,19 @@
 {
+  "__generated__": "⚠️ This file is generated. Do not edit.",
   "$schema": "https://schemas.wp.org/trunk/theme.json",
   "version": 2,
   "settings": {
     "color": {
-      "palette": [
-        {
-          "slug": "primary",
-          "color": "#525ddc",
-          "name": "Primary"
-        }
-      ],
       "custom": false,
       "customGradient": false,
-      "defaultPalette": false,
-      "defaultGradients": false
+      "palette": [
+        {
+          "name": "Primary",
+          "slug": "primary",
+          "color": "#000000"
+        }
+      ],
+      "defaultPalette": false
     },
     "custom": {
       "spacing": {},
@@ -24,10 +24,92 @@
     },
     "spacing": {
       "padding": true,
-      "units": ["px", "%", "em", "rem", "vw", "vh"]
+      "units": [
+        "px",
+        "%",
+        "em",
+        "rem",
+        "vw",
+        "vh"
+      ]
     },
     "typography": {
-      "customFontSize": false
+      "customFontSize": false,
+      "dropCap": false,
+      "fontSizes": [
+        {
+          "name": "xs",
+          "slug": "xs",
+          "size": "0.75rem"
+        },
+        {
+          "name": "sm",
+          "slug": "sm",
+          "size": "0.875rem"
+        },
+        {
+          "name": "base",
+          "slug": "base",
+          "size": "1rem"
+        },
+        {
+          "name": "lg",
+          "slug": "lg",
+          "size": "1.125rem"
+        },
+        {
+          "name": "xl",
+          "slug": "xl",
+          "size": "1.25rem"
+        },
+        {
+          "name": "2xl",
+          "slug": "2xl",
+          "size": "1.5rem"
+        },
+        {
+          "name": "3xl",
+          "slug": "3xl",
+          "size": "1.875rem"
+        },
+        {
+          "name": "4xl",
+          "slug": "4xl",
+          "size": "2.25rem"
+        },
+        {
+          "name": "5xl",
+          "slug": "5xl",
+          "size": "3rem"
+        },
+        {
+          "name": "6xl",
+          "slug": "6xl",
+          "size": "3.75rem"
+        },
+        {
+          "name": "7xl",
+          "slug": "7xl",
+          "size": "4.5rem"
+        },
+        {
+          "name": "8xl",
+          "slug": "8xl",
+          "size": "6rem"
+        },
+        {
+          "name": "9xl",
+          "slug": "9xl",
+          "size": "8rem"
+        }
+      ],
+      "fontFamilies": [
+        {
+          "name": "rigid-square",
+          "slug": "rigid",
+          "fontFamily": "rigid-square,sans-serif"
+        }
+      ]
     }
   }
 }

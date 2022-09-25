@@ -40,4 +40,11 @@ export default async (app) => {
      * URI of the `public` directory
      */
     .setPublicPath("/app/themes/sage/public/");
+
+  app.wpjson
+    .useTailwindColors()
+    .useTailwindFontSize()
+    .useTailwindFontFamily()
+    .settings((theme) => theme.set("color.defaultPalette", false))
+    .enable();
 };
