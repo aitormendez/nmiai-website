@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9ec7e745aef0e47f2a0032564227015f",
+    "content-hash": "f69de857d6f8ab746c4883791b804907",
     "packages": [
         {
             "name": "advanced-custom-fields/advanced-custom-fields-pro",
@@ -136,131 +136,6 @@
                 }
             ],
             "time": "2022-06-29T23:37:57+00:00"
-        },
-        {
-            "name": "cedaro/satispress",
-            "version": "1.0.4",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/cedaro/satispress.git",
-                "reference": "aca49486c7f5e1a35b9c9184392c3ab1297e8efc"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/cedaro/satispress/zipball/aca49486c7f5e1a35b9c9184392c3ab1297e8efc",
-                "reference": "aca49486c7f5e1a35b9c9184392c3ab1297e8efc",
-                "shasum": ""
-            },
-            "require": {
-                "cedaro/wp-plugin": "^0.4.0",
-                "composer/installers": "^1.0 || ^2.0",
-                "composer/semver": "^3.2",
-                "php": ">=7.1",
-                "pimple/pimple": "^3.2",
-                "psr/container": "^1.0",
-                "psr/log": "^1.0"
-            },
-            "require-dev": {
-                "brain/monkey": "^2.2",
-                "cedaro/wp-test-suite": "dev-develop",
-                "dealerdirect/phpcodesniffer-composer-installer": "^0.7.1",
-                "phpcompatibility/phpcompatibility-wp": "^2",
-                "phpunit/phpunit": "^7.5",
-                "roave/security-advisories": "dev-master",
-                "squizlabs/php_codesniffer": "^3.3",
-                "wordpress/wordpress": "^5.1",
-                "wp-cli/i18n-command": "dev-master",
-                "wp-coding-standards/wpcs": "^1"
-            },
-            "type": "wordpress-plugin",
-            "autoload": {
-                "files": [
-                    "src/functions.php"
-                ],
-                "psr-4": {
-                    "SatisPress\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "Brady Vercher",
-                    "email": "brady@blazersix.com",
-                    "homepage": "https://www.cedaro.com/"
-                },
-                {
-                    "name": "Gary Jones",
-                    "homepage": "https://gamajo.com",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Generate a Composer repository from installed WordPress plugins and themes.",
-            "homepage": "https://github.com/cedaro/satispress",
-            "keywords": [
-                "composer",
-                "satis",
-                "wordpress"
-            ],
-            "support": {
-                "issues": "https://github.com/cedaro/satispress/issues",
-                "source": "https://github.com/cedaro/satispress"
-            },
-            "funding": [
-                {
-                    "url": "https://paypal.me/bradyvercher",
-                    "type": "custom"
-                }
-            ],
-            "time": "2022-05-02T15:50:15+00:00"
-        },
-        {
-            "name": "cedaro/wp-plugin",
-            "version": "v0.4.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/cedaro/wp-plugin.git",
-                "reference": "c53f7f5809e95f0a08db1d31aec7f069d53eabd5"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/cedaro/wp-plugin/zipball/c53f7f5809e95f0a08db1d31aec7f069d53eabd5",
-                "reference": "c53f7f5809e95f0a08db1d31aec7f069d53eabd5",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.4.0",
-                "psr/container": "^1.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "*@stable"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Cedaro\\WP\\Plugin\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Brady Vercher",
-                    "email": "brady@blazersix.com",
-                    "homepage": "https://www.cedaro.com/"
-                }
-            ],
-            "description": "A base WordPress plugin library.",
-            "homepage": "https://github.com/cedaro/wp-plugin",
-            "support": {
-                "issues": "https://github.com/cedaro/wp-plugin/issues",
-                "source": "https://github.com/cedaro/wp-plugin"
-            },
-            "time": "2018-01-12T20:25:00+00:00"
         },
         {
             "name": "composer/installers",
@@ -406,87 +281,6 @@
                 }
             ],
             "time": "2022-08-20T06:45:11+00:00"
-        },
-        {
-            "name": "composer/semver",
-            "version": "3.3.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/composer/semver.git",
-                "reference": "3953f23262f2bff1919fc82183ad9acb13ff62c9"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/composer/semver/zipball/3953f23262f2bff1919fc82183ad9acb13ff62c9",
-                "reference": "3953f23262f2bff1919fc82183ad9acb13ff62c9",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^5.3.2 || ^7.0 || ^8.0"
-            },
-            "require-dev": {
-                "phpstan/phpstan": "^1.4",
-                "symfony/phpunit-bridge": "^4.2 || ^5"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-main": "3.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Composer\\Semver\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Nils Adermann",
-                    "email": "naderman@naderman.de",
-                    "homepage": "http://www.naderman.de"
-                },
-                {
-                    "name": "Jordi Boggiano",
-                    "email": "j.boggiano@seld.be",
-                    "homepage": "http://seld.be"
-                },
-                {
-                    "name": "Rob Bast",
-                    "email": "rob.bast@gmail.com",
-                    "homepage": "http://robbast.nl"
-                }
-            ],
-            "description": "Semver library that offers utilities, version constraint parsing and validation.",
-            "keywords": [
-                "semantic",
-                "semver",
-                "validation",
-                "versioning"
-            ],
-            "support": {
-                "irc": "irc://irc.freenode.org/composer",
-                "issues": "https://github.com/composer/semver/issues",
-                "source": "https://github.com/composer/semver/tree/3.3.2"
-            },
-            "funding": [
-                {
-                    "url": "https://packagist.com",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/composer",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/composer/composer",
-                    "type": "tidelift"
-                }
-            ],
-            "time": "2022-04-01T19:23:25+00:00"
         },
         {
             "name": "doctrine/inflector",
@@ -2181,59 +1975,6 @@
                 }
             ],
             "time": "2022-07-30T15:51:26+00:00"
-        },
-        {
-            "name": "pimple/pimple",
-            "version": "v3.5.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/silexphp/Pimple.git",
-                "reference": "a94b3a4db7fb774b3d78dad2315ddc07629e1bed"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/silexphp/Pimple/zipball/a94b3a4db7fb774b3d78dad2315ddc07629e1bed",
-                "reference": "a94b3a4db7fb774b3d78dad2315ddc07629e1bed",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.2.5",
-                "psr/container": "^1.1 || ^2.0"
-            },
-            "require-dev": {
-                "symfony/phpunit-bridge": "^5.4@dev"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "3.4.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "Pimple": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                }
-            ],
-            "description": "Pimple, a simple Dependency Injection Container",
-            "homepage": "https://pimple.symfony.com",
-            "keywords": [
-                "container",
-                "dependency injection"
-            ],
-            "support": {
-                "source": "https://github.com/silexphp/Pimple/tree/v3.5.0"
-            },
-            "time": "2021-10-28T11:13:42+00:00"
         },
         {
             "name": "psr/container",

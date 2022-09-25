@@ -86,7 +86,6 @@
     "roots/wp-password-bcrypt": "1.1.0",
     "wpackagist-theme/twentytwentytwo": "^1.2",
     "roots/acorn": "^2.1",
-    "cedaro/satispress": "^1.0",
     "satispress/sitepress-multilingual-cms": "4.5.2",
     "satispress/wpml-wpforms": "*",
     "satispress/acfml": "*",
