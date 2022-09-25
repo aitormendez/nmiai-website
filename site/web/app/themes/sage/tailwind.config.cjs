@@ -4,9 +4,13 @@ module.exports = {
     fontFamily: {
       rigid: ["rigid-square", "sans-serif"],
       sans: ["rigid-square", "sans-serif"],
+      sabon: ["sabon", "sans-serif"],
     },
     colors: {
-      primary: "#000000",
+      dark: "#2f2f2f",
+      middle: "#969393",
+      white: "#ffffff",
+      black: "#000000",
     },
     extend: {},
   },

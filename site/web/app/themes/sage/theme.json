@@ -108,6 +108,16 @@
           "name": "rigid-square",
           "slug": "rigid",
           "fontFamily": "rigid-square,sans-serif"
+        },
+        {
+          "name": "rigid-square",
+          "slug": "sans",
+          "fontFamily": "rigid-square,sans-serif"
+        },
+        {
+          "name": "sabon",
+          "slug": "sabon",
+          "fontFamily": "sabon,sans-serif"
         }
       ]
     }
