@@ -8,8 +8,23 @@
       "customGradient": false,
       "palette": [
         {
-          "name": "Primary",
-          "slug": "primary",
+          "name": "Dark",
+          "slug": "dark",
+          "color": "#2f2f2f"
+        },
+        {
+          "name": "Middle",
+          "slug": "middle",
+          "color": "#969393"
+        },
+        {
+          "name": "White",
+          "slug": "white",
+          "color": "#ffffff"
+        },
+        {
+          "name": "Black",
+          "slug": "black",
           "color": "#000000"
         }
       ],
