@@ -1,6 +1,6 @@
 <header class="banner">
     <a class="brand" href="{{ home_url('/') }}">
-        {!! $siteName !!}
+        <span>No </span><span>{{ $emoji['header_emoji'] }}</span><span> Is An Island</span>
     </a>
 
     @include('partials.navigation')
