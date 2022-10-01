@@ -42,9 +42,30 @@ export default async (app) => {
     .setPublicPath("/app/themes/sage/public/");
 
   app.wpjson
+    .settings({
+      color: {
+        custom: false,
+        customGradient: false,
+        defaultPalette: false,
+        defaultGradients: false,
+      },
+      custom: {
+        spacing: {},
+        typography: {
+          "font-size": {},
+          "line-height": {},
+        },
+      },
+      spacing: {
+        padding: true,
+        units: ["px", "%", "em", "rem", "vw", "vh"],
+      },
+      typography: {
+        customFontSize: false,
+      },
+    })
     .useTailwindColors()
     .useTailwindFontSize()
     .useTailwindFontFamily()
-    .settings((theme) => theme.set("color.defaultPalette", false))
     .enable();
 };

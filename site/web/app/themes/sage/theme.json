@@ -6,6 +6,8 @@
     "color": {
       "custom": false,
       "customGradient": false,
+      "defaultPalette": false,
+      "defaultGradients": false,
       "palette": [
         {
           "name": "Dark",
@@ -27,8 +29,7 @@
           "slug": "black",
           "color": "#000000"
         }
-      ],
-      "defaultPalette": false
+      ]
     },
     "custom": {
       "spacing": {},
@@ -50,7 +51,6 @@
     },
     "typography": {
       "customFontSize": false,
-      "dropCap": false,
       "fontSizes": [
         {
           "name": "xs",
