@@ -1,5 +1,5 @@
-import {domReady} from '@roots/sage/client';
-import { nav } from "./nav.mjs";
+import { domReady } from "@roots/sage/client";
+import { nav } from "./nav.js";
 
 /**
  * app.main

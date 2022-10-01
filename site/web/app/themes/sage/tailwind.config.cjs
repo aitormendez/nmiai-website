@@ -4,7 +4,7 @@ module.exports = {
     fontFamily: {
       rigid: ["rigid-square", "sans-serif"],
       sans: ["rigid-square", "sans-serif"],
-      sabon: ["sabon", "sans-serif"],
+      serif: ["linotype-sabon", "serif"],
     },
     colors: {
       dark: "#2f2f2f",

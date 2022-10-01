@@ -1,4 +1,5 @@
 import gsap from "gsap";
+import tailwindConfig from "../../tailwind.config.cjs";
 
 export class nav {
   constructor() {
@@ -44,7 +45,7 @@ export class nav {
 
     gsap.to(this.btnDot, {
       overwrite: true,
-      backgroundColor: "black",
+      backgroundColor: tailwindConfig.theme.colors.dark,
       duration: 0.5,
     });
 

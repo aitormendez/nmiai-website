@@ -1,5 +1,5 @@
 @if ($navigation)
-    <ul id="main-menu" class="my-menu fixed w-screen h-screen top-0 bg-black text-white"
+    <ul id="main-menu" class="my-menu fixed w-screen h-screen top-0 bg-dark text-white"
         style="clip-path: circle(0.5rem at calc(100% - 1.5rem) 1.5rem);">
         @foreach ($navigation as $item)
             <li class="my-menu-item {{ $item->classes ?? '' }} {{ $item->active ? 'active' : '' }}">
