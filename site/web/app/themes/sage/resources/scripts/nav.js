@@ -11,7 +11,7 @@ export class nav {
     this.scroll = '';
     this.oldValue = 0;
     this.newValue = 0;
-    this.oldDirection = '';
+    this.oldDirection = 'down';
     this.direction = '';
 
     this.btnDot.addEventListener('click', () => {
@@ -75,16 +75,10 @@ export class nav {
 
       if (this.oldDirection !== this.direction && this.direction === 'down') {
         this.removeBannerGradient();
-        console.log('removing');
-        console.log(`oldDirection: ${this.oldDirection}`);
-        console.log(`direction: ${this.direction}`);
       }
 
       if (this.oldDirection !== this.direction && this.direction === 'up') {
         this.addBannerGradient();
-        console.log('adding');
-        console.log(`oldDirection: ${this.oldDirection}`);
-        console.log(`direction: ${this.direction}`);
       }
 
       this.oldValue = this.newValue;
