@@ -7,7 +7,12 @@ export class nav {
     this.btnDot = document.getElementById('btnDot');
     this.mainMenu = document.getElementById('main-menu');
     this.radio = Math.round(Math.hypot(window.innerWidth, window.innerHeight));
-    this.header = document.getElementById('banner');
+    this.banner = document.getElementById('banner');
+    this.scroll = '';
+    this.oldValue = 0;
+    this.newValue = 0;
+    this.oldDirection = '';
+    this.direction = '';
 
     this.btnDot.addEventListener('click', () => {
       this.closed ? this.openDot() : this.closeDot();
@@ -33,8 +38,8 @@ export class nav {
       duration: 0.5,
     });
 
-    this.header.classList.remove('text-dark');
-    this.header.classList.add('text-white');
+    this.banner.classList.remove('text-dark');
+    this.banner.classList.add('text-white');
 
     this.closed = false;
   }
@@ -52,23 +57,64 @@ export class nav {
       duration: 0.5,
     });
 
-    this.header.classList.add('text-dark');
-    this.header.classList.remove('text-white');
+    this.banner.classList.add('text-dark');
+    this.banner.classList.remove('text-white');
 
     this.closed = true;
   }
 
   detectScroll() {
-    let oldValue = 0;
-    let newValue = 0;
     window.addEventListener('scroll', () => {
-      newValue = window.pageYOffset;
-      if (oldValue < newValue) {
-        console.log('Up');
-      } else if (oldValue > newValue) {
-        console.log('Down');
+      this.newValue = window.pageYOffset;
+
+      if (this.oldValue < this.newValue) {
+        this.direction = 'down';
+      } else if (this.oldValue > this.newValue) {
+        this.direction = 'up';
       }
-      oldValue = newValue;
+
+      if (this.oldDirection !== this.direction && this.direction === 'down') {
+        this.removeBannerGradient();
+        console.log('removing');
+        console.log(`oldDirection: ${this.oldDirection}`);
+        console.log(`direction: ${this.direction}`);
+      }
+
+      if (this.oldDirection !== this.direction && this.direction === 'up') {
+        this.addBannerGradient();
+        console.log('adding');
+        console.log(`oldDirection: ${this.oldDirection}`);
+        console.log(`direction: ${this.direction}`);
+      }
+
+      this.oldValue = this.newValue;
+      this.oldDirection = this.direction;
     });
+  }
+
+  addBannerGradient() {
+    gsap.fromTo(
+      this.banner,
+      {
+        backgroundImage: 'linear-gradient(180deg, rgba(255, 255, 255, 0) 36%, rgba(255, 255, 255, 0) 100%)',
+      },
+      {
+        backgroundImage: 'linear-gradient(180deg, rgba(255, 255, 255, 1) 36%, rgba(255, 255, 255, 0) 100%)',
+        duration: 1,
+      },
+    );
+  }
+
+  removeBannerGradient() {
+    gsap.fromTo(
+      this.banner,
+      {
+        backgroundImage: 'linear-gradient(180deg, rgba(255, 255, 255, 1) 36%, rgba(255, 255, 255, 0) 100%)',
+      },
+      {
+        backgroundImage: 'linear-gradient(180deg, rgba(255, 255, 255, 0) 36%, rgba(255, 255, 255, 0) 100%)',
+        duration: 1,
+      },
+    );
   }
 }
