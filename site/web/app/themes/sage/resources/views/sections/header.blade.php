@@ -1,12 +1,14 @@
-<header class="banner flex justify-between py-3 text-dark">
-    <a class="brand mx-3" href="{{ home_url('/') }}">
-        <span>No </span><span>{{ $emoji['header_emoji'] }}</span><span> Is An Island</span>
-    </a>
+<header id="banner" class="banner text-dark fixed flex w-full justify-between pt-3 pb-10 transition-colors">
 
-    @include('partials.navigation')
+  @include('partials.navigation')
 
-    <div class="tagline hidden md:block mr-10 font-serif font-bold">{{ get_bloginfo('description') }}</div>
+  <a class="brand relative ml-6 text-lg uppercase" href="{{ home_url('/') }}">
+    <span class="mr-3 align-middle">No</span><span class="align-middle text-2xl">{{ $emoji['header_emoji'] }}</span><span
+      class="ml-3 align-middle">Is An Island</span>
+  </a>
 
-    <button id="btnDot" class="w-4 h-4 bg-dark rounded-full fixed right-4 top-4">
-    </button>
+  <div class="tagline relative mr-9 hidden font-serif font-bold md:block">{{ get_bloginfo('description') }}</div>
+
+  <button id="btnDot" class="bg-dark fixed top-4 h-4 w-4 rounded-full">
+  </button>
 </header>
