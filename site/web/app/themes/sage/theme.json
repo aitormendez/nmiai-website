@@ -53,17 +53,17 @@
       "customFontSize": false,
       "fontFamilies": [
         {
-          "name": "rigid-square",
+          "name": "Rigid-square",
           "slug": "rigid",
           "fontFamily": "rigid-square,sans-serif"
         },
         {
-          "name": "rigid-square",
+          "name": "Rigid-square",
           "slug": "sans",
           "fontFamily": "rigid-square,sans-serif"
         },
         {
-          "name": "linotype-sabon",
+          "name": "Linotype-sabon",
           "slug": "serif",
           "fontFamily": "linotype-sabon,serif"
         }
