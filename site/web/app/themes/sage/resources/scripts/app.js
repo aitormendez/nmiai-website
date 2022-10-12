@@ -1,5 +1,6 @@
-import { domReady } from "@roots/sage/client";
-import { nav } from "./nav.js";
+import {domReady} from '@roots/sage/client';
+import {nav} from './nav.js';
+import {renderTest} from './lottieApp.js';
 
 /**
  * app.main
@@ -12,6 +13,8 @@ const main = async (err) => {
 
   // application code
   new nav();
+
+  renderTest();
 };
 
 /**

@@ -26,6 +26,7 @@
     "@roots/sage": "^6.4.4"
   },
   "dependencies": {
-    "gsap": "^3.11.1"
+    "gsap": "^3.11.1",
+    "lottie-web": "^5.9.6"
   }
 }
