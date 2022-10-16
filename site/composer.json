@@ -86,7 +86,7 @@
     "roots/wp-password-bcrypt": "1.1.0",
     "wpackagist-theme/twentytwentytwo": "^1.2",
     "roots/acorn": "^2.1",
-    "satispress/sitepress-multilingual-cms": "4.5.2",
+    "satispress/sitepress-multilingual-cms": "*",
     "satispress/wpml-wpforms": "*",
     "satispress/acfml": "*",
     "satispress/woocommerce-multilingual": "*",
@@ -104,6 +104,7 @@
     "advanced-custom-fields/advanced-custom-fields-pro": "*",
     "wpackagist-plugin/favicon-by-realfavicongenerator": "*",
     "wpackagist-plugin/lottiefiles": "*",
+    "wpackagist-plugin/bunnycdn": "*",
     "log1x/navi": "^2.0"
   },
   "require-dev": {
