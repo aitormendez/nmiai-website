@@ -8,23 +8,23 @@
     "packages": [
         {
             "name": "doctrine/inflector",
-            "version": "2.0.5",
+            "version": "2.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/inflector.git",
-                "reference": "ade2b3bbfb776f27f0558e26eed43b5d9fe1b392"
+                "reference": "d9d313a36c872fd6ee06d9a6cbcf713eaa40f024"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/inflector/zipball/ade2b3bbfb776f27f0558e26eed43b5d9fe1b392",
-                "reference": "ade2b3bbfb776f27f0558e26eed43b5d9fe1b392",
+                "url": "https://api.github.com/repos/doctrine/inflector/zipball/d9d313a36c872fd6ee06d9a6cbcf713eaa40f024",
+                "reference": "d9d313a36c872fd6ee06d9a6cbcf713eaa40f024",
                 "shasum": ""
             },
             "require": {
                 "php": "^7.2 || ^8.0"
             },
             "require-dev": {
-                "doctrine/coding-standard": "^9",
+                "doctrine/coding-standard": "^10",
                 "phpstan/phpstan": "^1.8",
                 "phpstan/phpstan-phpunit": "^1.1",
                 "phpstan/phpstan-strict-rules": "^1.3",
@@ -79,7 +79,7 @@
             ],
             "support": {
                 "issues": "https://github.com/doctrine/inflector/issues",
-                "source": "https://github.com/doctrine/inflector/tree/2.0.5"
+                "source": "https://github.com/doctrine/inflector/tree/2.0.6"
             },
             "funding": [
                 {
@@ -95,7 +95,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-09-07T09:01:28+00:00"
+            "time": "2022-10-20T09:10:12+00:00"
         },
         {
             "name": "johnbillion/args",
@@ -235,16 +235,16 @@
         },
         {
             "name": "log1x/acf-composer",
-            "version": "v2.0.9",
+            "version": "v2.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Log1x/acf-composer.git",
-                "reference": "b19eb3aefc36505ded477aff2539b8e74aee8880"
+                "reference": "71e2695277c4f96bb62bc59e158ee5a4a4754be6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Log1x/acf-composer/zipball/b19eb3aefc36505ded477aff2539b8e74aee8880",
-                "reference": "b19eb3aefc36505ded477aff2539b8e74aee8880",
+                "url": "https://api.github.com/repos/Log1x/acf-composer/zipball/71e2695277c4f96bb62bc59e158ee5a4a4754be6",
+                "reference": "71e2695277c4f96bb62bc59e158ee5a4a4754be6",
                 "shasum": ""
             },
             "require": {
@@ -283,7 +283,7 @@
             "description": "Create fields, blocks, option pages, and widgets using ACF Builder and Sage 10",
             "support": {
                 "issues": "https://github.com/Log1x/acf-composer/issues",
-                "source": "https://github.com/Log1x/acf-composer/tree/v2.0.9"
+                "source": "https://github.com/Log1x/acf-composer/tree/v2.1.0"
             },
             "funding": [
                 {
@@ -291,7 +291,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-08-21T17:09:02+00:00"
+            "time": "2022-10-14T18:37:36+00:00"
         },
         {
             "name": "log1x/poet",
