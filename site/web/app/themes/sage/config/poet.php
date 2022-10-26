@@ -13,15 +13,16 @@ return [
     */
 
     'post' => [
-        'book' => [
-            'enter_title_here' => 'Enter book title',
-            'menu_icon' => 'dashicons-book-alt',
+        'project' => [
+            'enter_title_here' => __('Enter project title', 'sage'),
+            'menu_icon' => 'dashicons-portfolio',
             'supports' => ['title', 'editor', 'author', 'revisions', 'thumbnail'],
             'show_in_rest' => true,
             'has_archive' => false,
+            'taxonomies' => ['category'],
             'labels' => [
-                'singular' => 'Book',
-                'plural' => 'Books',
+                'singular' => 'Project',
+                'plural' => 'Projects',
             ],
         ],
     ],
@@ -37,10 +38,10 @@ return [
     */
 
     'taxonomy' => [
-        'genre' => [
-            'links' => ['book'],
-            'meta_box' => 'radio',
-        ],
+        // 'genre' => [
+        //     'links' => ['project'],
+        //     'meta_box' => 'radio',
+        // ],
     ],
 
     /*
@@ -80,10 +81,10 @@ return [
     */
 
     'block_category' => [
-        // 'cta' => [
-        //     'title' => 'Call to Action',
-        //     'icon' => 'star-filled',
-        // ],
+        'nmiai' => [
+            'title' => 'No Man Is An Island',
+            // 'icon' => 'star-filled',
+        ],
     ],
 
     /*
