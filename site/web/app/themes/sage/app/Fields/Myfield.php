@@ -5,7 +5,7 @@ namespace App\Fields;
 use Log1x\AcfComposer\Field;
 use StoutLogic\AcfBuilder\FieldsBuilder;
 
-class Example extends Field
+class Myfield extends Field
 {
     /**
      * The field group.
@@ -14,14 +14,14 @@ class Example extends Field
      */
     public function fields()
     {
-        $example = new FieldsBuilder('example');
+        $example = new FieldsBuilder('myfield');
 
         $example
             ->setLocation('post_type', '==', 'post');
 
         $example
-            ->addRepeater('items')
-                ->addText('item')
+            ->addRepeater('cosas')
+                ->addText('cosa')
             ->endRepeater();
 
         return $example->build();
