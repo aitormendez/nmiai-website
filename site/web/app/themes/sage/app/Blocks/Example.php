@@ -5,14 +5,14 @@ namespace App\Blocks;
 use Log1x\AcfComposer\Block;
 use StoutLogic\AcfBuilder\FieldsBuilder;
 
-class Test extends Block
+class Example extends Block
 {
     /**
      * The block name.
      *
      * @var string
      */
-    public $name = 'Test';
+    public $name = 'Example';
 
     /**
      * The block description.
@@ -95,7 +95,7 @@ class Test extends Block
         'align_content' => false,
         'full_height' => false,
         'anchor' => false,
-        'mode' => true,
+        'mode' => false,
         'multiple' => true,
         'jsx' => true,
     ];

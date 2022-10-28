@@ -1,10 +1,18 @@
-// https://tailwindcss.com/docs/configuration
 module.exports = {
   content: ["./index.php", "./app/**/*.php", "./resources/**/*.{php,vue,js}"],
   theme: {
-    extend: {
-      colors: {}, // Extend Tailwind's default colors
+    fontFamily: {
+      rigid: ["rigid-square", "sans-serif"],
+      sans: ["rigid-square", "sans-serif"],
+      serif: ["linotype-sabon", "serif"],
     },
+    colors: {
+      dark: "#2f2f2f",
+      middle: "#969393",
+      white: "#ffffff",
+      black: "#000000",
+    },
+    extend: {},
   },
   plugins: [],
 };
