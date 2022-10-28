@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <!doctype html>
 <html <?php language_attributes(); ?>>
   <head>
