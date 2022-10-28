@@ -37,7 +37,6 @@ class HeaderEmoji extends Composer
     {
         $emoji = '';
 
-        if (!is_admin()) {
             $headerEmojiList = get_field('header_emojis', 'option');
 
             if (get_field('has_header_unique_emoji', 'option') === true) {
@@ -48,7 +47,6 @@ class HeaderEmoji extends Composer
                 }
                 $emoji = $_SESSION["header_emoji"];
             }
-        }
 
         return $emoji;
     }
