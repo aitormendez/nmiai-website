@@ -1,14 +1,11 @@
-<header id="banner" class="banner text-dark fixed flex w-full justify-between pt-3 pb-10 transition-colors">
-
-  @include('partials.navigation')
-
-  <a class="brand relative ml-6 text-lg uppercase" href="{{ home_url('/') }}">
-    <span class="mr-3 align-middle">No</span><span class="align-middle text-2xl">{{ $emoji['header_emoji'] }}</span><span
-      class="ml-3 align-middle">Is An Island</span>
+<header class="banner">
+  <a class="brand" href="{{ home_url('/') }}">
+    {!! $siteName !!}
   </a>
 
-  <div class="tagline relative mr-9 hidden font-serif font-bold md:block">{{ get_bloginfo('description') }}</div>
-
-  <button id="btnDot" class="bg-dark fixed top-4 h-4 w-4 rounded-full">
-  </button>
+  @if (has_nav_menu('primary_navigation'))
+    <nav class="nav-primary" aria-label="{{ wp_get_nav_menu_name('primary_navigation') }}">
+      {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav', 'echo' => false]) !!}
+    </nav>
+  @endif
 </header>

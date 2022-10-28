@@ -134,17 +134,3 @@ add_action('widgets_init', function () {
         'id' => 'sidebar-footer',
     ] + $config);
 });
-
-/**
- * Enqueue styles.
- *
- * @return void
- */
-add_action('wp_enqueue_scripts', function () {
-    wp_enqueue_style('typekit', 'https://use.typekit.net/xei5jjq.css', false);
-}, 100);
-
-add_action('enqueue_block_editor_assets', function () {
-    wp_enqueue_style('typekit', 'https://use.typekit.net/xei5jjq.css', false);
-}, 100);
-
