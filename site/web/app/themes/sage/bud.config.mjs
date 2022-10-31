@@ -29,12 +29,16 @@ export default async (app) => {
     /**
      * Proxy origin (`WP_HOME`)
      */
-    .proxy('http://nomanisanisland.test')
+    .proxy('https://nomanisanisland.test')
 
     /**
      * Development origin
      */
-    .serve('http://0.0.0.0:3000')
+    .serve({
+      host: '0.0.0.0',
+      cert: app.path('/Users/aitor/Library/Application Support/mkcert/0.0.0.0.pem'),
+      key: app.path('/Users/aitor/Library/Application Support/mkcert/0.0.0.0-key.pem'),
+    })
 
     /**
      * URI of the `public` directory
