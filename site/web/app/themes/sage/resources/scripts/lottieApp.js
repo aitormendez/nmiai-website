@@ -1,15 +1,16 @@
 import lottie from 'lottie-web';
 
-console.log(lottie);
-
-export function renderTest() {
-  const testElement = document.getElementById('test');
+export function renderHeader() {
+  const headingElement = document.getElementById('header-animation');
+  const jsonPath = headingElement.dataset.jsonPath;
+  const jsonAutoplay = headingElement.dataset.jsonAutoplay == 1 ? true : false;
+  const jsonLoop = headingElement.dataset.jsonLoop == 1 ? true : false;
 
   lottie.loadAnimation({
-    container: testElement, // the dom element that will contain the animation
+    container: headingElement, // the dom element that will contain the animation
     renderer: 'svg',
-    loop: true,
-    autoplay: true,
-    path: '/app/themes/sage/resources/scripts/json/data-2.json', // the path to the animation json
+    loop: jsonLoop,
+    autoplay: jsonAutoplay,
+    path: jsonPath, // the path to the animation json
   });
 }

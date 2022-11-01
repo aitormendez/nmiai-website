@@ -148,3 +148,13 @@ add_action('enqueue_block_editor_assets', function () {
     wp_enqueue_style('typekit', 'https://use.typekit.net/xei5jjq.css', false);
 }, 100);
 
+/**
+ * Allow json in media files.
+ *
+ * @return void
+ */
+
+add_filter('upload_mimes', function($mimes) {
+    $mimes['json'] = 'text/plain';
+    return $mimes;
+});
