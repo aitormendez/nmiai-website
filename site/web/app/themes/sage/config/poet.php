@@ -16,10 +16,10 @@ return [
         'project' => [
             'enter_title_here' => __('Enter project title', 'sage'),
             'menu_icon' => 'dashicons-portfolio',
-            'supports' => ['title', 'editor', 'author', 'revisions', 'thumbnail'],
+            'supports' => ['title', 'editor', 'author', 'revisions', 'thumbnail', 'excerpt'],
             'show_in_rest' => true,
             'has_archive' => false,
-            'taxonomies' => ['category'],
+            'taxonomies' => ['post_tag'],
             'labels' => [
                 'singular' => 'Project',
                 'plural' => 'Projects',

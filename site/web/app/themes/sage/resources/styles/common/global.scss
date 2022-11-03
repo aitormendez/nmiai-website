@@ -3,10 +3,16 @@
 }
 
 #main {
-  height: 3000px;
+  body.home & {
+    padding: 1.5rem;
+  }
 }
 
 .outlined {
   -webkit-text-stroke: 2px white;
   color: var(--dark);
+}
+
+.progress-bar {
+  transition: width 2s;
 }

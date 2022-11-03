@@ -1,6 +1,7 @@
 import {domReady} from '@roots/sage/client';
 import {nav} from './nav.js';
 import {renderHeader} from './lottieApp.js';
+import {progressBar} from './progressBar.js';
 
 /**
  * app.main
@@ -15,6 +16,7 @@ const main = async (err) => {
   new nav();
 
   renderHeader();
+  progressBar();
 };
 
 /**
