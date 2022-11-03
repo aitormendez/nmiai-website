@@ -1,6 +1,7 @@
 <div class="{{ $block->classes }} py-6">
-  <img src="{{ $post_block['post_thumbnail_data']['src'][0] }}" alt="{{ $post_block['post_thumbnail_data']['alt'] }}"
-    srcset="{{ $post_block['post_thumbnail_data']['srcset'] }}" sizes="100%">
+  <img class="opacity-0" src="{{ $post_block['post_thumbnail_data']['src'][0] }}"
+    alt="{{ $post_block['post_thumbnail_data']['alt'] }}" srcset="{{ $post_block['post_thumbnail_data']['srcset'] }}"
+    sizes="100%">
 
   <div class="my-6 flex items-center justify-start">
     <span class="start-text mr-4 font-serif">{{ $post_block['start_text'] }}</span>

@@ -2,6 +2,10 @@
   display: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   min-height: 101vh;
 }
@@ -9,6 +13,10 @@ body {
 #main {
   body.home & {
     padding: 1.5rem;
+  }
+
+  img {
+    transition: opacity 4s;
   }
 }
 
@@ -18,5 +26,5 @@ body {
 }
 
 .progress-bar {
-  transition: 1s;
+  transition: 4s;
 }
