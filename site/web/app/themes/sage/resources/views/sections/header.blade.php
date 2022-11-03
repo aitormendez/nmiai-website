@@ -7,7 +7,7 @@
       class="ml-3 align-middle">Is An Island</span>
   </a>
 
-  <div class="tagline relative mr-9 hidden font-serif font-bold md:block">{{ get_bloginfo('description') }}</div>
+  <div id="tagline" class="absolute hidden font-serif font-bold md:block">{{ get_bloginfo('description') }}</div>
 
   <button id="btnDot" class="bg-dark fixed top-4 h-4 w-4 rounded-full">
   </button>
