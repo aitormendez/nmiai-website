@@ -1,4 +1,4 @@
-<div class="{{ $block->classes }} py-6">
+<a href="{{ $post_block['permalink'] }}" class="{{ $block->classes }} block py-6">
   <img class="opacity-0" src="{{ $post_block['post_thumbnail_data']['src'][0] }}"
     alt="{{ $post_block['post_thumbnail_data']['alt'] }}" srcset="{{ $post_block['post_thumbnail_data']['srcset'] }}"
     sizes="100%">
@@ -21,4 +21,4 @@
 
   <div class="my-6 text-2xl">{!! $post_block['post_excerpt'] !!}</div>
   <p class="font-serif font-bold">{!! $post_block['terms'] !!}</p>
-</div>
+</a>

@@ -213,6 +213,7 @@ class PostBlock extends Block
             'post_excerpt'        => wpautop($post_raw->post_excerpt),
             'start_text'          => get_field('post_block_start_text'),
             'end_text'            => get_field('post_block_end_text'),
+            'permalink'           => get_permalink($post_raw->ID),
         ];
 
         return $post;
