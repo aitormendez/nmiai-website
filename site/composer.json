@@ -105,6 +105,7 @@
     "wpackagist-plugin/favicon-by-realfavicongenerator": "*",
     "wpackagist-plugin/lottiefiles": "*",
     "wpackagist-plugin/bunnycdn": "*",
+    "wpackagist-plugin/fakerpress": "*",
     "log1x/navi": "^2.0",
     "log1x/acf-composer": "^2.1"
   },
