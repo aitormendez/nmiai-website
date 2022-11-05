@@ -4,6 +4,7 @@ namespace App\Blocks;
 
 use Log1x\AcfComposer\Block;
 use StoutLogic\AcfBuilder\FieldsBuilder;
+use App\Fields\Partials\ListItems;
 
 class Example extends Block
 {
@@ -152,9 +153,7 @@ class Example extends Block
         $example = new FieldsBuilder('example');
 
         $example
-            ->addRepeater('items')
-                ->addText('item')
-            ->endRepeater();
+            ->addFields($this->get(ListItems::class));
 
         return $example->build();
     }

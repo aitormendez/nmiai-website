@@ -4,6 +4,7 @@ namespace App\Blocks;
 
 use Log1x\AcfComposer\Block;
 use StoutLogic\AcfBuilder\FieldsBuilder;
+use App\Fields\Partials\ListItems;
 
 class PostBlock extends Block
 {
@@ -177,6 +178,7 @@ class PostBlock extends Block
                 'append' => '',
                 'maxlength' => '',
             ])
+            ->addFields($this->get(ListItems::class));
             ;
 
         return $builder->build();
