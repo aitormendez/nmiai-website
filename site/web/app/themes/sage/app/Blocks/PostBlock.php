@@ -188,33 +188,40 @@ class PostBlock extends Block
     public function postBlock()
     {
         $post_raw = get_field('post_block_post');
-        $post_thumbnail_id = get_post_thumbnail_id($post_raw->ID);
         $img = get_field('post_block_image');
         $terms = get_the_terms($post_raw->ID, 'post_tag');
-        $terms_string = '';
-        foreach ($terms as $key => $term) {
-            $terms_string .= $term->name;
-
-            if ($key !== array_key_last($terms)) {
-                $terms_string .= ' / ';
-            }
-        }
 
         $post = [
             'post_terms'          => get_the_terms($post_raw->ID, 'post_tag'),
-            'terms'               => $terms_string,
             'img' => $img,
-            'post_thumbnail_data' => [
-                'src'    => $img['url'],
-                'srcset' => wp_get_attachment_image_srcset($img['ID']),
-                'alt'    => $img['alt'],
-            ],
             'post_title'          => $post_raw->post_title,
             'post_excerpt'        => wpautop($post_raw->post_excerpt),
             'start_text'          => get_field('generic_block_start_text'),
             'end_text'            => get_field('generic_block_end_text'),
             'permalink'           => get_permalink($post_raw->ID),
         ];
+
+        if ($terms) {
+            $terms_string = '';
+
+            foreach ($terms as $key => $term) {
+                $terms_string .= $term->name;
+
+                if ($key !== array_key_last($terms)) {
+                    $terms_string .= ' / ';
+                }
+            }
+
+            $post['terms'] = $terms_string;
+        }
+
+        if ($img) {
+            $post['post_thumbnail_data'] = [
+                'src'    => $img['url'],
+                'srcset' => wp_get_attachment_image_srcset($img['ID']),
+                'alt'    => $img['alt'],
+            ];
+        }
 
         return $post;
     }
