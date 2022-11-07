@@ -4,7 +4,7 @@ namespace App\Blocks;
 
 use Log1x\AcfComposer\Block;
 use StoutLogic\AcfBuilder\FieldsBuilder;
-use App\Fields\Partials\ListItems;
+use App\Fields\Partials\StartEnd;
 
 class PostBlock extends Block
 {
@@ -150,35 +150,31 @@ class PostBlock extends Block
 
         $builder
             ->addPostObject('post_block_post', [
-                'label'         => __('Post', 'sage'),
+                'label'         => __('Project', 'sage'),
                 'instructions'  => '',
                 'required'      => 1,
-                'post_type'     => [],
+                'post_type'     => ['project'],
                 'taxonomy'      => [],
                 'allow_null'    => 0,
                 'multiple'      => 0,
                 'return_format' => 'object',
                 'ui'            => 1,
             ])
-            ->addText('post_block_start_text', [
-                'label' => __('Start text', 'sage'),
-                'instructions' => '',
-                'default_value' => '01',
-                'placeholder' => '',
-                'prepend' => '',
-                'append' => '',
-                'maxlength' => '',
+            ->addImage('post_block_image', [
+                'label' => __('Image', 'sage'),
+                'required' => 1,
+                'return_format' => 'array',
+                'preview_size' => 'medium',
+                'library' => 'all',
+                'min_width' => '',
+                'min_height' => '',
+                'min_size' => '',
+                'max_width' => '',
+                'max_height' => '',
+                'max_size' => '',
+                'mime_types' => '',
             ])
-            ->addText('post_block_end_text', [
-                'label' => __('End text', 'sage'),
-                'instructions' => '',
-                'default_value' => 'Post title',
-                'placeholder' => '',
-                'prepend' => '',
-                'append' => '',
-                'maxlength' => '',
-            ])
-            ->addFields($this->get(ListItems::class));
+            ->addFields($this->get(StartEnd::class));
             ;
 
         return $builder->build();
@@ -193,6 +189,7 @@ class PostBlock extends Block
     {
         $post_raw = get_field('post_block_post');
         $post_thumbnail_id = get_post_thumbnail_id($post_raw->ID);
+        $img = get_field('post_block_image');
         $terms = get_the_terms($post_raw->ID, 'post_tag');
         $terms_string = '';
         foreach ($terms as $key => $term) {
@@ -206,15 +203,16 @@ class PostBlock extends Block
         $post = [
             'post_terms'          => get_the_terms($post_raw->ID, 'post_tag'),
             'terms'               => $terms_string,
+            'img' => $img,
             'post_thumbnail_data' => [
-                'src'    => wp_get_attachment_image_src($post_thumbnail_id, 'full'),
-                'srcset' => wp_get_attachment_image_srcset($post_thumbnail_id, 'full'),
-                'alt'    => get_post_meta( $post_thumbnail_id, '_wp_attachment_image_alt', true ),
+                'src'    => $img['url'],
+                'srcset' => wp_get_attachment_image_srcset($img['ID']),
+                'alt'    => $img['alt'],
             ],
             'post_title'          => $post_raw->post_title,
             'post_excerpt'        => wpautop($post_raw->post_excerpt),
-            'start_text'          => get_field('post_block_start_text'),
-            'end_text'            => get_field('post_block_end_text'),
+            'start_text'          => get_field('generic_block_start_text'),
+            'end_text'            => get_field('generic_block_end_text'),
             'permalink'           => get_permalink($post_raw->ID),
         ];
 
