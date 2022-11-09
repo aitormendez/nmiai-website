@@ -16,6 +16,11 @@
       'posts_per_page' => 4,
   ])
 
+  @php
+    global $counter;
+    $counter = 1;
+  @endphp
+
   <div class="works mt-24 flex flex-wrap px-6">
     @posts
       @includeFirst(['partials.content-' . get_post_type(), 'partials.content'])
