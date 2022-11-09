@@ -27,7 +27,10 @@
     @endposts
   </div>
 
-  <div>INTERMEDIO</div>
+  <div class="banner-footer p-6">
+    @php(dynamic_sidebar('sidebar-project-archive'))
+  </div>
+
   <div class="works mt-24 flex flex-wrap px-6">
     @while (have_posts())
       @php(the_post())
