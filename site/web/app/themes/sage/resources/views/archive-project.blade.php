@@ -27,7 +27,7 @@
     @endposts
   </div>
 
-  <div class="banner-footer p-6">
+  <div class="insertions p-6">
     @php(dynamic_sidebar('sidebar-project-archive'))
   </div>
 
