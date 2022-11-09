@@ -18,7 +18,7 @@ return [
             'menu_icon' => 'dashicons-portfolio',
             'supports' => ['title', 'editor', 'author', 'revisions', 'thumbnail', 'excerpt'],
             'show_in_rest' => true,
-            'has_archive' => false,
+            'has_archive' => true,
             'taxonomies' => ['post_tag'],
             'labels' => [
                 'singular' => 'Project',

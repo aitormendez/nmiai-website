@@ -23,6 +23,11 @@ body {
 .outlined {
   -webkit-text-stroke: 2px white;
   color: var(--dark);
+
+  &.light {
+    -webkit-text-stroke: 2px var(--dark);
+    color: white;
+  }
 }
 
 .progress-bar {

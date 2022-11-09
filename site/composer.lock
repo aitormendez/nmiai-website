@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "918a4d10173fb570e5f7ff42a3c54b2f",
+    "content-hash": "7eca6888b1c66d5b0d286938d2484018",
     "packages": [
         {
             "name": "advanced-custom-fields/advanced-custom-fields-pro",
@@ -5410,15 +5410,15 @@
         },
         {
             "name": "wpackagist-plugin/gdpr-cookie-compliance",
-            "version": "4.9.1",
+            "version": "4.9.2",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/gdpr-cookie-compliance/",
-                "reference": "tags/4.9.1"
+                "reference": "tags/4.9.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/gdpr-cookie-compliance.4.9.1.zip"
+                "url": "https://downloads.wordpress.org/plugin/gdpr-cookie-compliance.4.9.2.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
@@ -6129,15 +6129,15 @@
         },
         {
             "name": "wpackagist-plugin/fakerpress",
-            "version": "0.5.3",
+            "version": "0.5.2",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/fakerpress/",
-                "reference": "tags/0.5.3"
+                "reference": "tags/0.5.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/fakerpress.0.5.3.zip"
+                "url": "https://downloads.wordpress.org/plugin/fakerpress.0.5.2.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"

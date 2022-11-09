@@ -48,6 +48,14 @@ class Post extends Composer
             return __('Latest Posts', 'sage');
         }
 
+        if (is_post_type_archive('project')) {
+            return __('<span class="outlined light">When project and Client connect</span> Bad-Ass work is Born', 'sage');
+        }
+
+        if (is_archive()) {
+            return get_the_archive_title();
+        }
+
         if (is_archive()) {
             return get_the_archive_title();
         }

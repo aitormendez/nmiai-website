@@ -158,3 +158,13 @@ add_filter('upload_mimes', function($mimes) {
     $mimes['json'] = 'text/plain';
     return $mimes;
 });
+
+
+/**
+* Offset posts
+*/
+add_action('pre_get_posts', function ($query) {
+    if ( ! is_admin() && is_post_type_archive('project') && $query->is_main_query() ) {
+         $query->set( 'offset', 4 );
+    }
+});
