@@ -2,7 +2,7 @@
   $thumb = $featured_img();
   global $counter;
 @endphp
-<a role="article" href="{{ get_permalink() }} class="{{ post_class('md:w-1/2 md:odd:pr-2 md:even:pl-2 mb-20') }}"">
+<a role="article" href="{{ get_permalink() }}" {{ post_class('md:w-1/2 md:odd:pr-2 md:even:pl-2 mb-20') }}>
   <header>
     @if (array_key_exists('img', $thumb))
       @if ($thumb['img']['mime'] === 'image/gif')
@@ -13,7 +13,7 @@
       @endif
     @endif
 
-    <div class="my-6 flex flex-wrap items-center justify-between md:justify-start">
+    <div class="bottom my-6 flex flex-wrap items-center justify-between md:justify-start">
       <span class="start-text order-1 mr-4 font-serif md:order-none">{{ substr(str_repeat(0, 2) . $counter, -2) }}</span>
       <div class="progress relative mb-2 flex w-full items-center justify-between md:mr-4 md:mb-0 md:w-52">
         <div class="progress-bar absolute h-0 w-0 border"></div>
@@ -27,11 +27,11 @@
         </svg>
       </div>
 
-      <span class="end-text order-1 font-serif italic md:order-none">{!! $title !!}</span>
+      <span class="end-text order-1 font-serif italic opacity-40 md:order-none">{!! $title !!}</span>
     </div>
 
     @if (array_key_exists('terms', $thumb))
-      <p class="font-serif font-bold">{!! $thumb['terms'] !!}</p>
+      <p class="terms font-serif font-bold opacity-0">{!! $thumb['terms'] !!}</p>
     @endif
   </header>
 </a>

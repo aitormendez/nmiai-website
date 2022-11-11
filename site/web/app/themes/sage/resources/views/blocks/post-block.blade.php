@@ -25,6 +25,5 @@
   <div class="my-6 text-2xl">{!! $post_block['post_excerpt'] !!}</div>
 
   @if (array_key_exists('terms', $post_block))
-    <p class="font-serif font-bold">{!! $post_block['terms'] !!}</p>
   @endif
 </a>
