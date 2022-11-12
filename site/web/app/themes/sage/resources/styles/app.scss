@@ -4,4 +4,11 @@
 
 @import 'common/variables';
 @import 'common/global';
+@import 'common/blocks';
 @import 'layouts/banner';
+
+@import '~swiper/scss';
+@import '~swiper/scss/autoplay';
+@import '~swiper/scss/effect-fade';
+// @import '~swiper/scss/navigation';
+// @import '~swiper/scss/pagination';

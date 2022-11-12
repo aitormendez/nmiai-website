@@ -2,6 +2,7 @@ import {domReady} from '@roots/sage/client';
 import {nav} from './nav.js';
 import {renderHeader} from './lottieApp.js';
 import {animateProject} from './animateProject.js';
+import {quotesSlider} from './sliders.js';
 
 /**
  * app.main
@@ -17,6 +18,7 @@ const main = async (err) => {
 
   renderHeader();
   animateProject();
+  quotesSlider();
 };
 
 /**
