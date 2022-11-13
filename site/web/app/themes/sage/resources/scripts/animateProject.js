@@ -9,15 +9,17 @@ export function animateProject() {
     articles.forEach((article) => {
       const termsText = article.querySelector('.terms');
 
-      article.addEventListener('mouseenter', () => {
-        termsText.classList.add('opacity-100');
-        termsText.classList.remove('opacity-0');
-      });
+      if (termsText) {
+        article.addEventListener('mouseenter', () => {
+          termsText.classList.add('opacity-100');
+          termsText.classList.remove('opacity-0');
+        });
 
-      article.addEventListener('mouseleave', () => {
-        termsText.classList.add('opacity-0');
-        termsText.classList.remove('opacity-100');
-      });
+        article.addEventListener('mouseleave', () => {
+          termsText.classList.add('opacity-0');
+          termsText.classList.remove('opacity-100');
+        });
+      }
     });
 
     const loadBars = (entries) => {
