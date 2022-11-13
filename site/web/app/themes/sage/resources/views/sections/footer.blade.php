@@ -3,7 +3,7 @@
     @php dynamic_sidebar('sidebar-footer') @endphp
   </div>
 
-  <div class="bottom flex flex-wrap justify-between text-xs">
+  <div class="flex flex-wrap justify-between text-xs">
     <div class="left order-1 mr-4">
       @option('footer_left_text')
     </div>

@@ -6,7 +6,7 @@
       sizes="100%">
   @endif
 
-  <div class="my-6 flex flex-wrap items-center justify-between md:justify-start">
+  <div class="bottom my-6 flex flex-wrap items-center justify-between md:justify-start">
     <span class="start-text order-1 mr-4 font-serif md:order-none">{{ $post_block['start_text'] }}</span>
     <div class="progress relative mb-2 flex w-full items-center justify-between md:mr-4 md:mb-0 md:w-52">
       <div class="progress-bar absolute h-0 w-0 border"></div>
