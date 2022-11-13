@@ -1,16 +1,12 @@
 <footer class="content-info bg-dark p-6 text-white">
-  <div class="sidebar-footer">
-    @php dynamic_sidebar('sidebar-footer') @endphp
-  </div>
-
-  <div class="flex flex-wrap justify-between text-xs">
-    <div class="left order-1 mr-4">
+  <div class="down grid gap-x-4 text-xs">
+    <div class="left-text flex items-center">
       @option('footer_left_text')
     </div>
-    <div class="right order-1">
+    <div class="right-text flex items-center justify-end">
       <span>@option('footer_right_text')</span>
     </div>
-    <div class="social mb-4 flex w-full gap-4">
+    <div class="social mb-4 flex w-full gap-4 md:mb-0 md:w-auto">
       <div class="icon h-6 w-6">
         <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g clip-path="url(#clip0_109_16)">
