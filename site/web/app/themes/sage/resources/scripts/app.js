@@ -3,7 +3,6 @@ import {nav} from './nav.js';
 import {renderHeader} from './lottieApp.js';
 import {animateProject} from './animateProject.js';
 import {quotesSlider} from './sliders.js';
-import {loadMore} from './infiniteScroll.js';
 
 /**
  * app.main
@@ -20,7 +19,11 @@ const main = async (err) => {
   renderHeader();
   animateProject();
   quotesSlider();
-  loadMore();
+
+  if (document.body.classList.contains('post-type-archive-project')) {
+    const {loadMore} = await import('./infiniteScroll.js');
+    loadMore();
+  }
 };
 
 /**
