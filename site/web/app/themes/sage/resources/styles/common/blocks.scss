@@ -3,3 +3,16 @@
     height: 400px;
   }
 }
+
+.wp-block-section {
+  &.is-style-dark {
+    background-color: var(--dark);
+    color: white;
+
+    .progress {
+      svg circle {
+        fill: white;
+      }
+    }
+  }
+}

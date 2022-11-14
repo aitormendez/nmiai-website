@@ -4,22 +4,23 @@ namespace App\Blocks;
 
 use Log1x\AcfComposer\Block;
 use StoutLogic\AcfBuilder\FieldsBuilder;
+use App\Fields\Partials\StartEnd;
 
-class QuotesSlider extends Block
+class Section extends Block
 {
     /**
      * The block name.
      *
      * @var string
      */
-    public $name = 'Quotes Slider';
+    public $name = 'Section';
 
     /**
      * The block description.
      *
      * @var string
      */
-    public $description = 'Slider for quotes';
+    public $description = 'Section with free content';
 
     /**
      * The block category.
@@ -33,7 +34,7 @@ class QuotesSlider extends Block
      *
      * @var string|array
      */
-    public $icon = '<svg width="23" height="20" viewBox="0 0 23 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 0H2V5H0V0Z" fill="#010101"/><path d="M3 0H5V5H3V0Z" fill="#010101"/><path d="M23 3H7V5H23V3Z" fill="#010101"/><path d="M7 9H21V11H7V9Z" fill="#010101"/><path d="M18 6H7V8H18V6Z" fill="#010101"/><path d="M23 16.5L18.5 19.5311V13.4689L23 16.5Z" fill="#010101"/><path d="M6.5 13.4689L2 16.5L6.5 19.5311V13.4689Z" fill="#010101"/></svg>';
+    public $icon = '<svg width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.5 3C2.15311 3 2.70873 2.5826 2.91465 2H21.0854C21.2913 2.5826 21.8469 3 22.5 3C23.3284 3 24 2.32843 24 1.5C24 0.671574 23.3284 0 22.5 0C21.8469 0 21.2913 0.417404 21.0854 1H2.91465C2.70873 0.417404 2.15311 0 1.5 0C0.671573 0 0 0.671574 0 1.5C0 2.32843 0.671573 3 1.5 3Z" fill="black"/><rect y="5" width="4" height="2" fill="black"/><rect x="17" y="5" width="7" height="2" fill="black"/><path d="M14 8H9V15H5L11.5 22L18 15H14V8Z" fill="black"/></svg>';
 
     /**
      * The block keywords.
@@ -106,15 +107,19 @@ class QuotesSlider extends Block
      * @var array
      */
     public $styles = [
-        // [
-        //     'name' => 'light',
-        //     'label' => 'Light',
-        //     'isDefault' => true,
-        // ],
-        // [
-        //     'name' => 'dark',
-        //     'label' => 'Dark',
-        // ]
+        [
+            'name' => 'light',
+            'label' => 'Light',
+            'isDefault' => true,
+        ],
+        [
+            'name' => 'dark',
+            'label' => 'Dark',
+        ],
+        [
+            'name' => 'dynamic',
+            'label' => 'Dynamic',
+        ]
     ];
 
     /**
@@ -138,7 +143,7 @@ class QuotesSlider extends Block
     public function with()
     {
         return [
-            'quotes' => $this->getQuotes(),
+            'section' => $this->section(),
         ];
     }
 
@@ -149,42 +154,12 @@ class QuotesSlider extends Block
      */
     public function fields()
     {
-        $example = new FieldsBuilder('quotes_slider');
+        $section = new FieldsBuilder('section');
 
-        $example
-            ->addRepeater('quotes_slider_quotes', [
-                'label' => __('Quotes', 'sage'),
-                'required' => 1,
-                'min' => 1,
-                'layout' => 'row',
-                'button_label' => __('Add quote', 'sage'),
-            ])
-            ->addTextarea('quotes_slider_quote', [
-                'label' => __('Quote', 'sage'),
-                'default_value' => '',
-                'rows' => '5',
-                'maxlength' => '200',
-            ])
-            ->addText('quotes_slider_start_text', [
-                'label' => __('Name', 'sage'),
-                'default_value' => '',
-                'maxlength' => '200',
-            ])
-            ->addText('quotes_slider_subtitle', [
-                'label' => __('Subtitle', 'sage'),
-                'default_value' => '',
-                'maxlength' => '200',
-            ])
-            ->addText('quotes_slider_end_text', [
-                'label' => __('End text', 'sage'),
-                'default_value' => 'Us',
-                'placeholder' => 'Write quote here',
-                'maxlength' => '200',
-            ])
-            ->endRepeater()
-            ;
+        $section
+            ->addFields($this->get(StartEnd::class));
 
-        return $example->build();
+        return $section->build();
     }
 
     /**
@@ -192,9 +167,14 @@ class QuotesSlider extends Block
      *
      * @return array
      */
-    public function getQuotes()
+    public function section()
     {
-        return get_field('quotes_slider_quotes');
+        $sect = [
+            'start_text'          => get_field('generic_block_start_text'),
+            'end_text'            => get_field('generic_block_end_text'),
+        ];
+
+        return $sect;
     }
 
     /**

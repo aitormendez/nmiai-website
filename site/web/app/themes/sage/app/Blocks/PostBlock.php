@@ -174,7 +174,7 @@ class PostBlock extends Block
                 'max_size' => '',
                 'mime_types' => '',
             ])
-            ->addFields($this->get(StartEnd::class));
+            ->addFields($this->get(StartEnd::class))
             ;
 
         return $builder->build();
