@@ -27,6 +27,7 @@
   },
   "dependencies": {
     "gsap": "^3.11.1",
+    "infinite-scroll": "^4.0.1",
     "lottie-web": "^5.9.6",
     "swiper": "^8.4.4"
   }

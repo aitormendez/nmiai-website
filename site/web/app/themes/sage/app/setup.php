@@ -166,10 +166,12 @@ add_filter('upload_mimes', function($mimes) {
 
 
 /**
-* Offset posts
+* For second loop in project archive
 */
 add_action('pre_get_posts', function ($query) {
     if ( ! is_admin() && is_post_type_archive('project') && $query->is_main_query() ) {
-         $query->set( 'offset', 4 );
+        $query->set( 'offset', 4 );
+        $query->set( 'posts_per_page', 4 );
+        return;
     }
 });

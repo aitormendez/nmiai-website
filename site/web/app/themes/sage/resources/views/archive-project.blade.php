@@ -31,14 +31,21 @@
     @php(dynamic_sidebar('sidebar-project-archive'))
   </div>
 
-  <div class="works mt-24 flex flex-wrap px-6">
+  <div class="works infinite-container mt-24 flex flex-wrap px-6">
     @while (have_posts())
       @php(the_post())
       @includeFirst(['partials.content-' . get_post_type(), 'partials.content'])
     @endwhile
   </div>
 
-  {!! get_the_posts_navigation() !!}
+  <div class="page-load-status w-full text-center text-3xl uppercase">
+    <p class="infinite-scroll-last hidden">{{ __('End of content', 'sage') }}</p>
+    <p class="infinite-scroll-error hidden">{{ __('No more pages to load', 'sage') }}</p>
+  </div>
+
+  <button class="view-more-button w-full text-3xl uppercase underline">View more</button>
+
+  {!! get_the_posts_navigation(['class' => 'hidden']) !!}
 @endsection
 
 @section('sidebar')
