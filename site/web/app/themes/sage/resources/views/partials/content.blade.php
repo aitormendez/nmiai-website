@@ -14,7 +14,8 @@
     @endif
 
     <div class="bottom my-6 flex flex-wrap items-center justify-between md:justify-start">
-      <span class="start-text order-1 mr-4 font-serif md:order-none">{{ substr(str_repeat(0, 2) . $counter, -2) }}</span>
+      <span
+        class="start-text order-1 mr-4 font-serif font-bold md:order-none">{{ substr(str_repeat(0, 2) . $counter, -2) }}</span>
       <div class="progress relative mb-2 flex w-full items-center justify-between md:mr-4 md:mb-0 md:w-52">
         <div class="progress-bar absolute h-0 w-0 border"></div>
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
@@ -27,7 +28,7 @@
         </svg>
       </div>
 
-      <span class="end-text order-1 font-serif italic opacity-40 md:order-none">{!! $title !!}</span>
+      <span class="end-text order-1 font-serif font-bold italic opacity-40 md:order-none">{!! $title !!}</span>
     </div>
 
     @if (array_key_exists('terms', $thumb))
