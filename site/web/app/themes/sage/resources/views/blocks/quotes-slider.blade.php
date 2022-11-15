@@ -22,18 +22,6 @@
         @endforeach
       </div>
 
-      <div class="progress absolute mb-2 flex w-full items-center justify-between md:mr-4 md:mb-0 md:w-1/3">
-        <div class="progress-bar absolute h-0 w-0 border"></div>
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-          <circle id="Elipse_2596" data-name="Elipse 2596" cx="8" cy="8" r="8"
-            class="fill-dark" />
-        </svg>
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-          <circle id="Elipse_2596" data-name="Elipse 2596" cx="8" cy="8" r="8"
-            class="fill-dark" />
-        </svg>
-      </div>
-
       <div class="nav absolute bottom-0 right-20 z-10 flex w-32 justify-between">
         <div class="swiper-button-prev">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="18" viewBox="0 0 16 18">
