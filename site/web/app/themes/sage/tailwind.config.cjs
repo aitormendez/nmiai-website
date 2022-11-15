@@ -1,4 +1,5 @@
 module.exports = {
+  darkMode: ['class', '.is-style-dark'],
   content: ['./index.php', './app/**/*.php', './resources/**/*.{php,vue,js}'],
   theme: {
     fontFamily: {

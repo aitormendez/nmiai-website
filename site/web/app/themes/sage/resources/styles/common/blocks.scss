@@ -5,14 +5,14 @@
 }
 
 .wp-block-section {
-  &.is-style-dark {
-    background-color: var(--dark);
-    color: white;
+  // &.is-style-dark {
+  //   background-color: var(--dark);
+  //   color: white;
 
-    .progress {
-      svg circle {
-        fill: white;
-      }
-    }
-  }
+  //   .progress {
+  //     svg circle {
+  //       fill: white;
+  //     }
+  //   }
+  // }
 }
