@@ -79,7 +79,19 @@ class Options extends Field
                     'label' => __('Right text', 'sage'),
                     'required' => 1,
                     'default_value' => 'Impressum & Datenschutz',
-                ]);
+                ])
+                ->addRepeater('footer_links', [
+                    'label' => __('Footer links', 'sage'),
+                    'min' => 0,
+                    'max' => 0,
+                    'layout' => 'table',
+                    'button_label' => 'Add link',
+                    ])
+                    ->addLink('footer_link', [
+                        'label' => 'Link',
+                        'return_format' => 'array',
+                    ])
+                ->endRepeater()
             ;
 
         return $options->build();
