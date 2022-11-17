@@ -72,6 +72,13 @@
           "fontFamily": "linotype-sabon,serif"
         }
       ]
+    },
+    "blocks": {
+      "core/group": {
+        "spacing": {
+          "padding": false
+        }
+      }
     }
   }
 }

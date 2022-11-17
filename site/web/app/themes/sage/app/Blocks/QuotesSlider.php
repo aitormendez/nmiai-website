@@ -98,6 +98,20 @@ class QuotesSlider extends Block
         'mode' => true,
         'multiple' => true,
         'jsx' => true,
+        'defaultStylePicker' => true,
+        'spacing' => [
+            'margin' => true,
+            'padding' => true,
+            'blockGap' => true,
+        ],
+        'color' => [
+            'background' => true,
+            'gradients' => true,
+        ],
+        'typography' => [
+            'lineHeight' => true,
+            'fontSize' => true,
+        ]
     ];
 
     /**
@@ -106,15 +120,19 @@ class QuotesSlider extends Block
      * @var array
      */
     public $styles = [
-        // [
-        //     'name' => 'light',
-        //     'label' => 'Light',
-        //     'isDefault' => true,
-        // ],
-        // [
-        //     'name' => 'dark',
-        //     'label' => 'Dark',
-        // ]
+        [
+            'name' => 'light',
+            'label' => 'Light',
+            'isDefault' => true,
+        ],
+        [
+            'name' => 'dark',
+            'label' => 'Dark',
+        ],
+        [
+            'name' => 'dynamic',
+            'label' => 'Dynamic',
+        ]
     ];
 
     /**
@@ -139,6 +157,7 @@ class QuotesSlider extends Block
     {
         return [
             'quotes' => $this->getQuotes(),
+            'padding' => $this->paddingStyles(),
         ];
     }
 
@@ -165,7 +184,7 @@ class QuotesSlider extends Block
                 'rows' => '5',
                 'maxlength' => '200',
             ])
-            ->addText('quotes_slider_start_text', [
+            ->addText('quotes_slider_name', [
                 'label' => __('Name', 'sage'),
                 'default_value' => '',
                 'maxlength' => '200',
@@ -173,12 +192,6 @@ class QuotesSlider extends Block
             ->addText('quotes_slider_subtitle', [
                 'label' => __('Subtitle', 'sage'),
                 'default_value' => '',
-                'maxlength' => '200',
-            ])
-            ->addText('quotes_slider_end_text', [
-                'label' => __('End text', 'sage'),
-                'default_value' => 'Us',
-                'placeholder' => 'Write quote here',
                 'maxlength' => '200',
             ])
             ->endRepeater()
@@ -194,7 +207,43 @@ class QuotesSlider extends Block
      */
     public function getQuotes()
     {
-        return get_field('quotes_slider_quotes');
+        $output = [
+            'padding' => $this->paddingStyles(),
+            'quotes' => get_field('quotes_slider_quotes'),
+            'block' => $this,
+        ];
+
+        return $output;
+    }
+
+    /**
+     * Return padding styles.
+     *
+     * @return string
+     */
+    public function paddingStyles()
+    {
+        if (property_exists($this->block, 'style') ) {
+            if (array_key_exists('padding', $this->block->style['spacing'])) {
+                $padding = $this->block->style['spacing']['padding'];
+                $styles = array_map(function($val) {
+                    if (str_starts_with($val, 'var:preset|spacing|') ) {
+                        return 'var(--wp--preset--spacing--' . substr($val, -2) . ')';
+                    };
+
+                    return $val; // return custom val if there is no preset
+                }, array_values($padding));
+            }
+        } else {
+            $styles = [
+                0 => '',
+                1 => '',
+                2 => '',
+                3 => '',
+            ];
+        }
+
+        return $styles;
     }
 
     /**

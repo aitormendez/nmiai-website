@@ -46,7 +46,8 @@ export default async (app) => {
     .setPublicPath('/app/themes/sage/public/');
 
   app.wpjson
-    .settings({
+    .settings(
+      {
       layout: {
         contentSize: '840px',
         wideSize: '1100px',
@@ -75,4 +76,9 @@ export default async (app) => {
     .useTailwindColors()
     .useTailwindFontFamily()
     .enable();
+
+    // app.wpjson.settings((theme) =>
+    //   theme.set("blocks.core/group.spacing.padding", false)
+    // );
+
 };
