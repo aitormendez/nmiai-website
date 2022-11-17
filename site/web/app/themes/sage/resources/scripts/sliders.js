@@ -7,9 +7,9 @@ export function quotesSlider() {
     fadeEffect: {
       crossFade: true,
     },
-    // autoplay: {
-    //   delay: 5000,
-    // },
+    autoplay: {
+      delay: 5000,
+    },
     loop: true,
     speed: 2000,
     navigation: {

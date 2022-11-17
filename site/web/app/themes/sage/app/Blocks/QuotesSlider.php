@@ -103,14 +103,6 @@ class QuotesSlider extends Block
             'margin' => true,
             'padding' => true,
             'blockGap' => true,
-        ],
-        'color' => [
-            'background' => true,
-            'gradients' => true,
-        ],
-        'typography' => [
-            'lineHeight' => true,
-            'fontSize' => true,
         ]
     ];
 

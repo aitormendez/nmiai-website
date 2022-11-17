@@ -1,8 +1,9 @@
 import {domReady} from '@roots/sage/client';
 import {nav} from './nav.js';
 import {renderHeader} from './lottieApp.js';
-import {animateProject} from './animateProject.js';
-import {quotesSlider} from './sliders.js';
+// import {animateProject} from './animateProject.js';
+// import {quotesSlider} from './sliders.js';
+// import {dynamicBg} from './dynamicDarkBg.js';
 
 /**
  * app.main
@@ -17,11 +18,21 @@ const main = async (err) => {
   new nav();
 
   renderHeader();
-  animateProject();
-  quotesSlider();
+  // animateProject();
+  // quotesSlider();
+  // dynamicBg();
 
-  if (document.body.classList.contains('post-type-archive-project')) {
+  if (document.body.classList.contains('post-type-archive-project') || document.body.classList.contains('page')) {
+    const {dynamicBg} = await import('./dynamicDarkBg.js');
+    dynamicBg();
+  }
+
+  if (document.body.classList.contains('post-type-archive-project') || document.body.classList.contains('page')) {
+    const {animateProject} = await import('./animateProject.js');
+    const {quotesSlider} = await import('./sliders.js');
     const {loadMore} = await import('./infiniteScroll.js');
+    animateProject();
+    quotesSlider();
     loadMore();
   }
 };
