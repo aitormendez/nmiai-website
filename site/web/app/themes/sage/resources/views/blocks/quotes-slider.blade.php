@@ -1,6 +1,6 @@
 @if ($quotes)
   <div class="{{ $block->classes }}">
-    <div class="wrapper dark:bg-dark transition-colors duration-1000"
+    <div class="wrapper"
       style="padding-top:{{ $padding[0] }};padding-right:{{ $padding[1] }};padding-bottom:{{ $padding[2] }};padding-left:{{ $padding[3] }}">
       <div class="swiper-quotes swiper w-full !overflow-visible text-5xl">
         <div class="swiper-wrapper">

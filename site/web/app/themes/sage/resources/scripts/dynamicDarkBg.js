@@ -1,12 +1,14 @@
 export function dynamicBg() {
   const dynamicElements = document.querySelectorAll('.is-style-dynamic');
+  const htmlElement = document.querySelector('html');
 
   const loadDynElements = (entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        entry.target.classList.add('is-style-dark');
+        console.log(htmlElement);
+        htmlElement.classList.add('is-style-dark');
       } else {
-        entry.target.classList.remove('is-style-dark');
+        htmlElement.classList.remove('is-style-dark');
       }
     });
   };

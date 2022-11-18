@@ -30,9 +30,12 @@ const main = async (err) => {
   if (document.body.classList.contains('post-type-archive-project') || document.body.classList.contains('page')) {
     const {animateProject} = await import('./animateProject.js');
     const {quotesSlider} = await import('./sliders.js');
-    const {loadMore} = await import('./infiniteScroll.js');
     animateProject();
     quotesSlider();
+  }
+
+  if (document.body.classList.contains('post-type-archive-project')) {
+    const {loadMore} = await import('./infiniteScroll.js');
     loadMore();
   }
 };
