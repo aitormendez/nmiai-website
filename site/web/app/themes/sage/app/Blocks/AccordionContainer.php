@@ -4,37 +4,36 @@ namespace App\Blocks;
 
 use Log1x\AcfComposer\Block;
 use StoutLogic\AcfBuilder\FieldsBuilder;
-use App\Fields\Partials\ListItems;
 
-class Example extends Block
+class AccordionContainer extends Block
 {
     /**
      * The block name.
      *
      * @var string
      */
-    public $name = 'Example';
+    public $name = 'Accordion container';
 
     /**
      * The block description.
      *
      * @var string
      */
-    public $description = 'A simple Example block.';
+    public $description = 'Section with free content';
 
     /**
      * The block category.
      *
      * @var string
      */
-    public $category = 'formatting';
+    public $category = 'nmiai';
 
     /**
      * The block icon.
      *
      * @var string|array
      */
-    public $icon = 'editor-ul';
+    public $icon = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M23 1H1V23H23V1ZM0 0V24H24V0H0Z" fill="black"/><path d="M7 5V2H5V5H2V7H5V10H7V7H10V5H7Z" fill="black"/></svg>';
 
     /**
      * The block keywords.
@@ -91,14 +90,17 @@ class Example extends Block
      * @var array
      */
     public $supports = [
-        'align' => true,
+        'align' => false,
         'align_text' => false,
         'align_content' => false,
         'full_height' => false,
         'anchor' => false,
-        'mode' => false,
+        'mode' => true,
         'multiple' => true,
         'jsx' => true,
+        'spacing' => [
+            'padding' => true,
+        ]
     ];
 
     /**
@@ -115,20 +117,11 @@ class Example extends Block
         [
             'name' => 'dark',
             'label' => 'Dark',
-        ]
-    ];
-
-    /**
-     * The block preview example data.
-     *
-     * @var array
-     */
-    public $example = [
-        'items' => [
-            ['item' => 'Item one'],
-            ['item' => 'Item two'],
-            ['item' => 'Item three'],
         ],
+        [
+            'name' => 'dynamic',
+            'label' => 'Dynamic',
+        ]
     ];
 
     /**
@@ -139,7 +132,7 @@ class Example extends Block
     public function with()
     {
         return [
-            'items' => $this->items(),
+            'padding' => $this->paddingStyles(),
         ];
     }
 
@@ -150,22 +143,39 @@ class Example extends Block
      */
     public function fields()
     {
-        $example = new FieldsBuilder('example');
+        $section = new FieldsBuilder('accordion_container');
 
-        $example
-            ->addFields($this->get(ListItems::class));
+        $section
+            ->addText('accordion_container_text');
 
-        return $example->build();
+        return $section->build();
     }
 
     /**
-     * Return the items field.
+     * Return padding styles.
      *
-     * @return array
+     * @return string
      */
-    public function items()
+    public function paddingStyles()
     {
-        return get_field('items') ?: $this->example['items'];
+        if (property_exists($this->block, 'style') ) {
+            if (array_key_exists('padding', $this->block->style['spacing'])) {
+                $padding = $this->block->style['spacing']['padding'];
+                $styles = array_map(function($val) {
+                    if (str_starts_with($val, 'var:preset|spacing|') ) {
+                        return 'var(--wp--preset--spacing--' . substr($val, -2) . ')';
+                    };
+
+                    return $val; // return custom val if there is no preset
+                }, array_values($padding));
+
+                $styles = 'padding-top:' . $styles[0] . ';padding-right:' . $styles[1] . ';padding-bottom:' . $styles[2] . ';padding-left:' . $styles[3];
+            }
+        } else {
+            $styles = '';
+        }
+
+        return $styles;
     }
 
     /**
