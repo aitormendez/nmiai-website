@@ -2,16 +2,75 @@ export function dynamicBg() {
   const dynamicElements = document.querySelectorAll('.is-style-dynamic');
   const htmlElement = document.querySelector('html');
 
-  const loadDynElements = (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        console.log(htmlElement);
-        htmlElement.classList.add('is-style-dark');
-      } else {
+  let totalEntries = undefined;
+  let firstTimeIntersectingEntries = undefined;
+  let intersectingEntries = 0;
+  let firstLoop = false;
+
+  function loadDynElements(entries) {
+    if (typeof totalEntries === 'undefined') {
+      totalEntries = entries.length;
+    }
+
+    if (typeof firstTimeIntersectingEntries === 'undefined') {
+      firstTimeIntersectingEntries = entries.reduce(function (r, a) {
+        return r + +(a.isIntersecting === true);
+      }, 0);
+    }
+
+    // next loops
+    if (firstLoop) {
+      console.log('next', entries);
+      entries.forEach((entry, index) => {
+        console.log('index: ' + index);
+        if (entry.isIntersecting) {
+          entry.target.classList.add('bg-middle');
+          intersectingEntries++;
+        } else {
+          entry.target.classList.remove('bg-middle');
+          intersectingEntries--;
+        }
+
+        console.log('totalEntries: ' + totalEntries);
+        console.log('is intersecting: ' + entry.isIntersecting);
+        console.log('firstTimeIntersectingEntries: ' + firstTimeIntersectingEntries);
+        console.log('intersectingEntries: ' + intersectingEntries);
+
+        if (intersectingEntries > 0) {
+          htmlElement.classList.add('is-style-dark');
+        } else {
+          htmlElement.classList.remove('is-style-dark');
+        }
+      });
+    }
+
+    // fist time loop
+
+    if (!firstLoop) {
+      entries.forEach((entry) => {
+        console.log('first', entries);
+        if (entry.isIntersecting) {
+          entry.target.classList.add('bg-middle');
+        } else {
+          entry.target.classList.remove('bg-middle');
+        }
+        firstLoop = true;
+
+        console.log('totalEntries: ' + totalEntries);
+        console.log('is intersecting: ' + entry.isIntersecting);
+        console.log('firstTimeIntersectingEntries: ' + firstTimeIntersectingEntries);
+        console.log('intersectingEntries: ' + intersectingEntries);
+      });
+
+      intersectingEntries = firstTimeIntersectingEntries;
+
+      if (intersectingEntries === 0) {
         htmlElement.classList.remove('is-style-dark');
+      } else {
+        htmlElement.classList.add('is-style-dark');
       }
-    });
-  };
+    }
+  }
 
   const observerDynElements = new IntersectionObserver(loadDynElements, {
     root: null,
@@ -19,7 +78,7 @@ export function dynamicBg() {
     // threshold: 0.5,
   });
 
-  dynamicElements.forEach((article) => {
-    observerDynElements.observe(article);
+  dynamicElements.forEach((element) => {
+    observerDynElements.observe(element);
   });
 }
