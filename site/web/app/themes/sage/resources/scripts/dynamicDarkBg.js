@@ -25,10 +25,8 @@ export function dynamicBg() {
       entries.forEach((entry, index) => {
         console.log('index: ' + index);
         if (entry.isIntersecting) {
-          entry.target.classList.add('bg-middle');
           intersectingEntries++;
         } else {
-          entry.target.classList.remove('bg-middle');
           intersectingEntries--;
         }
 
@@ -50,11 +48,6 @@ export function dynamicBg() {
     if (firstLoop) {
       entries.forEach((entry) => {
         console.log('first', entries);
-        if (entry.isIntersecting) {
-          entry.target.classList.add('bg-middle');
-        } else {
-          entry.target.classList.remove('bg-middle');
-        }
 
         console.log('totalEntries: ' + totalEntries);
         console.log('is intersecting: ' + entry.isIntersecting);
