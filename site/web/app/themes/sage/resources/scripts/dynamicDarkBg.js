@@ -5,7 +5,7 @@ export function dynamicBg() {
   let totalEntries = undefined;
   let firstTimeIntersectingEntries = undefined;
   let intersectingEntries = 0;
-  let firstLoop = false;
+  let firstLoop = true;
 
   function loadDynElements(entries) {
     if (typeof totalEntries === 'undefined') {
@@ -19,7 +19,8 @@ export function dynamicBg() {
     }
 
     // next loops
-    if (firstLoop) {
+    //-----------------------------------------------------------------------
+    if (!firstLoop) {
       console.log('next', entries);
       entries.forEach((entry, index) => {
         console.log('index: ' + index);
@@ -45,8 +46,8 @@ export function dynamicBg() {
     }
 
     // fist time loop
-
-    if (!firstLoop) {
+    //-----------------------------------------------------------------------
+    if (firstLoop) {
       entries.forEach((entry) => {
         console.log('first', entries);
         if (entry.isIntersecting) {
@@ -54,13 +55,14 @@ export function dynamicBg() {
         } else {
           entry.target.classList.remove('bg-middle');
         }
-        firstLoop = true;
 
         console.log('totalEntries: ' + totalEntries);
         console.log('is intersecting: ' + entry.isIntersecting);
         console.log('firstTimeIntersectingEntries: ' + firstTimeIntersectingEntries);
         console.log('intersectingEntries: ' + intersectingEntries);
       });
+
+      firstLoop = false;
 
       intersectingEntries = firstTimeIntersectingEntries;
 
