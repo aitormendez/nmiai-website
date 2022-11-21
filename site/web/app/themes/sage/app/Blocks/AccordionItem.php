@@ -108,7 +108,7 @@ class AccordionItem extends Block
     public function with()
     {
         return [
-            'padding' => $this->paddingStyles(),
+            'accordion_item' => $this->accordionItem(),
         ];
     }
 
@@ -125,6 +125,16 @@ class AccordionItem extends Block
             ->addText('accordion_item_label');
 
         return $section->build();
+    }
+
+    /**
+     * Return the accordion item label.
+     *
+     * @return array
+     */
+    public function accordionItem()
+    {
+        return get_field('accordion_item_label') ?: 'label';
     }
 
 

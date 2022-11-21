@@ -95,7 +95,7 @@ class AccordionContainer extends Block
         'align_content' => false,
         'full_height' => false,
         'anchor' => false,
-        'mode' => 'preview',
+        'mode' => 'false',
         'multiple' => true,
         'jsx' => true,
         'spacing' => [

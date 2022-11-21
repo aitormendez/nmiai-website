@@ -17,7 +17,8 @@
       <div class="labels flex w-full justify-between">
         <span
           class="start-text order-1 mr-4 font-serif font-bold dark:text-white md:order-none">{{ $section['start_text'] }}</span>
-        <span class="end-text order-1 font-serif font-bold italic md:order-none">{{ $section['end_text'] }}</span>
+        <span
+          class="end-text order-1 font-serif font-bold italic dark:text-white md:order-none">{{ $section['end_text'] }}</span>
       </div>
 
     </div>

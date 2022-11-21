@@ -5,3 +5,11 @@
 .wp-block {
   font-family: 'rigid-square', sans-serif;
 }
+
+.wp-block-acf-accordion-container {
+  .wp-block-acf-accordion-item:last-child {
+    .wp-block-accordion-item {
+      margin-bottom: 0;
+    }
+  }
+}
