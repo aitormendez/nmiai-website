@@ -1,4 +1,4 @@
-<header id="banner" class="banner text-dark fixed flex w-full justify-between pt-3 pb-10 transition-colors">
+<header id="banner" class="banner text-dark fixed flex w-full justify-between pt-3 pb-10 transition-all duration-500">
 
   @include('partials.navigation')
 

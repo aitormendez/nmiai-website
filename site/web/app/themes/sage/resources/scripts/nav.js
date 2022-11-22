@@ -22,7 +22,7 @@ export class nav {
       this.radio = Math.round(Math.hypot(window.innerWidth, window.innerHeight));
     });
 
-    // this.detectScroll();
+    this.detectScroll();
   }
 
   openDot() {
@@ -75,10 +75,14 @@ export class nav {
 
       if (this.oldDirection !== this.direction && this.direction === 'down') {
         this.removeBannerGradient();
+        this.banner.classList.add('opacity-0');
+        this.banner.classList.remove('opacity-100');
       }
 
       if (this.oldDirection !== this.direction && this.direction === 'up') {
         this.addBannerGradient();
+        this.banner.classList.add('opacity-100');
+        this.banner.classList.remove('opacity-0');
       }
 
       this.oldValue = this.newValue;
