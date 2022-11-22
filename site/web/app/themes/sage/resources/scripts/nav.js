@@ -8,6 +8,7 @@ export class nav {
     this.mainMenu = document.getElementById('main-menu');
     this.radio = Math.round(Math.hypot(window.innerWidth, window.innerHeight));
     this.banner = document.getElementById('banner');
+    this.tagLine = document.getElementById('tagline');
     this.scroll = '';
     this.oldValue = 0;
     this.newValue = 0;
@@ -77,12 +78,16 @@ export class nav {
         this.removeBannerGradient();
         this.banner.classList.add('opacity-0');
         this.banner.classList.remove('opacity-100');
+        this.tagLine.classList.add('opacity-0');
+        this.tagLine.classList.remove('opacity-100');
       }
 
       if (this.oldDirection !== this.direction && this.direction === 'up') {
         this.addBannerGradient();
         this.banner.classList.add('opacity-100');
         this.banner.classList.remove('opacity-0');
+        this.tagLine.classList.add('opacity-100');
+        this.tagLine.classList.remove('opacity-0');
       }
 
       this.oldValue = this.newValue;
