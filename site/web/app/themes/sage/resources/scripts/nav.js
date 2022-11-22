@@ -12,7 +12,7 @@ export class nav {
     this.scroll = '';
     this.oldValue = 0;
     this.newValue = 0;
-    this.oldDirection = 'down';
+    this.oldDirection = 'up';
     this.direction = '';
 
     this.btnDot.addEventListener('click', () => {
