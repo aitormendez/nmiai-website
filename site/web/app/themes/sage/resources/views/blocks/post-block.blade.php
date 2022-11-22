@@ -1,7 +1,7 @@
 <a href="{{ $post_block['permalink'] }}" class="{{ $block->classes }} block py-6" role="article">
 
   @if (array_key_exists('post_thumbnail_data', $post_block))
-    <img class="opacity-0" src="{{ $post_block['post_thumbnail_data']['src'][0] }}"
+    <img class="" src="{{ $post_block['post_thumbnail_data']['src'][0] }}"
       alt="{{ $post_block['post_thumbnail_data']['alt'] }}" srcset="{{ $post_block['post_thumbnail_data']['srcset'] }}"
       sizes="100%">
   @endif
@@ -23,7 +23,4 @@
   </div>
 
   <div class="my-6 text-2xl">{!! $post_block['post_excerpt'] !!}</div>
-
-  @if (array_key_exists('terms', $post_block))
-  @endif
 </a>
