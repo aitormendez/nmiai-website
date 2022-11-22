@@ -75,7 +75,7 @@ export class nav {
       }
 
       if (this.oldDirection !== this.direction && this.direction === 'down') {
-        this.removeBannerGradient();
+        // this.removeBannerGradient();
         this.banner.classList.add('opacity-0');
         this.banner.classList.remove('opacity-100');
         this.tagLine.classList.add('opacity-0');
@@ -83,7 +83,7 @@ export class nav {
       }
 
       if (this.oldDirection !== this.direction && this.direction === 'up') {
-        this.addBannerGradient();
+        // this.addBannerGradient();
         this.banner.classList.add('opacity-100');
         this.banner.classList.remove('opacity-0');
         this.tagLine.classList.add('opacity-100');

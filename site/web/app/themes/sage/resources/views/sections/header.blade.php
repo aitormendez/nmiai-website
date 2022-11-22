@@ -1,4 +1,5 @@
-<header id="banner" class="banner text-dark fixed flex w-full justify-between pt-3 pb-10 transition-all duration-500">
+<header id="banner"
+  class="banner text-dark fixed flex w-full justify-between bg-gradient-to-b from-white to-transparent pt-3 pb-10 transition-all duration-500">
 
   @include('partials.navigation')
 
@@ -9,7 +10,7 @@
 
 </header>
 
-<div id="tagline" class="text-light fixed top-3 hidden font-serif font-bold mix-blend-exclusion md:block">
+<div id="tagline" class="text-dark dark:text-light fixed top-3 hidden font-serif font-bold md:block">
   {{ get_bloginfo('description') }}
 </div>
 

@@ -1,6 +1,7 @@
 export function dynamicBg() {
   const dynamicElements = document.querySelectorAll('.is-style-dynamic');
   const htmlElement = document.querySelector('html');
+  const banner = document.getElementById('banner');
 
   let totalEntries = undefined;
   let firstTimeIntersectingEntries = undefined;
@@ -30,15 +31,19 @@ export function dynamicBg() {
           intersectingEntries--;
         }
 
-        console.log('totalEntries: ' + totalEntries);
-        console.log('is intersecting: ' + entry.isIntersecting);
-        console.log('firstTimeIntersectingEntries: ' + firstTimeIntersectingEntries);
-        console.log('intersectingEntries: ' + intersectingEntries);
+        // console.log('totalEntries: ' + totalEntries);
+        // console.log('is intersecting: ' + entry.isIntersecting);
+        // console.log('firstTimeIntersectingEntries: ' + firstTimeIntersectingEntries);
+        // console.log('intersectingEntries: ' + intersectingEntries);
 
         if (intersectingEntries > 0) {
           htmlElement.classList.add('is-style-dark');
+          banner.classList.add('from-dark');
+          banner.classList.remove('from-white');
         } else {
           htmlElement.classList.remove('is-style-dark');
+          banner.classList.add('from-white');
+          banner.classList.remove('from-dark');
         }
       });
     }
@@ -46,13 +51,13 @@ export function dynamicBg() {
     // fist time loop
     //-----------------------------------------------------------------------
     if (firstLoop) {
-      entries.forEach((entry) => {
+      entries.forEach(() => {
         console.log('first', entries);
 
-        console.log('totalEntries: ' + totalEntries);
-        console.log('is intersecting: ' + entry.isIntersecting);
-        console.log('firstTimeIntersectingEntries: ' + firstTimeIntersectingEntries);
-        console.log('intersectingEntries: ' + intersectingEntries);
+        // console.log('totalEntries: ' + totalEntries);
+        // console.log('is intersecting: ' + entry.isIntersecting);
+        // console.log('firstTimeIntersectingEntries: ' + firstTimeIntersectingEntries);
+        // console.log('intersectingEntries: ' + intersectingEntries);
       });
 
       firstLoop = false;
@@ -61,8 +66,12 @@ export function dynamicBg() {
 
       if (intersectingEntries === 0) {
         htmlElement.classList.remove('is-style-dark');
+        banner.classList.add('from-white');
+        banner.classList.remove('from-dark');
       } else {
         htmlElement.classList.add('is-style-dark');
+        banner.classList.add('from-dark');
+        banner.classList.remove('from-white');
       }
     }
   }
