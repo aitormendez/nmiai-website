@@ -4,7 +4,7 @@ export function animateProject() {
   setTimeout(function () {
     const articles = document.querySelectorAll('a[role="article"]');
     const bottoms = document.querySelectorAll('.bottom');
-    const imgs = document.querySelectorAll('#main img');
+    // const imgs = document.querySelectorAll('#main img');
 
     articles.forEach((article) => {
       const termsText = article.querySelector('.terms');
@@ -35,17 +35,17 @@ export function animateProject() {
       });
     };
 
-    const loadImgs = (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('opacity-100');
-          entry.target.classList.remove('opacity-0');
-        } else {
-          entry.target.classList.remove('opacity-100');
-          entry.target.classList.add('opacity-0');
-        }
-      });
-    };
+    // const loadImgs = (entries) => {
+    //   entries.forEach((entry) => {
+    //     if (entry.isIntersecting) {
+    //       entry.target.classList.add('opacity-100');
+    //       entry.target.classList.remove('opacity-0');
+    //     } else {
+    //       entry.target.classList.remove('opacity-100');
+    //       entry.target.classList.add('opacity-0');
+    //     }
+    //   });
+    // };
 
     const observerBars = new IntersectionObserver(loadBars, {
       root: null,
@@ -53,19 +53,19 @@ export function animateProject() {
       // threshold: 0.5,
     });
 
-    const observerImgs = new IntersectionObserver(loadImgs, {
-      root: null,
-      rootMargin: '0px',
-      // threshold: 0.5,
-    });
+    // const observerImgs = new IntersectionObserver(loadImgs, {
+    //   root: null,
+    //   rootMargin: '0px',
+    //   // threshold: 0.5,
+    // });
 
     bottoms.forEach((article) => {
       observerBars.observe(article);
     });
 
-    imgs.forEach((img) => {
-      observerImgs.observe(img);
-    });
+    // imgs.forEach((img) => {
+    //   observerImgs.observe(img);
+    // });
   }, 300);
 
   const growBar = (bar, endText) => {

@@ -8,7 +8,7 @@
     <?php wp_head(); ?>
   </head>
 
-  <body <?php body_class('dark:bg-dark transition-colors duration-1000'); ?>>
+  <body <?php body_class('dark:bg-dark bg-white transition-colors duration-1000'); ?>>
     <?php wp_body_open(); ?>
     <?php do_action('get_header'); ?>
 

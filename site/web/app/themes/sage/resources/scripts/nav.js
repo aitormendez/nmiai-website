@@ -1,5 +1,5 @@
 import gsap from 'gsap';
-import tailwindConfig from '../../tailwind.config.cjs';
+// import tailwindConfig from '../../tailwind.config.cjs';
 
 export class nav {
   constructor() {
@@ -22,7 +22,7 @@ export class nav {
       this.radio = Math.round(Math.hypot(window.innerWidth, window.innerHeight));
     });
 
-    this.detectScroll();
+    // this.detectScroll();
   }
 
   openDot() {
@@ -47,13 +47,13 @@ export class nav {
   closeDot() {
     gsap.to(this.mainMenu, {
       overwrite: true,
-      clipPath: 'circle(0.5rem at calc(100vw - 3rem) 1.5rem)',
+      clipPath: 'circle(0px at calc(100vw - 3rem) 1.5rem)',
       duration: 0.5,
     });
 
     gsap.to(this.btnDot, {
       overwrite: true,
-      backgroundColor: tailwindConfig.theme.colors.dark,
+      // backgroundColor: tailwindConfig.theme.colors.dark,
       duration: 0.5,
     });
 

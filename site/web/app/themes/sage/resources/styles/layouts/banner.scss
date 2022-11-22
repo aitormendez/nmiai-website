@@ -1,11 +1,11 @@
 .banner {
   background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 36%, rgba(255, 255, 255, 0) 100%);
+}
 
-  #btnDot {
-    left: calc(100vw - 3.5rem);
-  }
+#tagline {
+  right: 3rem;
+}
 
-  #tagline {
-    right: 3rem;
-  }
+#btnDot {
+  left: calc(100vw - 3.5rem);
 }
