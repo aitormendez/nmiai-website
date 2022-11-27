@@ -39,3 +39,11 @@ register_block_style(
             'label' => __( 'Column', 'sage' ),
         ]
     );
+
+register_block_style(
+    'core/columns',
+        [
+            'name'  => 'column',
+            'label' => __( 'Column', 'sage' ),
+        ]
+    );

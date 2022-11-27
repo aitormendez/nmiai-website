@@ -1,9 +1,13 @@
-<li class="accordion-group {{ $block->classes }} mb-6 p-6 transition-colors duration-1000 last:pb-0 dark:text-white">
+<li
+  class="accordion-group {{ $block->classes }} mb-6 max-w-none border-b py-10 transition-colors duration-1000 last:mb-0 dark:text-white">
   <div class="accordion-menu cursor-pointer select-none">
     <h2 class="text-4xl uppercase md:text-5xl lg:text-6xl">{{ $accordion_item }}</h2>
-    <div class="my-4 w-10">
-      <svg viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M13 16V29L16 29V16H29V13H16V0H13V13H0V16H13Z" class="fill-dark dark:fill-white" />
+    <div class="relative mt-10 mb-10 w-10">
+      <svg viewBox="0 0 29 3" fill="none" xmlns="http://www.w3.org/2000/svg" class="spin absolute">
+        <rect width="29" height="3" fill="none" class="fill-dark dark:fill-white" />
+      </svg>
+      <svg viewBox="0 0 29 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="29" height="3" fill="none" class="fill-dark dark:fill-white" />
       </svg>
     </div>
   </div>

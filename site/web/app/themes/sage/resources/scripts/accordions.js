@@ -8,9 +8,10 @@ export function accordion() {
   menus.forEach((menu) => {
     let box = menu.parentNode.querySelector('.accordion-content'),
       items = box.querySelectorAll('li'),
-      isOpen = false;
+      isOpen = false,
+      spin = menu.querySelector('.spin');
 
-    gsap.set(items, {y: -30});
+    gsap.set(spin, {rotation: 90});
 
     menu.open = () => {
       if (!isOpen) {
@@ -19,16 +20,13 @@ export function accordion() {
         openMenu = menu;
         gsap.to(box, {
           height: 'auto',
-          duration: 1,
-          ease: 'elastic',
+          duration: 0.5,
           overwrite: true,
         });
-        gsap.to(items, {
-          y: 0,
+        gsap.to(spin, {
+          rotation: '0',
+          duration: 0.5,
           overwrite: true,
-          duration: 1.5,
-          stagger: 0.1,
-          ease: 'elastic',
         });
       }
     };
@@ -41,6 +39,11 @@ export function accordion() {
           height: 0,
           overwrite: true,
           onComplete: () => gsap.set(items, {y: -30, overwrite: true}),
+        });
+        gsap.to(spin, {
+          rotation: '90',
+          duration: 0.5,
+          overwrite: true,
         });
       }
     };

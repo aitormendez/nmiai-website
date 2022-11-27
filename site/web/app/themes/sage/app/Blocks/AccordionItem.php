@@ -100,6 +100,18 @@ class AccordionItem extends Block
         'jsx' => true,
     ];
 
+        /**
+     * The block styles.
+     *
+     * @var array
+     */
+    public $styles = [
+        [
+            'name' => 'column',
+            'label' => 'Column',
+        ]
+    ];
+
     /**
      * Data to be passed to the block before rendering.
      *

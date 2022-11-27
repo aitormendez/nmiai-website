@@ -15,6 +15,16 @@ module.exports = {
       black: '#000000',
     },
     extend: {
+      typography: {
+        '3xl': {
+          css: {
+            fontSize: '2.25rem',
+            h1: {
+              fontSize: '4rem',
+            },
+          },
+        },
+      },
       screens: {
         xs: '300px',
       },

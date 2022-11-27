@@ -122,6 +122,10 @@ class AccordionContainer extends Block
         [
             'name' => 'dynamic',
             'label' => 'Dynamic',
+        ],
+        [
+            'name' => 'column',
+            'label' => 'Column',
         ]
     ];
 
