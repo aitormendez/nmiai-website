@@ -20,3 +20,26 @@
 .is-style-dark #main * {
   color: white;
 }
+
+.is-style-column {
+  @media (min-width: 640px) {
+    padding-right: 3rem;
+    padding-left: 3rem;
+  }
+  @media (min-width: 768px) {
+    padding-right: 6rem;
+    padding-left: 6rem;
+  }
+  @media (min-width: 1024px) {
+    padding-right: 9rem;
+    padding-left: 9rem;
+  }
+  @media (min-width: 1280px) {
+    padding-right: 12rem;
+    padding-left: 12rem;
+  }
+  @media (min-width: 1536px) {
+    padding-right: 15rem;
+    padding-left: 15rem;
+  }
+}
