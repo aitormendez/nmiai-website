@@ -16,7 +16,7 @@
       {!! $title !!}</h1>
   </div>
 @else
-  <div class="page-header flex justify-center px-6 text-center">
-    <h1 class="text-4xl font-bold uppercase">{!! $title !!}</h1>
+  <div class="page-header not-prose flex justify-center px-6 py-20 text-center">
+    <h1 class="text-4xl font-bold uppercase md:text-5xl lg:text-7xl xl:text-8xl">{!! $title !!}</h1>
   </div>
 @endif
