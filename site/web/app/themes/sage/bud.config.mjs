@@ -46,8 +46,7 @@ export default async (app) => {
     .setPublicPath('/app/themes/sage/public/');
 
   app.wpjson
-    .settings(
-      {
+    .settings({
       layout: {
         contentSize: '840px',
         wideSize: '1100px',
@@ -70,15 +69,15 @@ export default async (app) => {
         units: ['px', '%', 'em', 'rem', 'vw', 'vh'],
       },
       typography: {
-        customFontSize: false,
+        customFontSize: true,
+        fluid: true,
       },
     })
     .useTailwindColors()
     .useTailwindFontFamily()
     .enable();
 
-    // app.wpjson.settings((theme) =>
-    //   theme.set("blocks.core/group.spacing.padding", false)
-    // );
-
+  // app.wpjson.settings((theme) =>
+  //   theme.set("blocks.core/group.spacing.padding", false)
+  // );
 };

@@ -177,8 +177,20 @@ add_action('pre_get_posts', function ($query) {
 });
 
 
-
+/**
+* Allow SVG
+*/
 add_filter('upload_mimes', 	function($mimes) {
     $mimes['svg'] = 'image/svg+xml';
     return $mimes;
 });
+
+
+/**
+* Allow HTML in post titles: [span class="outlined light"]
+*/
+add_filter( 'the_title', function($var) {
+    $var = (str_replace( '[', '<', $var ));
+    $var = (str_replace( ']', '>', $var ));
+    return $var ;
+} );

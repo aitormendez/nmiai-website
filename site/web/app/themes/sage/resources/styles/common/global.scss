@@ -21,12 +21,12 @@ body {
 }
 
 .outlined {
-  -webkit-text-stroke: 2px white;
-  color: var(--dark);
+  -webkit-text-stroke: 2px var(--dark);
+  color: white;
 
-  &.light {
-    -webkit-text-stroke: 2px var(--dark);
-    color: white;
+  &.dark {
+    -webkit-text-stroke: 2px white;
+    color: var(--dark);
   }
 }
 
