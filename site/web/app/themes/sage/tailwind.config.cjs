@@ -16,11 +16,12 @@ module.exports = {
     },
     extend: {
       typography: {
-        // DEFAULT: {
-        //   css: {
-        //     lineHeight: '1.8em',
-        //   },
-        // },
+        DEFAULT: {
+          color: '#2f2f2f',
+          css: {
+            lineHeight: '1.4',
+          },
+        },
         '3xl': {
           css: {
             fontSize: '2.25rem',

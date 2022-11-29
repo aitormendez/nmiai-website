@@ -21,10 +21,12 @@ const main = async (err) => {
     const {animateProject} = await import('./animateProject.js');
     const {quotesSlider} = await import('./sliders.js');
     const {accordion} = await import('./accordions.js');
+    const {people} = await import('./people.js');
     animateProject();
     quotesSlider();
     dynamicBg();
     accordion();
+    people();
   }
 
   if (document.body.classList.contains('post-type-archive-project')) {

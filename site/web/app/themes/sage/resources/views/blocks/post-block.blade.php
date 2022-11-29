@@ -1,4 +1,4 @@
-<a href="{{ $post_block['permalink'] }}" class="{{ $block->classes }} block py-6" role="article">
+<a href="{{ $post_block['permalink'] }}" class="{{ $block->classes }} not-prose block py-6" role="article">
 
   @if (array_key_exists('post_thumbnail_data', $post_block))
     <img class="" src="{{ $post_block['post_thumbnail_data']['src'][0] }}"

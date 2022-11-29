@@ -28,6 +28,11 @@ body {
     -webkit-text-stroke: 2px white;
     color: var(--dark);
   }
+
+  .is-style-dark #main & {
+    -webkit-text-stroke: 2px white;
+    color: var(--dark);
+  }
 }
 
 .terms {

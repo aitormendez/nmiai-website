@@ -2,7 +2,6 @@ import gsap from 'gsap';
 
 export function accordion() {
   const menus = gsap.utils.toArray('.accordion-menu');
-  console.log(menus);
   let openMenu;
 
   menus.forEach((menu) => {
