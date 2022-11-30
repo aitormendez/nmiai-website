@@ -36,17 +36,16 @@ export default async (app) => {
      */
     .serve({
       host: '0.0.0.0',
-      cert: app.path('/Users/aitor/Library/Application Support/mkcert/0.0.0.0.pem'),
-      key: app.path('/Users/aitor/Library/Application Support/mkcert/0.0.0.0-key.pem'),
+      cert: app.path('/Users/aitor/Library/Application Support/mkcert/nomanisanisland.test+3.pem'),
+      key: app.path('/Users/aitor/Library/Application Support/mkcert/nomanisanisland.test+3-key.pem'),
     })
 
     /**
      * URI of the `public` directory
      */
-    .setPublicPath('/app/themes/sage/public/');
+    .setPublicPath('/app/themes/sage/public/')
 
-  app.wpjson
-    .settings({
+    .wpjson.settings({
       layout: {
         contentSize: '840px',
         wideSize: '1100px',
