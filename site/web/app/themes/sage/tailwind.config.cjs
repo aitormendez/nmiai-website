@@ -1,6 +1,7 @@
 module.exports = {
   darkMode: ['class', '.is-style-dark'],
   content: ['./index.php', './app/**/*.php', './resources/**/*.{php,vue,js}'],
+  safelist: ['gap-0', 'gap-1', 'gap-2', 'gap-3'],
   theme: {
     fontFamily: {
       rigid: ['rigid-square', 'sans-serif'],
@@ -9,6 +10,7 @@ module.exports = {
     },
     colors: {
       dark: '#2f2f2f',
+      midup: '#565656',
       middle: '#969393',
       light: '#e3e3e3',
       white: '#ffffff',

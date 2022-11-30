@@ -90,7 +90,7 @@ class People extends Block
      * @var array
      */
     public $supports = [
-        'align' => true,
+        'align' => false,
         'align_text' => false,
         'align_content' => false,
         'full_height' => false,
@@ -156,39 +156,60 @@ class People extends Block
         $people = new FieldsBuilder('people');
 
         $people
+            ->addButtonGroup('people_content_type', [
+                'label' => __('Content type', 'sage'),
+                'instructions' => '',
+                'choices' => [
+                    'video' => __('Video', 'sage'),
+                    'img' => __('Image', 'sage'),
+                ],
+                'allow_null' => 0,
+                'default_value' => 'video',
+                'layout' => 'horizontal',
+                'return_format' => 'value',
+            ])
+            ->addImage('people_image', [
+                'label' => __('Image', 'sage'),
+                'instructions' => '',
+                'return_format' => 'array',
+                'preview_size' => 'medium',
+                'library' => 'all',
+            ])
+                ->conditional('people_content_type', '==', 'img')
             ->addText('people_video_zone', [
                 'label' => __('Bunny.net video zone', 'sage'),
                 'default_value' => 'vz-3b6a9b31-e3a',
-                'required' => 1,
                 'placeholder' => '',
                 'prepend' => '',
                 'append' => '',
                 'maxlength' => '',
             ])
+                ->conditional('people_content_type', '==', 'video')
             ->addText('people_video_id', [
                 'label' => __('Video ID', 'sage'),
                 'default_value' => '6ea813d4-bd21-439f-8d1a-02f0645a51fa',
             ])
+                ->conditional('people_content_type', '==', 'video')
             ->addText('people_video_poster', [
                 'label' => __('Video poster', 'sage'),
                 'default_value' => 'https://vz-3b6a9b31-e3a.b-cdn.net/6ea813d4-bd21-439f-8d1a-02f0645a51fa/thumbnail_9e3e7e72.jpg',
+            ])
+                ->conditional('people_content_type', '==', 'video')
+            ->addText('people_short_name', [
+                'label' => __('Person short name', 'sage'),
                 'required' => 1,
             ])
             ->addText('people_name', [
                 'label' => __('Person name', 'sage'),
-                'required' => 1,
             ])
             ->addText('people_title', [
                 'label' => __('Person title', 'sage'),
-                'required' => 1,
             ])
             ->addTextarea('people_text', [
                 'label' => __('Person text', 'sage'),
-                'required' => 1,
             ])
             ->addText('people_email', [
                 'label' => __('Person email', 'sage'),
-                'required' => 1,
             ]);
 
         return $people->build();
@@ -202,6 +223,9 @@ class People extends Block
     public function person()
     {
         $person = [
+            'people_content_type' => get_field('people_content_type'),
+            'people_image' => get_field('people_image'),
+            'people_short_name' => get_field('people_short_name'),
             'people_name' => get_field('people_name'),
             'people_video_zone' => get_field('people_video_zone'),
             'people_video_id' => get_field('people_video_id'),
@@ -210,6 +234,10 @@ class People extends Block
             'people_email' => get_field('people_email'),
             'people_title' => get_field('people_title'),
         ];
+
+        if (!empty($person['people_image'])) {
+            $person['people_image_src'] = wp_get_attachment_image_src($person['people_image']['id'], 'large');
+        };
 
         return $person;
     }
