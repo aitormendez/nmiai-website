@@ -83,6 +83,13 @@
           "fontFamily": "linotype-sabon,serif"
         }
       ]
+    },
+    "blocks": {
+      "acf/section": {
+        "spacing": {
+          "padding": true
+        }
+      }
     }
   }
 }

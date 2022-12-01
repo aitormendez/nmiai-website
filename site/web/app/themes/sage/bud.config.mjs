@@ -76,7 +76,5 @@ export default async (app) => {
     .useTailwindFontFamily()
     .enable();
 
-  // app.wpjson.settings((theme) =>
-  //   theme.set("blocks.core/group.spacing.padding", false)
-  // );
+  app.wpjson.settings((theme) => theme.set('blocks.acf/section.spacing.padding', true));
 };
