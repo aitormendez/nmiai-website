@@ -1,5 +1,5 @@
 <section class="{{ $block->classes }}">
-  <div class="p-6">
+  <div class="p-10">
     <div class="bottom my-6 flex flex-wrap items-center justify-between md:justify-start">
 
       <div class="progress relative mb-4 flex w-full items-center justify-between">
