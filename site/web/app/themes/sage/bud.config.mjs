@@ -36,6 +36,7 @@ export default async (app) => {
      */
     .serve({
       host: '0.0.0.0',
+      port: 3000,
       cert: app.path('/Users/aitor/Library/Application Support/mkcert/nomanisanisland.test+3.pem'),
       key: app.path('/Users/aitor/Library/Application Support/mkcert/nomanisanisland.test+3-key.pem'),
     })
