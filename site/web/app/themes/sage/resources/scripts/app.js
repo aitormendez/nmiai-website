@@ -1,6 +1,7 @@
 import {domReady} from '@roots/sage/client';
 import {nav} from './nav.js';
 import {renderHeader} from './lottieApp.js';
+import {cursor} from './cursor.js';
 
 /**
  * app.main
@@ -15,6 +16,7 @@ const main = async (err) => {
   new nav();
 
   renderHeader();
+  cursor();
 
   if (document.body.classList.contains('post-type-archive-project') || document.body.classList.contains('page')) {
     const {dynamicBg} = await import('./dynamicDarkBg.js');
