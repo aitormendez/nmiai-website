@@ -5,7 +5,8 @@ export function cursor() {
   const cursorCircle = cursor.querySelector('circle');
 
   document.addEventListener('mousemove', function (event) {
-    // console.log(event);
+    console.log(event.clientY);
+    console.log(cursor.style.top);
     cursor.style.top = event.clientY - 20;
     cursor.style.left = event.clientX - 20;
   });
