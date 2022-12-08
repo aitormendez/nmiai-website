@@ -1,6 +1,6 @@
 <li
   class="accordion-group {{ $block->classes }} mb-6 max-w-none border-b py-10 transition-colors duration-1000 last:mb-0 dark:text-white">
-  <div class="accordion-menu cursor-pointer select-none">
+  <a class="accordion-menu block cursor-pointer select-none">
     <h2 class="text-4xl uppercase md:text-5xl lg:text-6xl">{{ $accordion_item }}</h2>
     <div class="relative mt-10 mb-10 w-10">
       <svg viewBox="0 0 29 3" fill="none" xmlns="http://www.w3.org/2000/svg" class="spin absolute">
@@ -10,7 +10,7 @@
         <rect width="29" height="3" fill="none" class="fill-dark dark:fill-white" />
       </svg>
     </div>
-  </div>
+  </a>
   <div class="accordion-content h-0 overflow-hidden">
     <InnerBlocks />
   </div>
