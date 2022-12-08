@@ -1,7 +1,6 @@
 import {domReady} from '@roots/sage/client';
 import {nav} from './nav.js';
 import {renderHeader} from './lottieApp.js';
-// import {cursor} from './cursor.js';
 
 /**
  * app.main
