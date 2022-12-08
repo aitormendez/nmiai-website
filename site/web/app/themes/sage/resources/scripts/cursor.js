@@ -3,10 +3,27 @@ import gsap from 'gsap';
 export function cursor() {
   const cursor = document.getElementById('cursor');
   const cursorCircle = cursor.querySelector('circle');
+  let w = window.innerWidth;
+  let h = window.innerHeight;
+
+  window.onresize = function () {
+    w = window.innerWidth;
+    h = window.innerHeight;
+
+    console.log(w, h);
+  };
 
   document.addEventListener('mousemove', function (event) {
+    console.log(event.clientY, h);
+    // console.log(event.clientY);
     cursor.style.top = event.clientY - 20 + 'px';
     cursor.style.left = event.clientX - 20 + 'px';
+
+    if (event.clientX >= 1 && event.clientX <= w - 21 && event.clientY >= 1 && event.clientY <= h - 2) {
+      displayCursor();
+    } else {
+      hiddeCursor();
+    }
   });
 
   document.addEventListener('mouseover', (e) => {
@@ -43,5 +60,13 @@ export function cursor() {
       stroke: '#fff',
       duration: '0.2',
     });
+  }
+
+  function displayCursor() {
+    cursor.style.display = 'block';
+  }
+
+  function hiddeCursor() {
+    cursor.style.display = 'none';
   }
 }
