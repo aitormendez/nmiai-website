@@ -19,12 +19,13 @@ export function accordion() {
         openMenu = menu;
         gsap.to(box, {
           height: 'auto',
-          duration: 0.5,
+          duration: 2,
           overwrite: true,
+          ease: 'power4.out',
         });
         gsap.to(spin, {
           rotation: '0',
-          duration: 0.5,
+          duration: 2,
           overwrite: true,
         });
       }
@@ -36,12 +37,14 @@ export function accordion() {
         openMenu = null;
         gsap.to(box, {
           height: 0,
+          duration: 2,
           overwrite: true,
+          ease: 'power4.out',
           onComplete: () => gsap.set(items, {y: -30, overwrite: true}),
         });
         gsap.to(spin, {
           rotation: '90',
-          duration: 0.5,
+          duration: 2,
           overwrite: true,
         });
       }
