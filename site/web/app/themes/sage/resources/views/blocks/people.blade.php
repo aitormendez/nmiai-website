@@ -1,5 +1,5 @@
 <div class="{{ $block->classes }} not-prose mb-3">
-  <div class="wrapper relative h-full w-full">
+  <a class="wrapper relative block h-full w-full">
     <div class="text hidden">@wpautop($person['people_text'])</div>
 
     @if ($person['people_content_type'] === 'video')
@@ -52,5 +52,5 @@
         @endif
       </div>
     </div>
-  </div>
+  </a>
 </div>

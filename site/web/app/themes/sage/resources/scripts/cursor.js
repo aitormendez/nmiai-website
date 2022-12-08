@@ -15,7 +15,7 @@ export function cursor() {
     cursor.style.top = event.clientY - 20 + 'px';
     cursor.style.left = event.clientX - 20 + 'px';
 
-    if (event.clientX >= 1 && event.clientX <= w - 21 && event.clientY >= 1 && event.clientY <= h - 2) {
+    if (event.clientX >= 5 && event.clientX <= w - 25 && event.clientY >= 1 && event.clientY <= h - 5) {
       displayCursor();
     } else {
       hiddeCursor();
