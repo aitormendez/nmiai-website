@@ -1,7 +1,7 @@
 import {domReady} from '@roots/sage/client';
 import {nav} from './nav.js';
 import {renderHeader} from './lottieApp.js';
-import {cursor} from './cursor.js';
+// import {cursor} from './cursor.js';
 
 /**
  * app.main
@@ -12,11 +12,18 @@ const main = async (err) => {
     console.error(err);
   }
 
+  const mdMin = window.matchMedia('(min-width: 768px)');
+
   // application code
   new nav();
 
   renderHeader();
-  cursor();
+
+  if (mdMin.matches) {
+    console.log('match');
+    const {cursor} = await import('./cursor.js');
+    cursor();
+  }
 
   if (document.body.classList.contains('post-type-archive-project') || document.body.classList.contains('page')) {
     const {dynamicBg} = await import('./dynamicDarkBg.js');

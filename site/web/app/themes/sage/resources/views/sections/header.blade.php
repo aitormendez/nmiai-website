@@ -16,14 +16,7 @@
 
 <button id="btnDot" class="bg-light fixed top-4 h-4 w-4 rounded-full mix-blend-exclusion"></button>
 
-<svg id="cursor" class="pointer-events-none fixed z-50 mix-blend-exclusion" width="20" height="20"
-  viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="10" cy="10" r="10" />
-
-  <style>
-    circle {
-      fill: #e4e4e4;
-      mix-blend-mode: screen;
-    }
-  </style>
+<svg id="cursor" class="pointer-events-none fixed z-50 mix-blend-exclusion" width="40" height="40"
+  viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="20" cy="20" r="18" fill="#000" stroke="#fff" />
 </svg>

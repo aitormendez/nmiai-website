@@ -3,7 +3,6 @@ export function people() {
   const mainFlap = document.querySelector('#main-flap');
   const mainFlapContent = document.querySelector('.flap-content');
   const closeBtn = mainFlap.querySelector('button');
-  console.log(closeBtn);
 
   peopleBlocks.forEach(function (block) {
     let peopleText = block.querySelector('.text').innerHTML;
