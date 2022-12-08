@@ -9,13 +9,9 @@ export function cursor() {
   window.onresize = function () {
     w = window.innerWidth;
     h = window.innerHeight;
-
-    console.log(w, h);
   };
 
   document.addEventListener('mousemove', function (event) {
-    console.log(event.clientY, h);
-    // console.log(event.clientY);
     cursor.style.top = event.clientY - 20 + 'px';
     cursor.style.left = event.clientX - 20 + 'px';
 
@@ -39,10 +35,6 @@ export function cursor() {
   });
 
   function over() {
-    console.log('mouseover');
-    // cursorCircle.setAttribute('r', 10);
-    console.log(cursorCircle);
-
     gsap.to(cursorCircle, {
       r: '8',
       fill: '#fff',
@@ -52,8 +44,6 @@ export function cursor() {
   }
 
   function out() {
-    console.log('mouseout');
-    // cursorCircle.setAttribute('r', 20);
     gsap.to(cursorCircle, {
       r: '18',
       fill: '#000',
