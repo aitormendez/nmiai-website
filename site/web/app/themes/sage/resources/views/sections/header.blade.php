@@ -1,5 +1,5 @@
 <header id="banner"
-  class="banner text-dark fixed flex w-full justify-between bg-gradient-to-b from-white to-transparent pt-3 pb-10 transition-all duration-500">
+  class="banner text-dark dark:text-light fixed flex w-full justify-between bg-gradient-to-b from-white to-transparent pt-3 pb-10 transition-all duration-500">
 
   <a class="brand relative ml-6 text-lg uppercase" href="{{ home_url('/') }}">
     <span class="mr-3 align-middle">No</span><span class="align-middle text-2xl">{{ $emoji['header_emoji'] }}</span><span
