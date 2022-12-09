@@ -14,7 +14,7 @@
         </svg>
       </div>
 
-      <div class="labels flex w-full justify-between">
+      <div class="labels fade flex w-full justify-between">
         <span
           class="start-text order-1 mr-4 font-serif font-bold dark:text-white md:order-none">{{ $section['start_text'] }}</span>
         <span

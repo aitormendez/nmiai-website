@@ -22,6 +22,6 @@
       <span class="end-text order-1 font-serif font-bold italic md:order-none">{{ $post_block['end_text'] }}</span>
     </div>
 
-    <div class="my-6 text-2xl">{!! $post_block['post_excerpt'] !!}</div>
+    <div class="fade my-6 text-2xl">{!! $post_block['post_excerpt'] !!}</div>
   </a>
 </article>

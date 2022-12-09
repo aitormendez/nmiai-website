@@ -22,9 +22,7 @@ export function dynamicBg() {
     // next loops
     //-----------------------------------------------------------------------
     if (!firstLoop) {
-      console.log('next', entries);
-      entries.forEach((entry, index) => {
-        console.log('index: ' + index);
+      entries.forEach((entry) => {
         if (entry.isIntersecting) {
           intersectingEntries++;
         } else {
@@ -51,14 +49,13 @@ export function dynamicBg() {
     // fist time loop
     //-----------------------------------------------------------------------
     if (firstLoop) {
-      entries.forEach(() => {
-        console.log('first', entries);
-
-        // console.log('totalEntries: ' + totalEntries);
-        // console.log('is intersecting: ' + entry.isIntersecting);
-        // console.log('firstTimeIntersectingEntries: ' + firstTimeIntersectingEntries);
-        // console.log('intersectingEntries: ' + intersectingEntries);
-      });
+      // entries.forEach(() => {
+      //   console.log('first', entries);
+      //   console.log('totalEntries: ' + totalEntries);
+      //   console.log('is intersecting: ' + entry.isIntersecting);
+      //   console.log('firstTimeIntersectingEntries: ' + firstTimeIntersectingEntries);
+      //   console.log('intersectingEntries: ' + intersectingEntries);
+      // });
 
       firstLoop = false;
 

@@ -4,7 +4,12 @@ export function animateProject() {
   setTimeout(function () {
     const articles = document.querySelectorAll('a[role="article"]');
     const bottoms = document.querySelectorAll('.bottom');
-    // const imgs = document.querySelectorAll('#main img');
+    const fades = document.querySelectorAll('.fade');
+
+    gsap.set('.fade', {
+      y: '100px',
+      opacity: '0',
+    });
 
     articles.forEach((article) => {
       const termsText = article.querySelector('.terms');
@@ -35,37 +40,37 @@ export function animateProject() {
       });
     };
 
-    // const loadImgs = (entries) => {
-    //   entries.forEach((entry) => {
-    //     if (entry.isIntersecting) {
-    //       entry.target.classList.add('opacity-100');
-    //       entry.target.classList.remove('opacity-0');
-    //     } else {
-    //       entry.target.classList.remove('opacity-100');
-    //       entry.target.classList.add('opacity-0');
-    //     }
-    //   });
-    // };
+    const loadFades = (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          // entry.target.style.opacity = '1';
+          fadeIn(entry.target);
+        } else {
+          // entry.target.style.opacity = '0';
+          fadeOut(entry.target);
+        }
+      });
+    };
 
     const observerBars = new IntersectionObserver(loadBars, {
       root: null,
-      rootMargin: '0px',
+      // rootMargin: '0px',
       // threshold: 0.5,
     });
 
-    // const observerImgs = new IntersectionObserver(loadImgs, {
-    //   root: null,
-    //   rootMargin: '0px',
-    //   // threshold: 0.5,
-    // });
+    const observerFade = new IntersectionObserver(loadFades, {
+      root: null,
+      // rootMargin: '100px',
+      // threshold: 0.5,
+    });
 
     bottoms.forEach((article) => {
       observerBars.observe(article);
     });
 
-    // imgs.forEach((img) => {
-    //   observerImgs.observe(img);
-    // });
+    fades.forEach((fade) => {
+      observerFade.observe(fade);
+    });
   }, 300);
 
   const growBar = (bar, endText) => {
@@ -97,6 +102,24 @@ export function animateProject() {
     tl.to(endText, {
       opacity: '0.4',
       duration: '0.3',
+    });
+  };
+
+  const fadeIn = (fade) => {
+    gsap.to(fade, {
+      y: '0',
+      opacity: '1',
+      duration: '2',
+      overwrite: true,
+      ease: 'power4.out',
+    });
+  };
+
+  const fadeOut = (fade) => {
+    gsap.set(fade, {
+      y: '100px',
+      opacity: '0',
+      overwrite: true,
     });
   };
 }

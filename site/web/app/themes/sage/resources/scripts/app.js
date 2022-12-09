@@ -19,7 +19,6 @@ const main = async (err) => {
   renderHeader();
 
   if (mdMin.matches) {
-    console.log('match');
     const {cursor} = await import('./cursor.js');
     cursor();
   }
