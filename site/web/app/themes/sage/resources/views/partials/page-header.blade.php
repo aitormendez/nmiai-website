@@ -13,10 +13,21 @@
     <div data-json-path="{{ $header_json['url'] }}" data-json-autoplay="@field('json_header_autoplay')"
       data-json-loop="@field('json_header_loop')" id="header-animation" class="{!! $div_json_classes !!} -z-10 max-w-screen-md"></div>
     <h1 class="{!! $h1_classes !!} xs:text-5xl text-center text-4xl font-bold uppercase lg:text-8xl">
-      {!! $title !!}</h1>
+      @if ($header_html)
+        {!! $header_html !!}
+      @else
+        {!! $title !!}
+      @endif
+    </h1>
   </div>
 @else
   <div class="page-header not-prose flex justify-center px-6 py-20 text-center">
-    <h1 class="text-4xl font-bold uppercase md:text-5xl lg:text-7xl xl:text-8xl">{!! $title !!}</h1>
+    <h1 class="text-4xl font-bold uppercase md:text-5xl lg:text-7xl xl:text-8xl">
+      @if ($header_html)
+        {!! $header_html !!}
+      @else
+        {!! $title !!}
+      @endif
+    </h1>
   </div>
 @endif

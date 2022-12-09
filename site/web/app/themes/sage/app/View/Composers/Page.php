@@ -4,7 +4,7 @@ namespace App\View\Composers;
 
 use Roots\Acorn\View\Composer;
 
-class headerJson extends Composer
+class Page extends Composer
 {
     /**
      * List of views served by this composer.
@@ -24,18 +24,28 @@ class headerJson extends Composer
     {
         return [
             'header_json' => $this->headerJson(),
+            'header_html' => $this->headerHtml(),
             'json_on_mobile' => $this->jsonOnMobile(),
         ];
     }
 
 
     /**
-     * Returns an emoji per PHP session.
+     * Returns json.
      *
      */
     public function headerJson()
     {
         return get_field('json_header_json');
+    }
+
+    /**
+     * Returns HTML header.
+     *
+     */
+    public function headerHtml()
+    {
+        return get_field('page_title');
     }
 
     /**
