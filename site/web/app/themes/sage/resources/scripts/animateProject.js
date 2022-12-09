@@ -7,7 +7,7 @@ export function animateProject() {
     const fades = document.querySelectorAll('.fade');
 
     gsap.set('.fade', {
-      y: '100px',
+      y: '50px',
       opacity: '0',
     });
 
@@ -117,7 +117,7 @@ export function animateProject() {
 
   const fadeOut = (fade) => {
     gsap.set(fade, {
-      y: '100px',
+      y: '50px',
       opacity: '0',
       overwrite: true,
     });
