@@ -20,7 +20,7 @@ class StartEnd extends Partial
             ->addText('generic_block_start_text', [
                 'label' => __('Start text', 'sage'),
                 'instructions' => '',
-                'default_value' => '01',
+                'default_value' => '',
                 'placeholder' => '',
                 'prepend' => '',
                 'append' => '',
@@ -29,7 +29,7 @@ class StartEnd extends Partial
             ->addText('generic_block_end_text', [
                 'label' => __('End text', 'sage'),
                 'instructions' => '',
-                'default_value' => 'Post title',
+                'default_value' => '',
                 'placeholder' => '',
                 'prepend' => '',
                 'append' => '',

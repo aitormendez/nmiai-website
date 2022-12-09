@@ -167,14 +167,15 @@ add_filter('upload_mimes', function($mimes) {
 
 /**
 * For second loop in project archive
+* Finalmente se eliminó el segundo loop
 */
-add_action('pre_get_posts', function ($query) {
-    if ( ! is_admin() && is_post_type_archive('project') && $query->is_main_query() ) {
-        $query->set( 'offset', 4 );
-        $query->set( 'posts_per_page', 4 );
-        return;
-    }
-});
+// add_action('pre_get_posts', function ($query) {
+//     if ( ! is_admin() && is_post_type_archive('project') && $query->is_main_query() ) {
+//         $query->set( 'offset', 4 );
+//         $query->set( 'posts_per_page', 4 );
+//         return;
+//     }
+// });
 
 
 /**
