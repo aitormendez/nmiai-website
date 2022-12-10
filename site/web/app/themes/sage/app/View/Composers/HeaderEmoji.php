@@ -35,19 +35,24 @@ class HeaderEmoji extends Composer
      */
     public function headerEmoji()
     {
-        $emoji = '';
+        $emoji = [];
 
             $headerEmojiList = get_field('header_emojis', 'option');
 
             if (get_field('has_header_unique_emoji', 'option') === true) {
-                $emoji = get_field('header_unique_emoji', 'option');
-            } else {
-                if (!array_key_exists("header_emoji", $_SESSION)) {
-                    $_SESSION["header_emoji"] = $headerEmojiList[array_rand($headerEmojiList)];
+                if (get_field('unique_emoji_or_image', 'option') === true) {
+                    $emoji['emoji_or_image'] = true;
+                    $emoji['header_emoji'] = get_field('header_unique_emoji', 'option');
+                } else {
+                    $emoji['emoji_or_image'] = false;
+                    $emoji['header_image']= get_field('header_unique_image', 'option');
                 }
-                $emoji = $_SESSION["header_emoji"];
+            } else {
+                if (!array_key_exists('header_emoji', $_SESSION)) {
+                    $_SESSION = $headerEmojiList[array_rand($headerEmojiList)];
+                }
+                $emoji= $_SESSION;
             }
-
         return $emoji;
     }
 }

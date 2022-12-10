@@ -1,9 +1,16 @@
+@dump($emoji)
+
 <header id="banner"
   class="banner text-dark dark:text-light fixed z-30 flex w-full justify-between bg-gradient-to-b from-white to-transparent pt-3 pb-10 transition-all duration-500">
 
-  <a class="brand relative ml-6 text-lg uppercase" href="{{ home_url('/') }}">
-    <span class="mr-3 align-middle">No</span><span class="align-middle text-2xl">{{ $emoji['header_emoji'] }}</span><span
-      class="ml-3 align-middle">Is An Island</span>
+  <a class="brand relative ml-6 flex text-lg uppercase" href="{{ home_url('/') }}">
+    <span class="mr-3 align-middle">No</span>
+    @if ($emoji['emoji_or_image'])
+      <span class="align-middle text-2xl">{{ $emoji['header_emoji'] }}</span>
+    @else
+      <img src="{{ $emoji['header_image']['url'] }}" alt="{{ $emoji['header_image']['alt'] }}" class="h-7 w-auto">
+    @endif
+    <span class="ml-3 align-middle">Is An Island</span>
   </a>
 
 </header>
