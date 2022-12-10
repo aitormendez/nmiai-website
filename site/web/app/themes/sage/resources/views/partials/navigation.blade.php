@@ -1,5 +1,5 @@
 @if ($navigation)
-  <ul id="main-menu" class="my-menu bg-dark fixed top-0 h-screen w-screen pt-24 text-7xl text-white"
+  <ul id="main-menu" class="my-menu bg-dark fixed top-0 z-40 h-screen w-screen pt-24 text-7xl text-white"
     style="clip-path: circle(0 at calc(100vw - 4.25rem) 1.5rem);">
 
     @foreach ($navigation as $item)
