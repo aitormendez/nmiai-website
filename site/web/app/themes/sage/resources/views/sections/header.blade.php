@@ -1,5 +1,3 @@
-@dump($emoji)
-
 <header id="banner"
   class="banner text-dark dark:text-light fixed z-30 flex w-full justify-between bg-gradient-to-b from-white to-transparent pt-3 pb-10 transition-all duration-500">
 
