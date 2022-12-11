@@ -9,12 +9,12 @@
     <div class="bottom my-6 flex flex-wrap items-center justify-between md:justify-start">
       <span class="start-text order-1 mr-4 font-serif font-bold md:order-none">{{ $post_block['start_text'] }}</span>
       <div class="progress relative mb-2 flex w-full items-center justify-between md:mr-4 md:mb-0 md:w-52">
-        <div class="progress-bar absolute h-0 w-0 border"></div>
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+        <div class="progress-bar text-dark dark:text-light absolute h-0 w-0 border-t"></div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 16 16">
           <circle id="Elipse_2596" data-name="Elipse 2596" cx="8" cy="8" r="8"
             class="fill-dark" />
         </svg>
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 16 16">
           <circle id="Elipse_2596" data-name="Elipse 2596" cx="8" cy="8" r="8"
             class="fill-dark" />
         </svg>
