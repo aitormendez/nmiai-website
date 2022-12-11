@@ -1,4 +1,4 @@
-<article class="{{ $block->classes }} not-prose block py-6" role="article">
+<article class="{{ $block->classes }} not-prose block py-20" role="article">
   <a href="{{ $post_block['permalink'] }}">
     @if (array_key_exists('post_thumbnail_data', $post_block))
       <img class="" src="{{ $post_block['post_thumbnail_data']['src'][0] }}"
@@ -21,7 +21,8 @@
       </div>
       <span class="end-text order-1 font-serif font-bold italic md:order-none">{{ $post_block['end_text'] }}</span>
     </div>
-
-    <div class="fade my-6 text-2xl">{!! $post_block['post_excerpt'] !!}</div>
+    @if ($post_block['post_excerpt'])
+      <div class="fade my-6 text-2xl">{!! $post_block['post_excerpt'] !!}</div>
+    @endif
   </a>
 </article>
