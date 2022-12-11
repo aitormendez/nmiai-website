@@ -134,9 +134,14 @@ add_action('widgets_init', function () {
         'id' => 'sidebar-footer',
     ] + $config);
 
-        register_sidebar([
+    register_sidebar([
         'name' => __('Projects archive insert', 'sage'),
         'id' => 'sidebar-project-archive'
+    ] + $config);
+
+    register_sidebar([
+        'name' => __('Front page insert', 'sage'),
+        'id' => 'sidebar-front-page'
     ] + $config);
 });
 
