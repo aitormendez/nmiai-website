@@ -9,7 +9,7 @@ module.exports = {
       serif: ['linotype-sabon', 'serif'],
     },
     colors: {
-      dark: '#2f2f2f',
+      dark: '#1c1c1c',
       midup: '#565656',
       middle: '#969393',
       light: '#e3e3e3',
