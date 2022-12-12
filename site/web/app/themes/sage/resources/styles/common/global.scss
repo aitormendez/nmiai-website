@@ -10,11 +10,11 @@ body {
   min-height: 101vh;
 }
 
-// @media (min-width: 768px) {
-//   * {
-//     cursor: none !important;
-//   }
-// }
+@media (min-width: 768px) {
+  * {
+    cursor: none !important;
+  }
+}
 
 #main {
   body.home & {
@@ -43,4 +43,15 @@ body {
 
 .terms {
   transition: 2s;
+}
+
+.contenido p {
+  font-family: 'linotype-sabon', 'serif';
+}
+
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.2em;
 }
