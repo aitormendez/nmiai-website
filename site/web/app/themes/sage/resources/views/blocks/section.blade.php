@@ -1,4 +1,3 @@
-@dump($padding)
 <section class="{{ $block->classes }}">
   <div class="" style="{{ $padding }}">
     <div class="bottom my-6 flex flex-wrap items-center justify-between md:justify-start">
