@@ -99,6 +99,9 @@ class Section extends Block
         'mode' => true,
         'multiple' => true,
         'jsx' => true,
+        'spacing' => [
+            'padding' => true,
+        ],
     ];
 
     /**
@@ -144,6 +147,7 @@ class Section extends Block
     {
         return [
             'section' => $this->section(),
+            'padding' => $this->paddingStyles(),
         ];
     }
 
@@ -170,11 +174,55 @@ class Section extends Block
     public function section()
     {
         $sect = [
-            'start_text'          => get_field('generic_block_start_text'),
-            'end_text'            => get_field('generic_block_end_text'),
+            'start_text' => get_field('generic_block_start_text'),
+            'end_text'   => get_field('generic_block_end_text'),
         ];
 
         return $sect;
+    }
+
+    /**
+     * Return padding styles.
+     *
+     * @return string
+     */
+    public function paddingStyles()
+    {
+        if (property_exists($this->block, 'style') ) {
+            if (array_key_exists('padding', $this->block->style['spacing'])) {
+                $padding = $this->block->style['spacing']['padding'];
+                array_walk($padding, function(&$val) {
+                    if (str_starts_with($val, 'var:preset|spacing|') ) {
+                        $val = 'var(--wp--preset--spacing--' . substr($val, -2) . ')';
+                    };
+                });
+
+                $padding_string = '';
+
+                if (array_key_exists('top', $padding)) {
+                    $padding_string .= 'padding-top:' . $padding['top'] . ';';
+                }
+
+                if (array_key_exists('right', $padding)) {
+                    $padding_string .= 'padding-right:' . $padding['right'] . ';';
+                }
+
+                if (array_key_exists('bottom', $padding)) {
+                    $padding_string .= 'padding-bottom:' . $padding['bottom'] . ';';
+                }
+
+                if (array_key_exists('left', $padding)) {
+                    $padding_string .= 'padding-left:' . $padding['left'] . ';';
+                }
+
+                str_replace(`;;`, ';', $padding_string);
+
+            }
+        } else {
+            $padding_string = '';
+        }
+
+        return $padding_string;
     }
 
     /**

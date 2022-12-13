@@ -1,5 +1,6 @@
+@dump($padding)
 <section class="{{ $block->classes }}">
-  <div class="">
+  <div class="" style="{{ $padding }}">
     <div class="bottom my-6 flex flex-wrap items-center justify-between md:justify-start">
 
       <div class="progress relative mb-4 flex w-full items-center justify-between">
@@ -22,7 +23,7 @@
       </div>
 
     </div>
-    <div>
+    <div class="pt-24">
       <InnerBlocks />
     </div>
   </div>

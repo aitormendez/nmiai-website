@@ -218,24 +218,38 @@ class QuotesSlider extends Block
         if (property_exists($this->block, 'style') ) {
             if (array_key_exists('padding', $this->block->style['spacing'])) {
                 $padding = $this->block->style['spacing']['padding'];
-                $styles = array_map(function($val) {
+                array_walk($padding, function(&$val) {
                     if (str_starts_with($val, 'var:preset|spacing|') ) {
-                        return 'var(--wp--preset--spacing--' . substr($val, -2) . ')';
+                        $val = 'var(--wp--preset--spacing--' . substr($val, -2) . ')';
                     };
+                });
 
-                    return $val; // return custom val if there is no preset
-                }, array_values($padding));
+                $padding_string = '';
+
+                if (array_key_exists('top', $padding)) {
+                    $padding_string .= 'padding-top:' . $padding['top'] . ';';
+                }
+
+                if (array_key_exists('right', $padding)) {
+                    $padding_string .= 'padding-right:' . $padding['right'] . ';';
+                }
+
+                if (array_key_exists('bottom', $padding)) {
+                    $padding_string .= 'padding-bottom:' . $padding['bottom'] . ';';
+                }
+
+                if (array_key_exists('left', $padding)) {
+                    $padding_string .= 'padding-left:' . $padding['left'] . ';';
+                }
+
+                str_replace(`;;`, ';', $padding_string);
+
             }
         } else {
-            $styles = [
-                0 => '',
-                1 => '',
-                2 => '',
-                3 => '',
-            ];
+            $padding_string = '';
         }
 
-        return $styles;
+        return $padding_string;
     }
 
     /**
