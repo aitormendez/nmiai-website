@@ -2,13 +2,13 @@
   <div class="" style="{{ $padding }}">
     <div class="bottom my-6 flex flex-wrap items-center justify-between md:justify-start">
 
-      <div class="progress relative mb-4 flex w-full items-center justify-between">
+      <div class="progress relative mb-2 flex w-full items-center justify-between">
         <div class="progress-bar text-dark absolute h-0 w-0 border-t dark:text-white"></div>
-        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 16 16">
+        <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 16 16">
           <circle id="Elipse_2596" data-name="Elipse 2596" cx="8" cy="8" r="8"
             class="fill-dark dark:fill-white" />
         </svg>
-        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 16 16">
+        <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 16 16">
           <circle id="Elipse_2596" data-name="Elipse 2596" cx="8" cy="8" r="8"
             class="fill-dark dark:fill-white" />
         </svg>
