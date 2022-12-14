@@ -17,6 +17,10 @@ module.exports = {
       black: '#000000',
     },
     extend: {
+      fontSize: {
+        '10xl': '11rem',
+        '11xl': '15rem',
+      },
       typography: {
         DEFAULT: {
           color: '#2f2f2f',
