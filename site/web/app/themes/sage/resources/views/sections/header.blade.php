@@ -2,13 +2,13 @@
   class="banner text-dark dark:text-light fixed z-30 flex w-full justify-between bg-gradient-to-b from-white to-transparent pt-3 pb-10 transition-all duration-500">
 
   <a class="brand text-md relative ml-9 flex uppercase" href="{{ home_url('/') }}">
-    <span class="mr-3 align-middle">No</span>
+    <span class="mr-2 align-middle">No</span>
     @if ($emoji['emoji_or_image'])
       <span class="align-middle text-xl">{{ $emoji['header_emoji'] }}</span>
     @else
       <img src="{{ $emoji['header_image']['url'] }}" alt="{{ $emoji['header_image']['alt'] }}" class="h-6 w-auto">
     @endif
-    <span class="ml-3 align-middle">Is An Island</span>
+    <span class="ml-2 align-middle">Is An Island</span>
   </a>
 
 </header>
