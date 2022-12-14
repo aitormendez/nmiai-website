@@ -29,7 +29,7 @@ export class nav {
   openDot() {
     gsap.to(this.mainMenu, {
       overwrite: true,
-      clipPath: `circle(${this.radio}px at calc(100vw - 3.75rem) 1.5rem)`,
+      clipPath: `circle(${this.radio}px at calc(100vw - 3.75rem) 2.5rem)`,
       duration: 0.5,
     });
 
@@ -48,7 +48,7 @@ export class nav {
   closeDot() {
     gsap.to(this.mainMenu, {
       overwrite: true,
-      clipPath: 'circle(0px at calc(100vw - 3.75rem) 1.5rem)',
+      clipPath: 'circle(0px at calc(100vw - 3.75rem) 2.25rem)',
       duration: 0.5,
     });
 
