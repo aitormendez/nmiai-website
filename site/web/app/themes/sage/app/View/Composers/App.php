@@ -46,6 +46,10 @@ class App extends Composer
      */
     public function tagline()
     {
+        if (is_front_page()) {
+            return __('A creative practice', 'sage');;
+        }
+
         if (is_post_type_archive('project')) {
             return __('Work', 'sage');
         }
