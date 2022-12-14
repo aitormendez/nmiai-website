@@ -56,10 +56,6 @@ class Post extends Composer
             return get_the_archive_title();
         }
 
-        if (is_archive()) {
-            return get_the_archive_title();
-        }
-
         if (is_search()) {
             return sprintf(
                 /* translators: %s is replaced with the search query */

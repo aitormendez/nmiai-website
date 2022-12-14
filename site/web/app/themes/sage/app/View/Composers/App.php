@@ -24,6 +24,7 @@ class App extends Composer
     {
         return [
             'siteName' => $this->siteName(),
+            'tagline' => $this->tagline(),
         ];
     }
 
@@ -35,5 +36,32 @@ class App extends Composer
     public function siteName()
     {
         return get_bloginfo('name', 'display');
+    }
+
+
+    /**
+     * Returns the post title.
+     *
+     * @return string
+     */
+    public function tagline()
+    {
+        if (is_post_type_archive('project')) {
+            return __('Work', 'sage');
+        }
+
+        if (is_singular('project')) {
+            return __('Project', 'sage') . '/' . get_the_title();
+        }
+
+        if (is_page()) {
+            return get_the_title();
+        }
+
+        if (is_404()) {
+            return __('Not Found', 'sage');
+        }
+
+        return get_bloginfo('description');
     }
 }
