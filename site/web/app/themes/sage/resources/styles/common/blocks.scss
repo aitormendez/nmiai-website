@@ -50,3 +50,21 @@
     padding-left: 2.25rem;
   }
 }
+
+.wp-block-people-link {
+  a {
+    .text-hover {
+      opacity: 0;
+    }
+
+    &:hover {
+      .text-normal {
+        opacity: 0;
+      }
+
+      .text-hover {
+        opacity: 1;
+      }
+    }
+  }
+}
