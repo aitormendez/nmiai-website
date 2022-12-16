@@ -13,12 +13,12 @@
     @endif
 
     <div
-      class="text-normal absolute left-0 right-0 bottom-0 top-0 flex items-center justify-center text-center text-white transition-opacity duration-500">
+      class="text-normal absolute left-0 right-0 bottom-0 top-0 flex items-center justify-center text-center text-2xl text-white transition-opacity duration-500">
       <div class="relative -top-2">{{ $person_link['people_link_text'] }}</div>
     </div>
 
     <div
-      class="text-hover pointer-events-none absolute left-0 right-0 bottom-0 top-0 flex items-center justify-center text-center text-white transition-opacity duration-500">
+      class="text-hover pointer-events-none absolute left-0 right-0 bottom-0 top-0 flex items-center justify-center text-center text-2xl text-white transition-opacity duration-500">
       <div class="relative -top-2">{{ $person_link['people_link_hover_text'] }}</div>
     </div>
 
