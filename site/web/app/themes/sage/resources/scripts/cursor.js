@@ -3,24 +3,27 @@ import gsap from 'gsap';
 export function cursor() {
   const cursor = document.getElementById('cursor');
   const cursorCircle = cursor.querySelector('circle');
-  let w = window.innerWidth;
-  let h = window.innerHeight;
+  // let w = window.innerWidth;
+  // let h = window.innerHeight;
 
-  window.onresize = function () {
-    w = window.innerWidth;
-    h = window.innerHeight;
-  };
+  // window.onresize = function () {
+  //   w = window.innerWidth;
+  //   h = window.innerHeight;
+  // };
 
   document.addEventListener('mousemove', function (event) {
     cursor.style.top = event.clientY - 20 + 'px';
     cursor.style.left = event.clientX - 20 + 'px';
 
-    if (event.clientX >= 5 && event.clientX <= w - 25 && event.clientY >= 1 && event.clientY <= h - 5) {
-      displayCursor();
-    } else {
-      hiddeCursor();
-    }
+    // if (event.clientX >= 5 && event.clientX <= w - 25 && event.clientY >= 1 && event.clientY <= h - 5) {
+    //   displayCursor();
+    // } else {
+    //   hiddeCursor();
+    // }
   });
+
+  window.addEventListener('mouseover', displayCursor);
+  window.addEventListener('mouseout', hiddeCursor);
 
   document.addEventListener('mouseover', (e) => {
     if (e.target.closest('button') || e.target.closest('a')) {
