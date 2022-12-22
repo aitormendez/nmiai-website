@@ -26,13 +26,13 @@ export function cursor() {
   window.addEventListener('mouseout', hiddeCursor);
 
   document.addEventListener('mouseover', (e) => {
-    if (e.target.closest('button') || e.target.closest('a')) {
+    if (e.target.closest('button') || e.target.closest('a') || e.target.closest('input')) {
       over();
     }
   });
 
   document.addEventListener('mouseout', (e) => {
-    if (e.target.closest('button') || e.target.closest('a')) {
+    if (e.target.closest('button') || e.target.closest('a') || e.target.closest('input')) {
       out();
     }
   });

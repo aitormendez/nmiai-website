@@ -68,3 +68,54 @@
     }
   }
 }
+
+.wp-block-before-after {
+  input[type='range'] {
+    position: relative;
+    appearance: none;
+    display: block;
+    width: 60%;
+    height: 1px;
+    border-radius: 8px;
+
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      border: 1px solid black;
+      height: 13px;
+      width: 13px;
+      // background-color: #ffffff00;
+      border-radius: 50%;
+      cursor: none;
+    }
+  }
+
+  &.light {
+    .start_text,
+    .end_text {
+      color: var(--dark);
+    }
+
+    input[type='range'] {
+      background-color: var(--dark);
+
+      &::-webkit-slider-thumb {
+        border-color: var(--dark);
+      }
+    }
+  }
+
+  &.dark {
+    .start_text,
+    .end_text {
+      color: var(--light);
+    }
+
+    input[type='range'] {
+      background-color: var(--light);
+
+      &::-webkit-slider-thumb {
+        border-color: var(--light);
+      }
+    }
+  }
+}

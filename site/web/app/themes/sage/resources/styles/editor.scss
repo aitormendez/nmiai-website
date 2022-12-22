@@ -19,3 +19,22 @@
   padding-left: 3rem !important;
   max-width: none !important;
 }
+
+input[type='range'] {
+  position: relative;
+  appearance: none;
+  display: block;
+  width: 60%;
+  height: 1px;
+  background-color: #000000;
+  border-radius: 8px;
+
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: 1px solid black;
+    height: 13px;
+    width: 13px;
+    background-color: #ffffff00;
+    border-radius: 50%;
+  }
+}
