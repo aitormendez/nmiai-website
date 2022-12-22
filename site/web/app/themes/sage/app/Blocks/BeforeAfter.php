@@ -62,7 +62,7 @@ class BeforeAfter extends Block
      *
      * @var string
      */
-    public $mode = 'preview';
+    public $mode = 'edit';
 
     /**
      * The default block alignment.
@@ -91,12 +91,12 @@ class BeforeAfter extends Block
      * @var array
      */
     public $supports = [
-        'align' => false,
+        'align' => true,
         'align_text' => false,
         'align_content' => false,
         'full_height' => false,
         'anchor' => false,
-        'mode' => true,
+        'mode' => false,
         'multiple' => true,
         'jsx' => true,
         'spacing' => [
@@ -152,8 +152,8 @@ class BeforeAfter extends Block
                 'required' => 0,
                 'default_value' => 0,
                 'ui' => 1,
-                'ui_on_text' => 'Dark',
-                'ui_off_text' => 'Light',
+                'ui_on_text' => 'Light',
+                'ui_off_text' => 'Dark',
             ])
             ->addFields($this->get(StartEnd::class))
             ->addImage('beforeafter_image_before', [
