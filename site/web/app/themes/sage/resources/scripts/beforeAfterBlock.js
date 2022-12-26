@@ -7,7 +7,6 @@ export function beforeAfterBlock() {
       const imgAfter = block.querySelector('.img-after');
 
       slider.oninput = function () {
-        console.log(this.value);
         imgAfter.style.opacity = this.value / 100;
       };
     });

@@ -6,7 +6,7 @@
       alt="{{ $beforeafter['image_after']['alt'] }}" srcset="{{ $beforeafter['image_after']['srcset'] }}"
       sizes="{{ $beforeafter['image_after']['sizes'] }}" style="transition: opacity 0s">
 
-    <div class="bottom absolute bottom-0 my-6 flex w-full items-center justify-center">
+    <div class="absolute bottom-0 my-6 flex w-full items-center justify-center">
       <span class="start_text mr-4">{{ $beforeafter['start_text'] }}</span>
       <input type="range" min="0" max="100" value="0">
       <span class="end_text ml-4">{{ $beforeafter['end_text'] }}</span>

@@ -32,31 +32,6 @@ export function animateProject() {
         }
       });
 
-      const loadBars = (entries) => {
-        entries.forEach((entry) => {
-          const bar = entry.target.querySelector('.progress-bar');
-          const endText = entry.target.querySelector('.end-text');
-
-          if (entry.isIntersecting) {
-            growBar(bar, endText);
-          } else {
-            shrinkBar(bar, endText);
-          }
-        });
-      };
-
-      const loadFades = (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            // entry.target.style.opacity = '1';
-            fadeIn(entry.target);
-          } else {
-            // entry.target.style.opacity = '0';
-            fadeOut(entry.target);
-          }
-        });
-      };
-
       const observerBars = new IntersectionObserver(loadBars, {
         root: null,
         // rootMargin: '0px',
@@ -79,7 +54,32 @@ export function animateProject() {
     }
   }, 300);
 
-  const growBar = (bar, endText) => {
+  function loadFades(entries) {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        // entry.target.style.opacity = '1';
+        fadeIn(entry.target);
+      } else {
+        // entry.target.style.opacity = '0';
+        fadeOut(entry.target);
+      }
+    });
+  }
+
+  function loadBars(entries) {
+    entries.forEach((entry) => {
+      const bar = entry.target.querySelector('.progress-bar');
+      const endText = entry.target.querySelector('.end-text');
+
+      if (entry.isIntersecting) {
+        growBar(bar, endText);
+      } else {
+        shrinkBar(bar, endText);
+      }
+    });
+  }
+
+  function growBar(bar, endText) {
     let tl = gsap.timeline({repeat: 0});
 
     tl.to(bar, {
@@ -95,9 +95,9 @@ export function animateProject() {
       },
       '-=1',
     );
-  };
+  }
 
-  const shrinkBar = (bar, endText) => {
+  function shrinkBar(bar, endText) {
     let tl = gsap.timeline({repeat: 0});
 
     if (bar) {
@@ -113,9 +113,9 @@ export function animateProject() {
         duration: '0.3',
       });
     }
-  };
+  }
 
-  const fadeIn = (fade) => {
+  function fadeIn(fade) {
     gsap.to(fade, {
       y: '0',
       opacity: '1',
@@ -123,13 +123,13 @@ export function animateProject() {
       overwrite: true,
       ease: 'power4.out',
     });
-  };
+  }
 
-  const fadeOut = (fade) => {
+  function fadeOut(fade) {
     gsap.set(fade, {
       y: '50px',
       opacity: '0',
       overwrite: true,
     });
-  };
+  }
 }
