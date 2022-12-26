@@ -30,12 +30,14 @@ const main = async (err) => {
     const {accordion} = await import('./accordions.js');
     const {people} = await import('./people.js');
     const {beforeAfterBlock} = await import('./beforeAfterBlock.js');
+    const {beforeAfterMouseBlock} = await import('./beforeAfterMouseBlock.js');
     animateProject();
     quotesSlider();
     dynamicBg();
     accordion();
     people();
     beforeAfterBlock();
+    beforeAfterMouseBlock();
   }
 
   if (document.body.classList.contains('post-type-archive-project')) {

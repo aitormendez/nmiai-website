@@ -4,23 +4,22 @@ namespace App\Blocks;
 
 use Log1x\AcfComposer\Block;
 use StoutLogic\AcfBuilder\FieldsBuilder;
-use App\Fields\Partials\StartEnd;
 
-class BeforeAfter extends Block
+class BeforeAfterMouse extends Block
 {
     /**
      * The block name.
      *
      * @var string
      */
-    public $name = 'Before After';
+    public $name = 'Before After Mouse';
 
     /**
      * The block description.
      *
      * @var string
      */
-    public $description = 'Two images with slider';
+    public $description = 'Two images reacting to mouse position';
 
     /**
      * The block category.
@@ -34,7 +33,7 @@ class BeforeAfter extends Block
      *
      * @var string|array
      */
-    public $icon = '<svg width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20.9146 18H24V19H20.9146C20.7087 19.5826 20.1531 20 19.5 20C18.8469 20 18.2913 19.5826 18.0854 19H0V18H18.0854C18.2913 17.4174 18.8469 17 19.5 17C20.1531 17 20.7087 17.4174 20.9146 18Z" fill="black"/><path fill-rule="evenodd" clip-rule="evenodd" d="M19.8287 0.559686L18.9946 1.99999H24V13H12.6248L11.6036 14.7633L10.7383 14.2622L11.4692 13H0V1.99999H17.8391L18.9633 0.0585632L19.8287 0.559686ZM23 12H13.2038L18.4156 3H23V12Z" fill="black"/></svg>';
+    public $icon = '<svg width="24" height="21" viewBox="0 0 24 21" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M11 0H10V2H0V19H10V21H11V19H24V2H11V0ZM11 18V9.83165L13.0232 16.0413L14.5831 13.2906L17.2601 16.2627L18.7462 14.9242L16.0692 11.9521L18.9675 10.6874L11 7.13523V3H23V18H11Z" fill="black"/></svg>';
 
     /**
      * The block keywords.
@@ -132,7 +131,7 @@ class BeforeAfter extends Block
     public function with()
     {
         return [
-            'beforeafter' => $this->beforeAfter(),
+            'beforeafter' => $this->beforeAfterMouse(),
             'padding' => $this->paddingStyles(),
         ];
     }
@@ -144,25 +143,16 @@ class BeforeAfter extends Block
      */
     public function fields()
     {
-        $beforeafter = new FieldsBuilder('before_after');
+        $beforeafter = new FieldsBuilder('before_after_mouse');
 
         $beforeafter
-            ->addTrueFalse('beforeafter_ui_color', [
-                'label' => __('UI color', 'sage'),
-                'required' => 0,
-                'default_value' => 0,
-                'ui' => 1,
-                'ui_on_text' => 'Light',
-                'ui_off_text' => 'Dark',
-            ])
-            ->addFields($this->get(StartEnd::class))
-            ->addImage('beforeafter_image_before', [
+            ->addImage('beforeaftermouse_image_before', [
                 'label' => __('Image before', 'sage'),
                 'return_format' => 'array',
                 'preview_size' => 'medium',
                 'library' => 'all',
             ])
-            ->addImage('beforeafter_image_after', [
+            ->addImage('beforeaftermouse_image_after', [
                 'label' => __('Image after', 'sage'),
                 'return_format' => 'array',
                 'preview_size' => 'medium',
@@ -178,19 +168,16 @@ class BeforeAfter extends Block
      *
      * @return array
      */
-    public function beforeAfter()
+    public function beforeAfterMouse()
     {
-        $image_before = get_field('beforeafter_image_before');
+        $image_before = get_field('beforeaftermouse_image_before');
         $image_before['srcset'] = wp_get_attachment_image_srcset($image_before['id'], 'full');
         $image_before['sizes'] = wp_calculate_image_sizes('full', null, null, $image_before['id']);
-        $image_after = get_field('beforeafter_image_after');
+        $image_after = get_field('beforeaftermouse_image_after');
         $image_after['srcset'] = wp_get_attachment_image_srcset($image_after['id'], 'full');
         $image_after['sizes'] = wp_calculate_image_sizes('full', null, null, $image_after['id']);
 
         $befaft = [
-            'ui_color'     => get_field('beforeafter_ui_color') ? 'dark' : 'light',
-            'start_text'   => get_field('generic_block_start_text'),
-            'end_text'     => get_field('generic_block_end_text'),
             'image_before' => $image_before,
             'image_after'  => $image_after,
         ];
