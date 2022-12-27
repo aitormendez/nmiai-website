@@ -21,10 +21,10 @@ export function quotesSlider() {
 
 export function imagesSlider() {
   new Swiper('.swiper-images', {
-    modules: [Navigation, Autoplay],
-    autoplay: {
-      delay: 5000,
-    },
+    modules: [Autoplay],
+    // autoplay: {
+    //   // delay: 5000,
+    // },
     loop: true,
     speed: 1000,
   });

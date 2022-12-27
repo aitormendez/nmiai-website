@@ -190,7 +190,7 @@ class ImageSlider extends Block
 
         if ($gallery_raw) {
             $gallery = array_map(function($img) {
-                return wp_get_attachment_image($img['id'], 'full' );
+                return wp_get_attachment_image($img['id'], 'full', false, ['class' => 'w-full']  );
             }, $gallery_raw);
         }
 
