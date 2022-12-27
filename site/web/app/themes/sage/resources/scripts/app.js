@@ -26,13 +26,14 @@ const main = async (err) => {
   if (document.body.classList.contains('post-type-archive-project') || document.body.classList.contains('page')) {
     const {dynamicBg} = await import('./dynamicDarkBg.js');
     const {animateProject} = await import('./animateProject.js');
-    const {quotesSlider} = await import('./sliders.js');
+    const {quotesSlider, imagesSlider} = await import('./sliders.js');
     const {accordion} = await import('./accordions.js');
     const {people} = await import('./people.js');
     const {beforeAfterBlock} = await import('./beforeAfterBlock.js');
     const {beforeAfterMouseBlock} = await import('./beforeAfterMouseBlock.js');
     animateProject();
     quotesSlider();
+    imagesSlider();
     dynamicBg();
     accordion();
     people();
