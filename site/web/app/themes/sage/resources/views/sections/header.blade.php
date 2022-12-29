@@ -17,7 +17,7 @@
 
 <div id="tagline"
   class="text-dark dark:text-light fixed top-6 z-40 hidden font-serif font-bold transition-all duration-500 md:block">
-  {{ $tagline }}
+  {!! $tagline !!}
 </div>
 
 <button id="btnDot" class="bg-light fixed top-7 z-40 h-4 w-4 rounded-full mix-blend-exclusion"></button>

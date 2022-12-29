@@ -26,6 +26,7 @@ class Post extends Composer
     {
         return [
             'title' => $this->title(),
+            'tags' => $this->tags(),
         ];
     }
 
@@ -69,5 +70,28 @@ class Post extends Composer
         }
 
         return get_the_title();
+    }
+
+    /**
+     * Returns the post tags.
+     *
+     * @return string
+     */
+    public function tags() {
+        global $post;
+
+        $tags_raw = wp_get_post_tags($post->ID);
+
+        $tags = '';
+
+        foreach ($tags_raw as $key => $tag) {
+            if ($key === array_key_first($tags_raw)) {
+                $tags .= $tag->name;
+            } else {
+                $tags .= ' / ' . $tag->name;
+            }
+        }
+
+        return $tags ? $tags : false ;
     }
 }
