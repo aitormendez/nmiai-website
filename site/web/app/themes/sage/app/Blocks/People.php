@@ -179,7 +179,7 @@ class People extends Block
             ->addText('people_video_zone', [
                 'label' => __('Bunny.net video zone', 'sage'),
                 'default_value' => 'vz-3b6a9b31-e3a',
-                'placeholder' => '',
+                'placeholder' => 'vz-3b6a9b31-e3a',
                 'prepend' => '',
                 'append' => '',
                 'maxlength' => '',
@@ -188,6 +188,7 @@ class People extends Block
             ->addText('people_video_id', [
                 'label' => __('Video ID', 'sage'),
                 'default_value' => '6ea813d4-bd21-439f-8d1a-02f0645a51fa',
+                'placeholder' => '6ea813d4-bd21-439f-8d1a-02f0645a51fa',
             ])
                 ->conditional('people_content_type', '==', 'video')
             ->addText('people_video_poster', [

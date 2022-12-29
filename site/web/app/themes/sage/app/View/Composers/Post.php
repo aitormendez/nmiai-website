@@ -27,6 +27,7 @@ class Post extends Composer
         return [
             'title' => $this->title(),
             'tags' => $this->tags(),
+            'hero' => $this->hero(),
         ];
     }
 
@@ -93,5 +94,29 @@ class Post extends Composer
         }
 
         return $tags ? $tags : false ;
+    }
+
+    /**
+     * Returns page header hero.
+     *
+     * @return string
+     */
+    public function hero() {
+        $hero = [
+            'type' => get_field('single_project_type')
+        ];
+
+        if ($hero['type'] === 'video') {
+            $hero['video_id'] = get_field('single_project_video_id');
+            $hero['video_zone'] = get_field('single_project_video_zone');
+            $hero['video_poster'] = get_field('single_project_video_poster');
+        }
+
+        if ($hero['type'] === 'image') {
+            $img = get_field('single_project_image');
+            $hero['image'] = wp_get_attachment_image($img['id'], 'full');
+        }
+
+        return $hero;
     }
 }
