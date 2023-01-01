@@ -44,6 +44,29 @@
   }
 }
 
+// gap system
+// ---------------------
+
+.is-style-aspect-h {
+  img {
+    aspect-ratio: 900/539;
+  }
+}
+.is-style-gap {
+  row-gap: 1.2%;
+  column-gap: 1.2%;
+}
+
+.is-style-aspect-v {
+  img {
+    aspect-ratio: 9/11;
+  }
+}
+
+.margin-gap-b {
+  margin-bottom: var(--margin-gap);
+}
+
 .wp-block-section {
   #main .content > & {
     padding-right: 2.25rem;

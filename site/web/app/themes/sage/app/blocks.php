@@ -47,3 +47,27 @@ register_block_style(
             'label' => __( 'Column', 'sage' ),
         ]
     );
+
+register_block_style(
+    'core/columns',
+        [
+        'name'  => 'gap',
+        'label' => __( 'a/r gap', 'sage' ),
+        ]
+    );
+
+register_block_style(
+    'core/image',
+        [
+            'name'  => 'aspect-h',
+            'label' => __( 'a/r horiz', 'sage' ),
+        ]
+    );
+
+register_block_style(
+    'core/image',
+        [
+            'name'  => 'aspect-v',
+            'label' => __( 'a/r vert', 'sage' ),
+        ]
+    );

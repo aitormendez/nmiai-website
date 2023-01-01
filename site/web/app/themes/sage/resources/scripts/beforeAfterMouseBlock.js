@@ -4,9 +4,9 @@ gsap.registerPlugin(CustomEase);
 
 export function beforeAfterMouseBlock() {
   const blocks = document.querySelectorAll('.wp-block-before-after-mouse');
-  let r = document.querySelector(':root');
-  let rs = getComputedStyle(r);
-  console.log(rs.getPropertyValue('--beforeAfterMouseValue'));
+  // let r = document.querySelector(':root');
+  // let rs = getComputedStyle(r);
+  // console.log(rs.getPropertyValue('--beforeAfterMouseValue'));
 
   if (blocks) {
     // blocks.forEach(function (block) {
