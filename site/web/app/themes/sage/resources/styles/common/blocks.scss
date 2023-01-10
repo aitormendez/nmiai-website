@@ -58,8 +58,10 @@
 }
 
 .is-style-aspect-v {
-  img {
+  img,
+  lottie-player {
     aspect-ratio: 9/11;
+    object-fit: cover;
   }
 }
 
