@@ -28,8 +28,16 @@ export function beforeAfterMouseBlock() {
 function loadBlocks(entries) {
   entries.forEach((entry) => {
     const imgAfter = entry.target.querySelector('.img-after');
+    const verticalStroke = entry.target.querySelector('.line');
+    const middle = entry.target.offsetWidth / 2;
 
     if (entry.isIntersecting) {
+      gsap.to(verticalStroke, {
+        x: middle + 'px',
+        ease: CustomEase.create('custom', 'M0,0,C0,0,0.446,2,0.634,2,0.772,2,1,1,1,1'),
+        duration: 2,
+        onComplete: animateBlock(entry.target),
+      });
       gsap.to(imgAfter, {
         clipPath: `polygon(0% 0, 50% 0%, 50% 100%, 0 100%)`,
         ease: CustomEase.create('custom', 'M0,0,C0,0,0.446,2,0.634,2,0.772,2,1,1,1,1'),
@@ -40,6 +48,9 @@ function loadBlocks(entries) {
       gsap.set(imgAfter, {
         clipPath: `polygon(0% 0, 0% 0%, 0% 100%, 0 100%)`,
       });
+      gsap.set(verticalStroke, {
+        x: '0px',
+      });
     }
   });
 }
@@ -48,6 +59,9 @@ function animateBlock(block) {
   const imgAfter = block.querySelector('.img-after');
   const blockWidth = block.clientWidth;
   const blockXPos = block.getBoundingClientRect().left;
+  const verticalStroke = block.querySelector('.line');
+  console.log(verticalStroke);
+
   let localMouseX;
   let percent;
 
@@ -56,5 +70,6 @@ function animateBlock(block) {
     percent = (localMouseX * 100) / blockWidth + '%';
 
     imgAfter.style.clipPath = `polygon(0% 0, ${percent} 0%, ${percent} 100%, 0 100%)`;
+    verticalStroke.style.transform = `translate3d(${localMouseX}px, 0px, 0px)`;
   });
 }

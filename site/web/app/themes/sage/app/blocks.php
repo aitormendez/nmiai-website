@@ -79,3 +79,11 @@ register_block_style(
             'label' => __( 'a/r vert', 'sage' ),
         ]
     );
+
+register_block_style(
+    'gb/lottiefiles',
+        [
+            'name'  => 'aspect-h',
+            'label' => __( 'a/r horiz', 'sage' ),
+        ]
+    );

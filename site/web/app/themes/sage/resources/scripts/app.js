@@ -23,7 +23,11 @@ const main = async (err) => {
     cursor();
   }
 
-  if (document.body.classList.contains('post-type-archive-project') || document.body.classList.contains('page')) {
+  if (
+    document.body.classList.contains('post-type-archive-project') ||
+    document.body.classList.contains('page') ||
+    document.body.classList.contains('single-project')
+  ) {
     const {dynamicBg} = await import('./dynamicDarkBg.js');
     const {animateProject} = await import('./animateProject.js');
     const {quotesSlider, imagesSlider} = await import('./sliders.js');
