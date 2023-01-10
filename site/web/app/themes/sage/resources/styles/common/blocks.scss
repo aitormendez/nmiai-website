@@ -48,8 +48,10 @@
 // ---------------------
 
 .is-style-aspect-h {
-  img {
+  img,
+  lottie-player {
     aspect-ratio: 900/539;
+    object-fit: cover;
   }
 }
 .is-style-gap {
