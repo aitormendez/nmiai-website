@@ -108,9 +108,9 @@
     &::-webkit-slider-thumb {
       -webkit-appearance: none;
       border: 1px solid black;
-      height: 13px;
-      width: 13px;
-      // background-color: #ffffff00;
+      height: 18px;
+      width: 18px;
+      background-color: #ffffff;
       border-radius: 50%;
       cursor: none;
     }
@@ -123,8 +123,6 @@
     }
 
     input[type='range'] {
-      background-color: var(--dark);
-
       &::-webkit-slider-thumb {
         border-color: var(--dark);
       }
