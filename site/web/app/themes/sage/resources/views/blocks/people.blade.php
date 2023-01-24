@@ -40,15 +40,15 @@
     <div
       class="flap absolute top-0 left-0 z-10 h-full w-full cursor-pointer text-white opacity-0 transition-opacity duration-500 hover:opacity-100">
       <div class="bg bg-dark absolute h-full w-full opacity-50"></div>
-      <div class="data absolute flex h-full w-full flex-col justify-center">
+      <div class="data absolute flex h-full w-full flex-col justify-center leading-[1.1em]">
         @if ($person['people_name'])
-          <p class="name w-full text-center text-2xl">{{ $person['people_name'] }}</p>
+          <p class="name w-full text-center text-[13pt]">{{ $person['people_name'] }}</p>
         @endif
         @if ($person['people_title'])
-          <p class="title w-full text-center text-2xl italic">{{ $person['people_title'] }}</p>
+          <p class="title mb-2 w-full text-center font-serif text-[11pt] italic">{{ $person['people_title'] }}</p>
         @endif
         @if ($person['people_email'])
-          <p class="email w-full text-center text-2xl italic">{{ $person['people_email'] }}</p>
+          <p class="email w-full text-center text-[9.5pt] font-extralight">{{ $person['people_email'] }}</p>
         @endif
       </div>
     </div>

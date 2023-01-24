@@ -189,6 +189,7 @@ class PostBlock extends Block
     {
         $post_raw = get_field('post_block_post');
         $img = get_field('post_block_image');
+        $intro = get_field('single_project_intro', $post_raw->ID);
         $terms = get_the_terms($post_raw->ID, 'post_tag');
 
         $post = [
@@ -200,6 +201,10 @@ class PostBlock extends Block
             'end_text'            => get_field('generic_block_end_text'),
             'permalink'           => get_permalink($post_raw->ID),
         ];
+
+        if ($intro) {
+            $post['intro'] = $intro;
+        }
 
         if ($terms) {
             $terms_string = '';

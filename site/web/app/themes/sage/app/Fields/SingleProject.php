@@ -91,8 +91,15 @@ class SingleProject extends Field
                         ]
                     ],
                 ])
-
-        ;
+            ->addTab(__('Intro text', 'sage'))
+                ->addTextarea('single_project_intro', [
+                    'label' => __('Intro text', 'sage'),
+                    'instructions' => __('It is shown in the + dropdown button in the post block and in the projects of the main projects page.', 'sage'),
+                    'maxlength' => '',
+                    'rows' => '',
+                    'new_lines' => 'wpautop', // Possible values are 'wpautop', 'br', or ''.
+                ])
+            ;
 
         return $builder->build();
     }
