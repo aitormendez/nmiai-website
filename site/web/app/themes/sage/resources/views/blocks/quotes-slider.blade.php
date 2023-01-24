@@ -8,13 +8,11 @@
               <div class="quote flex py-6">
                 <span class="dark:text-white">“</span><span class="dark:text-white">{!! $quote['quotes_slider_quote'] !!}”</span>
               </div>
-              <div class="data font-serif text-2xl">
-                <div class="for-progress">
-                  <span class="name dark:text-white">
-                    {!! $quote['quotes_slider_name'] !!}
-                  </span>
+              <div class="data ml-6 font-serif text-2xl">
+                <div class="name font-rigid dark:text-white">
+                  {!! $quote['quotes_slider_name'] !!}
                 </div>
-                <span class="text-middle italic">{!! $quote['quotes_slider_subtitle'] !!}</span>
+                <div class="text-middle text-lg italic">{!! $quote['quotes_slider_subtitle'] !!}</div>
               </div>
             </div>
           @endforeach

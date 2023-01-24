@@ -111,13 +111,9 @@ class Section extends Block
      */
     public $styles = [
         [
-            'name' => 'light',
-            'label' => 'Light',
+            'name' => 'default',
+            'label' => 'Default',
             'isDefault' => true,
-        ],
-        [
-            'name' => 'dark',
-            'label' => 'Dark',
         ],
         [
             'name' => 'dynamic',

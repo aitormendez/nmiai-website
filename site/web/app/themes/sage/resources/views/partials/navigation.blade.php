@@ -4,8 +4,9 @@
     style="clip-path: circle(0px at calc(100vw - 3.75rem) 2.25rem); ">
 
     @foreach ($navigation as $item)
-      <li class="my-menu-item {{ $item->classes ?? '' }} {{ $item->active ? 'active' : '' }}">
-        <a href="{{ $item->url }}" class="block text-center font-bold uppercase text-white">
+      <li
+        class="my-menu-item {{ $item->classes ?? '' }} {{ $item->active ? 'active' : '' }} my-8 overflow-hidden text-center leading-[0.7em]">
+        <a href="{{ $item->url }}" class="text-center font-bold uppercase text-white">
           {!! $item->label !!}
         </a>
       </li>

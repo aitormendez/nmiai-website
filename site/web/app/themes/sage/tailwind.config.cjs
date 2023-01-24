@@ -1,7 +1,7 @@
 module.exports = {
   darkMode: ['class', '.is-style-dark'],
   content: ['./index.php', './app/**/*.php', './resources/**/*.{php,vue,js}'],
-  safelist: ['gap-0', 'gap-1', 'gap-2', 'gap-3', 'leading-tight', 'md:mb-36'],
+  safelist: ['gap-0', 'gap-1', 'gap-2', 'gap-3', 'leading-tight', 'md:mb-36', 'text-footer', 'leading-none'],
   theme: {
     fontFamily: {
       rigid: ['rigid-square', 'sans-serif'],
@@ -17,9 +17,13 @@ module.exports = {
       black: '#000000',
     },
     extend: {
+      lineHeight: {
+        none: '1',
+      },
       fontSize: {
         '10xl': '11rem',
         '11xl': '15rem',
+        footer: '7vw',
       },
       typography: {
         DEFAULT: {
