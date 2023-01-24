@@ -1,6 +1,6 @@
 <li
-  class="accordion-group {{ $block->classes }} mb-6 max-w-none border-b transition-colors duration-1000 last:mb-0 dark:text-white">
-  <a class="accordion-menu block cursor-pointer select-none py-10">
+  class="accordion-group {{ $block->classes }} mb-6 max-w-none border-b pb-16 transition-colors duration-1000 last:mb-0 dark:text-white">
+  <a class="accordion-menu block cursor-pointer select-none pt-10 pb-5">
     <h2 class="text-4xl uppercase md:text-5xl lg:text-6xl">{{ $accordion_item }}</h2>
     <div class="relative mt-10 mb-10 w-10">
       <svg viewBox="0 0 29 3" fill="none" xmlns="http://www.w3.org/2000/svg" class="spin absolute">
