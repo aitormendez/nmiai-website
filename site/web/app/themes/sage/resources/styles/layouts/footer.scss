@@ -10,7 +10,9 @@ footer .down {
   }
 
   .social {
+    grid-column-start: 1;
     grid-row-start: 1;
+    grid-column-end: 3;
   }
 
   @media (min-width: 768px) {

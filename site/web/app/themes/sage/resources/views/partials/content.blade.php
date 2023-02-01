@@ -9,7 +9,7 @@
         <img src="{{ $thumb['img']['url'] }}" alt="{{ $thumb['img']['alt'] }}">
       @else
         <img src="{{ $thumb['img']['url'] }}" alt="{{ $thumb['img']['alt'] }}" srcset="{{ $thumb['img']['srcset'] }}"
-          sizes="(max-width: 768px) 50vw, 100vw">
+          sizes="(max-width: 768px) 100vw, 50vw">
       @endif
     @endif
 
@@ -17,12 +17,12 @@
       <span
         class="start-text order-1 mr-4 font-serif font-bold md:order-none">{{ substr(str_repeat(0, 2) . $counter, -2) }}</span>
       <div class="progress relative mb-2 flex w-full items-center justify-between md:mr-4 md:mb-0 md:w-52">
-        <div class="progress-bar absolute h-0 w-0 border"></div>
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+        <div class="progress-bar absolute h-0 w-0 border-t"></div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 16 16">
           <circle id="Elipse_2596" data-name="Elipse 2596" cx="8" cy="8" r="8"
             class="fill-dark" />
         </svg>
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+        <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 16 16">
           <circle id="Elipse_2596" data-name="Elipse 2596" cx="8" cy="8" r="8"
             class="fill-dark" />
         </svg>

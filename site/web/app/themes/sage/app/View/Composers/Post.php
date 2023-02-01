@@ -114,7 +114,9 @@ class Post extends Composer
 
         if ($hero['type'] === 'image') {
             $img = get_field('single_project_image');
-            $hero['image'] = wp_get_attachment_image($img['id'], 'full');
+            if ($img) {
+                $hero['image'] = wp_get_attachment_image($img['id'], 'full');
+            }
         }
 
         return $hero;

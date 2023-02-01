@@ -41,6 +41,8 @@ export class nav {
 
     this.banner.classList.remove('text-dark');
     this.banner.classList.add('text-white');
+    this.tagLine.classList.add('md:hidden');
+    this.tagLine.classList.remove('md:block');
 
     this.closed = false;
   }
@@ -56,6 +58,10 @@ export class nav {
       overwrite: true,
       // backgroundColor: tailwindConfig.theme.colors.dark,
       duration: 0.5,
+      onComplete: () => {
+        this.tagLine.classList.remove('md:hidden');
+        this.tagLine.classList.add('md:block');
+      },
     });
 
     this.banner.classList.add('text-dark');

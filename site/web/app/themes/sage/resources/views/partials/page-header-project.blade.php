@@ -4,7 +4,9 @@
       <source src="https://{{ $hero['video_zone'] }}.b-cdn.net/{{ $hero['video_id'] }}/play_720p.mp4" type="video/mp4">
     </video>
   @else
-    {!! $hero['image'] !!}
+    @if (array_key_exists('image', $hero))
+      {!! $hero['image'] !!}
+    @endif
   @endif
 
   <div class="project-info is-style-column my-6 md:my-20">
