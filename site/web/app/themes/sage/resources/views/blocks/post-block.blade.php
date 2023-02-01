@@ -25,9 +25,5 @@
     @if ($post_block['post_excerpt'])
       <div class="fade my-6 text-2xl">{!! $post_block['post_excerpt'] !!}</div>
     @endif
-
-    @if (array_key_exists('intro', $post_block))
-      @dump($post_block['intro'])
-    @endif
   </a>
 </article>

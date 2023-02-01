@@ -23,6 +23,11 @@ const main = async (err) => {
     cursor();
   }
 
+  if (!mdMin.matches && document.body.classList.contains('single-project')) {
+    const {displayProjectInfo} = await import('./singleProyect.js');
+    displayProjectInfo();
+  }
+
   if (
     document.body.classList.contains('post-type-archive-project') ||
     document.body.classList.contains('page') ||
