@@ -1,4 +1,4 @@
-<div class="{{ $block->classes }} not-prose mb-3">
+<div class="{{ $block->classes }} not-prose">
   <a href="{{ $person_link['people_link_link'] }}" class="wrapper relative block h-full w-full">
     <div class="text hidden">@wpautop($person_link['people_link_hover_text'])</div>
 

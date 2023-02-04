@@ -3,3 +3,26 @@
   --light: #e3e3e3;
   --margin-gap: 1em;
 }
+
+body {
+  --base: 0.8rem;
+  --wp--preset--font-size--small: var(--base);
+  --wp--preset--font-size--normal: calc(var(--base) * 1.5);
+  --wp--preset--font-size--medium: calc(var(--base) * 2.5);
+  --wp--preset--font-size--large: calc(var(--base) * 3.5);
+  --wp--preset--font-size--x-large: calc(var(--base) * 4.5);
+  --wp--preset--font-size--huge: calc(var(--base) * 5.5);
+}
+
+.has-small-font-size {
+  font-size: var(--wp--preset--font-size--small) !important;
+}
+.has-medium-font-size {
+  font-size: var(--wp--preset--font-size--medium) !important;
+}
+.has-large-font-size {
+  font-size: var(--wp--preset--font-size--large) !important;
+}
+.has-x-large-font-size {
+  font-size: var(--wp--preset--font-size--x-large) !important;
+}

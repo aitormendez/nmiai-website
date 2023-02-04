@@ -144,3 +144,37 @@
     }
   }
 }
+
+.wp-block-group.people-group {
+  --gap: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap);
+
+  .wp-block-people,
+  .wp-block-people-link {
+    width: calc(50% - var(--gap) / 2);
+
+    .wrapper {
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+
+      video {
+        width: 160%;
+        max-width: none;
+      }
+    }
+
+    @media (min-width: 768px) {
+      width: calc(33% - var(--gap) / 3);
+
+      .wrapper {
+        video {
+          width: 100%;
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}

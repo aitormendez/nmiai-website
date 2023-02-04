@@ -1,12 +1,15 @@
-<div class="{{ $block->classes }} not-prose mb-3">
-  <a class="wrapper relative block h-full w-full">
+<div class="{{ $block->classes }} not-prose">
+  <a class="relative block h-full w-full">
     <div class="text hidden">@wpautop($person['people_text'])</div>
 
     @if ($person['people_content_type'] === 'video')
-      <video poster="{{ $person['people_video_poster'] }}" autoplay muted loop class="relative">
-        <source src="https://{{ $person['people_video_zone'] }}.b-cdn.net/{{ $person['people_video_id'] }}/play_720p.mp4"
-          type="video/mp4">
-      </video>
+      <div class="wrapper">
+        <video poster="{{ $person['people_video_poster'] }}" autoplay muted loop class="relative">
+          <source
+            src="https://{{ $person['people_video_zone'] }}.b-cdn.net/{{ $person['people_video_id'] }}/play_720p.mp4"
+            type="video/mp4">
+        </video>
+      </div>
     @else
       <img src="{!! $person['people_image']['url'] !!}" alt="">
     @endif
@@ -38,7 +41,7 @@
     </div>
 
     <div
-      class="flap absolute top-0 left-0 z-10 h-full w-full cursor-pointer text-white opacity-0 transition-opacity duration-500 hover:opacity-100">
+      class="flap absolute top-0 left-0 z-10 hidden h-full w-full cursor-pointer text-white opacity-0 transition-opacity duration-500 hover:opacity-100 md:block">
       <div class="bg bg-dark absolute h-full w-full opacity-50"></div>
       <div class="data absolute flex h-full w-full flex-col justify-center leading-[1.1em]">
         @if ($person['people_name'])

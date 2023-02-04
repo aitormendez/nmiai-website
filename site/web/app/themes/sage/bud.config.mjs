@@ -65,6 +65,7 @@ export default async (app) => {
         },
       },
       spacing: {
+        margin: true,
         padding: true,
         units: ['px', '%', 'em', 'rem', 'vw', 'vh'],
       },
