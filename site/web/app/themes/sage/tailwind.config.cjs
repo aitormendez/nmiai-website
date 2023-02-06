@@ -17,6 +17,9 @@ module.exports = {
       black: '#000000',
     },
     extend: {
+      screens: {
+        xs: '520px',
+      },
       lineHeight: {
         none: '1',
       },
