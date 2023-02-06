@@ -41,6 +41,9 @@ export class nav {
 
     this.banner.classList.remove('text-dark');
     this.banner.classList.add('text-white');
+    this.banner.classList.add('bg-none');
+    this.banner.classList.add('opacity-100');
+    this.banner.classList.remove('opacity-0');
     this.tagLine.classList.add('md:hidden');
     this.tagLine.classList.remove('md:block');
 
@@ -61,6 +64,7 @@ export class nav {
       onComplete: () => {
         this.tagLine.classList.remove('md:hidden');
         this.tagLine.classList.add('md:block');
+        this.banner.classList.remove('bg-none');
       },
     });
 
