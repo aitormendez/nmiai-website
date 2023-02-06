@@ -2,7 +2,7 @@
   $thumb = $featured_img();
   global $counter;
 @endphp
-<a role="article" href="{{ get_permalink() }}" {{ post_class('md:w-1/2 md:odd:pr-2 md:even:pl-2 mb-20') }}>
+<a role="article" href="{{ get_permalink() }}" {{ post_class('md:w-1/2 md:odd:pr-2 md:even:pl-2 mb-20 no-underline') }}>
   <header>
     @if (array_key_exists('img', $thumb))
       @if ($thumb['img']['mime'] === 'image/gif')

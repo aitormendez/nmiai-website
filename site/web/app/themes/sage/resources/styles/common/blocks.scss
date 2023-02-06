@@ -103,14 +103,13 @@
     display: block;
     width: 60%;
     height: 1px;
-    border-radius: 8px;
+    background-color: var(--light);
 
     &::-webkit-slider-thumb {
       -webkit-appearance: none;
-      border: 1px solid black;
       height: 18px;
       width: 18px;
-      background-color: #ffffff;
+      background-color: var(--light);
       border-radius: 50%;
       cursor: none;
     }
@@ -123,8 +122,10 @@
     }
 
     input[type='range'] {
+      background-color: var(--dark);
+
       &::-webkit-slider-thumb {
-        border-color: var(--dark);
+        background-color: var(--dark);
       }
     }
   }
