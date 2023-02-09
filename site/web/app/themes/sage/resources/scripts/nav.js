@@ -9,6 +9,8 @@ export class nav {
     this.radio = Math.round(Math.hypot(window.innerWidth, window.innerHeight));
     this.banner = document.getElementById('banner');
     this.tagLine = document.getElementById('tagline');
+    this.body = document.querySelector('body');
+    console.log(this.body);
     this.scroll = '';
     this.oldValue = 0;
     this.newValue = 0;
@@ -41,11 +43,14 @@ export class nav {
 
     this.banner.classList.remove('text-dark');
     this.banner.classList.add('text-white');
-    this.banner.classList.add('bg-none');
+    this.banner.classList.add('!bg-none');
     this.banner.classList.add('opacity-100');
     this.banner.classList.remove('opacity-0');
     this.tagLine.classList.add('md:hidden');
     this.tagLine.classList.remove('md:block');
+    this.body.classList.add('overflow-hidden');
+    this.body.classList.add('w-screen');
+    this.body.classList.add('h-screen');
 
     this.closed = false;
   }
@@ -70,6 +75,9 @@ export class nav {
 
     this.banner.classList.add('text-dark');
     this.banner.classList.remove('text-white');
+    this.body.classList.remove('overflow-hidden');
+    this.body.classList.remove('w-screen');
+    this.body.classList.remove('h-screen');
 
     this.closed = true;
   }
