@@ -11,21 +11,10 @@
     {!! get_search_form(false) !!}
   @endif
 
-  @query([
-      'post_type' => 'project',
-      'posts_per_page' => 4,
-  ])
-
   @php
     global $counter;
     $counter = 1;
   @endphp
-
-  <div class="works mt-24 flex flex-wrap px-6">
-    @posts
-      @includeFirst(['partials.content-' . get_post_type(), 'partials.content'])
-    @endposts
-  </div>
 
   <div class="works infinite-container mt-24 flex flex-wrap px-6">
     @while (have_posts())
@@ -39,11 +28,11 @@
     <p class="infinite-scroll-error hidden">{{ __('No more pages to load', 'sage') }}</p>
   </div>
 
+  <button class="view-more-button mb-24 w-full text-3xl uppercase underline">{{ __('Load more', 'sage') }}</button>
+
   <div class="insertions p-6">
     @php(dynamic_sidebar('sidebar-project-archive'))
   </div>
-
-  <button class="view-more-button w-full text-3xl uppercase underline">View more</button>
 
   {!! get_the_posts_navigation(['class' => 'hidden']) !!}
 @endsection
