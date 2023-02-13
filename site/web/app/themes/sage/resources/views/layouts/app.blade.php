@@ -4,7 +4,7 @@
 
 @include('sections.header')
 
-<main id="main" class="main prose prose-dark max-w-none py-24">
+<main id="main" class="main prose prose-dark max-w-none">
   @yield('content')
 </main>
 
