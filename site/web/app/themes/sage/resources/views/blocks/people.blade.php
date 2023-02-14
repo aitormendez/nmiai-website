@@ -45,10 +45,11 @@
       <div class="bg bg-dark absolute h-full w-full opacity-50"></div>
       <div class="data absolute flex h-full w-full flex-col justify-center leading-[1.1em]">
         @if ($person['people_name'])
-          <p class="name w-full text-center text-xl">{{ $person['people_name'] }}</p>
+          <p class="name mb-1 w-full text-center text-xl leading-none">{{ $person['people_name'] }}</p>
         @endif
         @if ($person['people_title'])
-          <p class="title mb-2 w-full text-center font-serif text-lg italic">{{ $person['people_title'] }}</p>
+          <p class="title mb-3 w-full text-center font-serif text-lg italic leading-none">{{ $person['people_title'] }}
+          </p>
         @endif
         @if ($person['people_email'])
           <p class="email w-full text-center text-sm font-extralight">{{ $person['people_email'] }}</p>

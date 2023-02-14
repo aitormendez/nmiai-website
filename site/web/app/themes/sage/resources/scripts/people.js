@@ -3,6 +3,7 @@ export function people() {
   const mainFlap = document.querySelector('#main-flap');
   const mainFlapContent = document.querySelector('.flap-content');
   const closeBtn = mainFlap.querySelector('button');
+  const body = document.querySelector('body');
 
   peopleBlocks.forEach(function (block) {
     let peopleText = block.querySelector('.text').innerHTML;
@@ -12,6 +13,9 @@ export function people() {
 
     block.addEventListener('click', () => {
       mainFlap.classList.remove('hidden');
+      body.classList.remove('overflow-hidden');
+      body.classList.remove('w-screen');
+      body.classList.remove('h-screen');
       mainFlap.classList.add('flex');
       mainFlapContent.innerHTML =
         '<div class="text-[46px] md:text-6xl mt-20 mb-4 leading-tight text-light">' +
@@ -29,6 +33,9 @@ export function people() {
       setTimeout(function () {
         mainFlap.classList.add('opacity-100');
         mainFlap.classList.remove('opacity-0');
+        body.classList.add('overflow-hidden');
+        body.classList.add('w-screen');
+        body.classList.add('h-screen');
       }, 10);
     });
   });

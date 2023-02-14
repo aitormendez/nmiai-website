@@ -1,7 +1,17 @@
 module.exports = {
   darkMode: ['class', '.is-style-dark'],
   content: ['./index.php', './app/**/*.php', './resources/**/*.{php,vue,js}'],
-  safelist: ['gap-0', 'gap-1', 'gap-2', 'gap-3', 'leading-tight', 'md:mb-36', 'text-footer', 'leading-none'],
+  safelist: [
+    'gap-0',
+    'gap-1',
+    'gap-2',
+    'gap-3',
+    'leading-tight',
+    'md:mb-36',
+    'text-footer',
+    'leading-none',
+    'leading-h2',
+  ],
   theme: {
     fontFamily: {
       rigid: ['rigid-square', 'sans-serif'],
@@ -18,10 +28,11 @@ module.exports = {
     },
     extend: {
       screens: {
-        xs: '520px',
+        xs: '300px',
       },
       lineHeight: {
         none: '1',
+        h2: '1.05em',
       },
       fontSize: {
         '10xl': '11rem',
@@ -43,9 +54,6 @@ module.exports = {
             },
           },
         },
-      },
-      screens: {
-        xs: '300px',
       },
     },
   },

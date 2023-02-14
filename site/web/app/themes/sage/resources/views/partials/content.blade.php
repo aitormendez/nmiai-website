@@ -32,7 +32,7 @@
     </div>
 
     @if (array_key_exists('terms', $thumb))
-      <p class="terms hidden font-serif font-bold opacity-0 md:block">{!! $thumb['terms'] !!}</p>
+      <p class="terms hidden font-serif md:block">{!! $thumb['terms'] !!}</p>
     @endif
   </header>
 </a>
