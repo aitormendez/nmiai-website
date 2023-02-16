@@ -43,6 +43,9 @@ export function people() {
   closeBtn.addEventListener('click', () => {
     mainFlap.classList.add('opacity-0');
     mainFlap.classList.remove('opacity-100');
+    body.classList.remove('overflow-hidden');
+    body.classList.remove('w-screen');
+    body.classList.remove('h-screen');
     setTimeout(function () {
       mainFlap.classList.remove('flex');
       mainFlap.classList.add('hidden');
