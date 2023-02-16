@@ -4,9 +4,14 @@
 
     @if ($person['people_content_type'] === 'video')
       <div class="wrapper">
-        <video poster="{{ $person['people_video_poster'] }}" autoplay muted loop class="relative">
+        <video class="hidden md:block" poster="{{ $person['people_video_poster'] }}" autoplay muted loop class="relative">
           <source
             src="https://{{ $person['people_video_zone'] }}.b-cdn.net/{{ $person['people_video_id'] }}/play_720p.mp4"
+            type="video/mp4">
+        </video>
+        <video class="md:hidden" poster="{{ $person['people_video_poster'] }}" autoplay muted loop class="relative">
+          <source
+            src="https://{{ $person['people_video_zone'] }}.b-cdn.net/{{ $person['people_video_id'] }}/play_240p.mp4"
             type="video/mp4">
         </video>
       </div>
