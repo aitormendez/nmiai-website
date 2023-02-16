@@ -11,6 +11,11 @@ module.exports = {
     'text-footer',
     'leading-none',
     'leading-h2',
+    'mb-40',
+    'my-40',
+    'mb-5',
+    'mb-0',
+    '!max-w-none',
   ],
   theme: {
     fontFamily: {
