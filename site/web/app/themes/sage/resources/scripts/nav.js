@@ -17,6 +17,15 @@ export class nav {
     this.newValue = 0;
     this.oldDirection = 'up';
     this.direction = '';
+    this.mdMin = window.matchMedia('(min-width: 768px)');
+
+    if (this.mdMin.matches) {
+      this.circlePosition = 'calc(100vw - 3.75rem)';
+    } else {
+      this.circlePosition = 'calc(100vw - 2rem)';
+    }
+
+    console.log(this.circlePosition);
 
     this.btnDot.addEventListener('click', () => {
       this.closed ? this.openDot() : this.closeDot();
@@ -32,7 +41,7 @@ export class nav {
   openDot() {
     gsap.to(this.mainMenu, {
       overwrite: true,
-      clipPath: `circle(${this.radio}px at calc(100vw - 3.75rem) 2.5rem)`,
+      clipPath: `circle(${this.radio}px at ${this.circlePosition} 2.5rem)`,
       duration: 0.5,
     });
 
@@ -47,7 +56,7 @@ export class nav {
     this.banner.classList.add('!bg-none');
     this.banner.classList.add('opacity-100');
     this.banner.classList.remove('opacity-0');
-    this.tagLine.classList.add('hidden');
+    this.tagLine.classList.add('md:hidden');
     this.tagLine.classList.remove('md:block');
     this.langMenu.classList.remove('hidden');
     this.body.classList.add('overflow-hidden');
@@ -60,7 +69,7 @@ export class nav {
   closeDot() {
     gsap.to(this.mainMenu, {
       overwrite: true,
-      clipPath: 'circle(0px at calc(100vw - 3.75rem) 2.25rem)',
+      clipPath: `circle(0px at ${this.circlePosition} 2.25rem)`,
       duration: 0.5,
     });
 
@@ -69,7 +78,7 @@ export class nav {
       // backgroundColor: tailwindConfig.theme.colors.dark,
       duration: 0.5,
       onComplete: () => {
-        this.tagLine.classList.remove('hidden');
+        this.tagLine.classList.remove('md:hidden');
         this.tagLine.classList.add('md:block');
         this.banner.classList.remove('bg-none');
         this.langMenu.classList.add('hidden');
