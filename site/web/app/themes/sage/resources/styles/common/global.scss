@@ -9,13 +9,21 @@ html {
 body {
   min-height: 101vh;
 
-  &.home {
+  &.home,
+  &.page {
     padding: 1.5rem;
   }
 
   #main {
     img {
       transition: opacity 4s;
+    }
+  }
+
+  @media (min-width: 768px) {
+    &.home,
+    &.page {
+      padding: 2rem;
     }
   }
 }

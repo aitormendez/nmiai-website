@@ -4,19 +4,6 @@
   }
 }
 
-.wp-block-section {
-  // &.is-style-dark {
-  //   background-color: var(--dark);
-  //   color: white;
-
-  //   .progress {
-  //     svg circle {
-  //       fill: white;
-  //     }
-  //   }
-  // }
-}
-
 .is-style-dark #main * {
   color: white;
 }
@@ -54,6 +41,7 @@
     object-fit: cover;
   }
 }
+
 .is-style-gap {
   row-gap: 1.2%;
   column-gap: 1.2%;
@@ -73,8 +61,13 @@
 
 .wp-block-section {
   #main .content > & {
-    padding-right: 2.25rem;
-    padding-left: 2.25rem;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+
+    @media (min-width: 768px) {
+      padding-right: 2rem;
+      padding-left: 2rem;
+    }
   }
 }
 
@@ -168,7 +161,7 @@
     }
 
     @media (min-width: 870px) {
-      width: calc(33% - var(--gap) / 3);
+      width: calc(33.1% - var(--gap) / 3);
 
       .wrapper {
         video {
