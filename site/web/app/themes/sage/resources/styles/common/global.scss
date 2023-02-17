@@ -11,7 +11,9 @@ body {
 
   &.home,
   &.contact {
-    padding: 1.5rem;
+    #main {
+      padding: 1.5rem;
+    }
   }
 
   #main {
@@ -23,7 +25,9 @@ body {
   @media (min-width: 768px) {
     &.home,
     &.contact {
-      padding: 2rem;
+      #main {
+        padding: 2rem;
+      }
     }
   }
 }
