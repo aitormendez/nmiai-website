@@ -2,8 +2,19 @@
    background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 36%, rgba(255, 255, 255, 0) 100%);
 } */
 
-#tagline {
+#tagline,
+#lang-menu {
   right: 4.25rem;
+
+  .wpml-ls-legacy-list-horizontal {
+    padding: 0px;
+    border: none;
+
+    a {
+      padding: 0;
+      line-height: 1.25rem;
+    }
+  }
 }
 
 #btnDot {

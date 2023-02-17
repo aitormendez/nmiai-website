@@ -14,8 +14,21 @@
   </a>
 
   <div id="tagline"
-    class="text-dark dark:text-light fixed top-6 z-40 hidden font-serif font-bold transition-all duration-500 md:block">
+    class="text-dark dark:text-light fixed top-6 z-40 hidden font-serif font-bold leading-5 transition-all duration-500 md:block">
     {!! $tagline !!}
+  </div>
+
+  <div id="lang-menu"
+    class="text-light fixed top-6 z-40 hidden font-serif font-bold leading-5 transition-all duration-500">
+    @php
+      $args = [
+          'native' => 1,
+          'link_current' => 0,
+          'translated' => 0,
+      ];
+      
+      do_action('wpml_language_switcher', $args);
+    @endphp
   </div>
 </header>
 

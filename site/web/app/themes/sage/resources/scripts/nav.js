@@ -9,6 +9,7 @@ export class nav {
     this.radio = Math.round(Math.hypot(window.innerWidth, window.innerHeight));
     this.banner = document.getElementById('banner');
     this.tagLine = document.getElementById('tagline');
+    this.langMenu = document.getElementById('lang-menu');
     this.body = document.querySelector('body');
     console.log(this.body);
     this.scroll = '';
@@ -46,8 +47,9 @@ export class nav {
     this.banner.classList.add('!bg-none');
     this.banner.classList.add('opacity-100');
     this.banner.classList.remove('opacity-0');
-    this.tagLine.classList.add('md:hidden');
+    this.tagLine.classList.add('hidden');
     this.tagLine.classList.remove('md:block');
+    this.langMenu.classList.remove('hidden');
     this.body.classList.add('overflow-hidden');
     this.body.classList.add('w-screen');
     this.body.classList.add('h-screen');
@@ -67,9 +69,10 @@ export class nav {
       // backgroundColor: tailwindConfig.theme.colors.dark,
       duration: 0.5,
       onComplete: () => {
-        this.tagLine.classList.remove('md:hidden');
+        this.tagLine.classList.remove('hidden');
         this.tagLine.classList.add('md:block');
         this.banner.classList.remove('bg-none');
+        this.langMenu.classList.add('hidden');
       },
     });
 

@@ -8,6 +8,16 @@ html {
 
 body {
   min-height: 101vh;
+
+  &.home {
+    padding: 1.5rem;
+  }
+
+  #main {
+    img {
+      transition: opacity 4s;
+    }
+  }
 }
 
 @media (min-width: 768px) {
@@ -15,17 +25,6 @@ body {
     // cursor: none !important;
   }
 }
-
-#main {
-  body.home & {
-    padding: 1.5rem;
-  }
-
-  img {
-    transition: opacity 4s;
-  }
-}
-
 .outlined {
   -webkit-text-stroke: 2px var(--dark);
   color: white;
