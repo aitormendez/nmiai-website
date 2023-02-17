@@ -22,7 +22,9 @@
         </video>
       </div>
     @else
-      <img src="{!! $person['people_image']['url'] !!}" alt="">
+      <div class="wrapper">
+        <img src="{!! $person['people_image']['url'] !!}" alt="">
+      </div>
     @endif
 
     <div class="bg-midup absolute left-0 bottom-0 flex items-center py-1 px-2 text-xs text-white sm:text-base">

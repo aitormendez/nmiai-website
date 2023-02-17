@@ -9,7 +9,9 @@
           type="video/mp4">
       </video>
     @else
-      <img src="{!! $person_link['people_link_image']['url'] !!}" alt="">
+      <div class="wrapper">
+        <img src="{!! $person_link['people_link_image']['url'] !!}" alt="">
+      </div>
     @endif
 
     <div
@@ -22,7 +24,7 @@
       <div class="relative -top-2">{{ $person_link['people_link_hover_text'] }}</div>
     </div>
 
-    <div class="bg-midup absolute left-0 bottom-0 flex items-center py-1 px-2 text-white">
+    <div class="bg-midup absolute left-0 bottom-0 flex items-center py-1 px-2 text-xs text-white sm:text-base">
       <div class="mr-1 w-4">
         <svg id="prefix__Layer_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240.63 254.24">
           <defs>

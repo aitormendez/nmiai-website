@@ -154,17 +154,19 @@
       display: flex;
       justify-content: center;
 
-      video {
+      video,
+      img {
         width: 65vw;
         max-width: none;
       }
     }
 
     @media (min-width: 870px) {
-      width: calc(33.1% - var(--gap) / 3);
+      width: calc(33% - var(--gap) / 3);
 
       .wrapper {
-        video {
+        video,
+        img {
           width: 100%;
           max-width: 100%;
         }

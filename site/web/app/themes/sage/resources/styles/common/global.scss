@@ -10,7 +10,7 @@ body {
   min-height: 101vh;
 
   &.home,
-  &.page {
+  &.contact {
     padding: 1.5rem;
   }
 
@@ -22,7 +22,7 @@ body {
 
   @media (min-width: 768px) {
     &.home,
-    &.page {
+    &.contact {
       padding: 2rem;
     }
   }

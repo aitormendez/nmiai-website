@@ -1,7 +1,7 @@
 @include('partials.navigation')
 
 <header id="banner"
-  class="banner text-dark dark:text-light fixed z-50 flex w-full justify-between bg-gradient-to-b from-white to-transparent pt-6 pb-10 transition-all duration-500">
+  class="banner text-dark dark:text-light fixed top-0 left-0 z-50 flex w-full justify-between bg-gradient-to-b from-white to-transparent pt-6 pb-10 transition-all duration-500">
 
   <a class="brand text-md relative ml-9 flex uppercase" href="{{ home_url('/') }}">
     <span class="mr-2 align-middle">No</span>
