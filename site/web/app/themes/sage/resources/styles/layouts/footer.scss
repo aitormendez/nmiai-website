@@ -1,12 +1,12 @@
 footer .down {
-  grid-template: 1fr 1fr / 1fr 1fr;
+  grid-template: 1fr 1fr 1fr / 1fr;
 
   .left-text {
     grid-column-start: 1;
   }
 
   .right-text {
-    grid-column-start: 2;
+    grid-row-start: 2;
   }
 
   .social {
@@ -24,6 +24,7 @@ footer .down {
 
     .right-text {
       grid-column-start: 2;
+      grid-row-start: 1;
     }
 
     .social {
