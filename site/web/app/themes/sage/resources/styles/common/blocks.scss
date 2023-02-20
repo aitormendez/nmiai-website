@@ -109,6 +109,8 @@
   }
 
   &.light {
+    background-color: var(--dark);
+
     .start_text,
     .end_text {
       color: var(--dark);
