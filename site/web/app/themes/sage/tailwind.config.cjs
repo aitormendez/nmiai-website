@@ -16,6 +16,7 @@ module.exports = {
     'mb-5',
     'mb-0',
     '!max-w-none',
+    'py-24',
   ],
   theme: {
     fontFamily: {

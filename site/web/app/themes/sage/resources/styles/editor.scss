@@ -19,6 +19,12 @@
   max-width: none !important;
 }
 
+#wpadminbar {
+  img {
+    display: inline !important;
+  }
+}
+
 // input[type='range'] {
 //   position: relative;
 //   appearance: none;

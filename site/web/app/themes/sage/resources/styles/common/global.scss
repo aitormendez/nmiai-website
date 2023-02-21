@@ -9,8 +9,7 @@ html {
 body {
   min-height: 101vh;
 
-  &.home,
-  &.contact {
+  &.home {
     #main {
       padding: 1.5rem;
     }
@@ -23,8 +22,7 @@ body {
   }
 
   @media (min-width: 768px) {
-    &.home,
-    &.contact {
+    &.home {
       #main {
         padding: 2rem;
       }
@@ -90,4 +88,8 @@ h4 {
   .link {
     margin-bottom: 10rem;
   }
+}
+
+.hanging {
+  text-indent: -0.5em;
 }

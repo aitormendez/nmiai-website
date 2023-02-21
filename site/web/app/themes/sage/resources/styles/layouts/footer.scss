@@ -33,3 +33,11 @@ footer .down {
     }
   }
 }
+
+#contact-footer {
+  @media (min-width: 768px) {
+    p {
+      margin-bottom: 1em;
+    }
+  }
+}
