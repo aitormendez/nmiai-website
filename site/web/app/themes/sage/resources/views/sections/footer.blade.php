@@ -1,7 +1,7 @@
 <footer class="content-info bg-dark p-6 text-white">
   <div class="down grid gap-4 gap-x-2 text-xs"">
     <div class="left-text flex items-center">
-      @option('footer_left_text')
+      ©{{ date('Y') }} @option('footer_left_text')
     </div>
     <div class="right-text flex items-center md:justify-end">
       <span>
