@@ -17,6 +17,8 @@ module.exports = {
     'mb-0',
     '!max-w-none',
     'py-24',
+    'md:pr-12',
+    'md:pl-12',
   ],
   theme: {
     fontFamily: {
@@ -45,10 +47,15 @@ module.exports = {
         '11xl': '15rem',
         footer: '7vw',
       },
-      typography: {
-        DEFAULT: {
-          color: '#2f2f2f',
+      typography: ({theme}) => ({
+        maincolors: {
           css: {
+            '--tw-prose-headings': theme('colors.dark'),
+          },
+        },
+        DEFAULT: {
+          css: {
+            color: theme('colors.dark'),
             lineHeight: '1.4',
           },
         },
@@ -60,7 +67,7 @@ module.exports = {
             },
           },
         },
-      },
+      }),
     },
   },
   plugins: [require('@tailwindcss/typography')],

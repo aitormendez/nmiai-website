@@ -1,4 +1,4 @@
-<footer class="content-info bg-dark p-6 text-white">
+<footer class="content-info bg-dark px-6 py-12 text-white">
   <div class="down grid gap-4 gap-x-2 text-xs"">
     <div class="left-text flex items-center">
       ©{{ date('Y') }} @option('footer_left_text')
