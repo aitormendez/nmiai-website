@@ -19,6 +19,10 @@ module.exports = {
     'py-24',
     'md:pr-12',
     'md:pl-12',
+    'my-36',
+    'md:my-0',
+    'mb-56',
+    'md:mb-40',
   ],
   theme: {
     fontFamily: {

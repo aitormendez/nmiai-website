@@ -18,6 +18,7 @@ export class nav {
     this.oldDirection = 'up';
     this.direction = '';
     this.mdMin = window.matchMedia('(min-width: 768px)');
+    this.doc = document.querySelector('html');
 
     if (this.mdMin.matches) {
       this.circlePosition = 'calc(100vw - 3.75rem)';
@@ -38,6 +39,13 @@ export class nav {
     this.detectScroll();
   }
 
+  preventScroll(e) {
+    e.preventDefault();
+    e.stopPropagation();
+
+    return false;
+  }
+
   openDot() {
     gsap.to(this.mainMenu, {
       overwrite: true,
@@ -51,6 +59,10 @@ export class nav {
       duration: 0.5,
     });
 
+    this.doc.addEventListener('wheel', this.preventScroll, {
+      passive: false,
+    });
+
     this.banner.classList.remove('text-dark');
     this.banner.classList.add('text-white');
     this.banner.classList.add('!bg-none');
@@ -59,7 +71,7 @@ export class nav {
     this.tagLine.classList.add('md:hidden');
     this.tagLine.classList.remove('md:block');
     this.langMenu.classList.remove('hidden');
-    this.body.classList.add('overflow-hidden');
+    // this.body.classList.add('overflow-hidden');
     this.body.classList.add('w-screen');
     this.body.classList.add('h-screen');
 
@@ -67,6 +79,8 @@ export class nav {
   }
 
   closeDot() {
+    this.doc.removeEventListener('wheel', this.preventScroll);
+
     gsap.to(this.mainMenu, {
       overwrite: true,
       clipPath: `circle(0px at ${this.circlePosition} 2.25rem)`,
@@ -87,7 +101,7 @@ export class nav {
 
     this.banner.classList.add('text-dark');
     this.banner.classList.remove('text-white');
-    this.body.classList.remove('overflow-hidden');
+    // this.body.classList.remove('overflow-hidden');
     this.body.classList.remove('w-screen');
     this.body.classList.remove('h-screen');
 

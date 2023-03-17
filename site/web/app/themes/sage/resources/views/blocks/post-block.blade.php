@@ -1,4 +1,4 @@
-<article class="{{ $block->classes }} not-prose block py-14 md:py-20" role="article">
+<article class="{{ $block->classes }} not-prose block pb-9 md:py-20" role="article">
   @if (array_key_exists('post_thumbnail_data', $post_block))
     <a href="{{ $post_block['permalink'] }}">
       <img class="" src="{{ $post_block['post_thumbnail_data']['src'][0] }}"
@@ -24,6 +24,6 @@
   </div>
 
   @if ($post_block['post_excerpt'])
-    <div class="fade my-6 text-2xl">{!! $post_block['post_excerpt'] !!}</div>
+    <div class="fade mt-6 text-2xl">{!! $post_block['post_excerpt'] !!}</div>
   @endif
 </article>
