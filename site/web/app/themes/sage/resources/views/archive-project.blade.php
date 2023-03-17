@@ -28,7 +28,8 @@
     <p class="infinite-scroll-error hidden">{{ __('No more pages to load', 'sage') }}</p>
   </div>
 
-  <button class="view-more-button mb-24 w-full text-3xl uppercase underline">{{ __('Load more', 'sage') }}</button>
+  <button
+    class="view-more-button mb-24 w-full text-[20px] font-bold uppercase underline">{{ __('Load more', 'sage') }}</button>
 
   <div class="insertions p-6">
     @php(dynamic_sidebar('sidebar-project-archive'))
