@@ -11,6 +11,7 @@ module.exports = {
     'text-footer',
     'leading-none',
     'leading-h2',
+    'mb-28',
     'mb-40',
     'my-40',
     'mb-5',

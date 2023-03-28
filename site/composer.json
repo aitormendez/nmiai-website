@@ -97,7 +97,6 @@
     "wpackagist-plugin/autodescription": "*",
     "wpackagist-plugin/schema-and-structured-data-for-wp": "*",
     "wpackagist-plugin/wp-mail-smtp": "*",
-    "soberwp/intervention": "dev-main",
     "wp-sync-db/wp-sync-db-media-files": "dev-master",
     "analogmemory/wp-sync-db": "1.6",
     "wpackagist-plugin/query-monitor": "*",
