@@ -19,6 +19,10 @@ body {
     img {
       transition: opacity 4s;
     }
+
+    .content p {
+      font-size: 1.2rem;
+    }
   }
 
   @media (min-width: 768px) {
