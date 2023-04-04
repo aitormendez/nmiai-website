@@ -72,7 +72,7 @@ export class nav {
     this.tagLine.classList.remove('md:block');
     this.langMenu.classList.remove('hidden');
     // this.body.classList.add('overflow-hidden');
-    this.body.classList.add('w-screen');
+    // this.body.classList.add('w-screen');
     this.body.classList.add('h-screen');
 
     this.closed = false;
@@ -102,7 +102,7 @@ export class nav {
     this.banner.classList.add('text-dark');
     this.banner.classList.remove('text-white');
     // this.body.classList.remove('overflow-hidden');
-    this.body.classList.remove('w-screen');
+    // this.body.classList.remove('w-screen');
     this.body.classList.remove('h-screen');
 
     this.closed = true;
