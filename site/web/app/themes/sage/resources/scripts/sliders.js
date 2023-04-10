@@ -24,6 +24,7 @@ export function imagesSlider() {
     modules: [Autoplay],
     autoplay: {
       delay: 5000,
+      disableOnInteraction: false,
     },
     loop: true,
     speed: 1000,
