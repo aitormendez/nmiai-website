@@ -51,7 +51,7 @@ class Post extends Composer
         }
 
         if (is_post_type_archive('project')) {
-            return __('<span class="outlined light">When project and Client connect</span> Bad-Ass work is Born', 'sage');
+            return __('When project and Client connect Bad-Ass work is Born', 'sage');
         }
 
         if (is_archive()) {
@@ -78,7 +78,8 @@ class Post extends Composer
      *
      * @return string
      */
-    public function tags() {
+    public function tags()
+    {
         global $post;
 
         $tags_raw = wp_get_post_tags($post->ID);
@@ -93,7 +94,7 @@ class Post extends Composer
             }
         }
 
-        return $tags ? $tags : false ;
+        return $tags ? $tags : false;
     }
 
     /**
@@ -101,7 +102,8 @@ class Post extends Composer
      *
      * @return string
      */
-    public function hero() {
+    public function hero()
+    {
         $hero = [
             'type' => get_field('single_project_type')
         ];
