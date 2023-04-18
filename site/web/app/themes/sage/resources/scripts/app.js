@@ -1,6 +1,7 @@
 import {domReady} from '@roots/sage/client';
 import {nav} from './nav.js';
 import {renderHeader} from './lottieApp.js';
+import {slotMachine} from './slotMachine.js';
 
 /**
  * app.main
@@ -17,6 +18,7 @@ const main = async (err) => {
   new nav();
 
   renderHeader();
+  slotMachine();
 
   if (mdMin.matches) {
     const {cursor} = await import('./cursor.js');

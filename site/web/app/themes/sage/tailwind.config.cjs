@@ -28,6 +28,8 @@ module.exports = {
     'md:my-0',
     'mb-56',
     'md:mb-40',
+    'text-6xl',
+    '2xl:text-7xl',
   ],
   theme: {
     fontFamily: {

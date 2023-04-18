@@ -49,11 +49,11 @@ class Page extends Composer
     }
 
     /**
-     * Returns an emoji per PHP session.
+     *
      *
      */
     public function jsonOnMobile()
     {
-        return get_field('json_header_mobile') == 1 ? true : false ;
+        return get_field('json_header_mobile') == 1 ? true : false;
     }
 }

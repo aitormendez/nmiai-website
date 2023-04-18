@@ -11,7 +11,6 @@ export class nav {
     this.tagLine = document.getElementById('tagline');
     this.langMenu = document.getElementById('lang-menu');
     this.body = document.querySelector('body');
-    console.log(this.body);
     this.scroll = '';
     this.oldValue = 0;
     this.newValue = 0;
@@ -25,8 +24,6 @@ export class nav {
     } else {
       this.circlePosition = 'calc(100vw - 2rem)';
     }
-
-    console.log(this.circlePosition);
 
     this.btnDot.addEventListener('click', () => {
       this.closed ? this.openDot() : this.closeDot();

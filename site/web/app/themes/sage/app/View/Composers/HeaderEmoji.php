@@ -23,7 +23,7 @@ class HeaderEmoji extends Composer
     public function override()
     {
         return [
-            'emoji' => $this->headerEmoji(),
+            'array_emoji' => $this->headerEmoji(),
         ];
     }
 
@@ -35,24 +35,38 @@ class HeaderEmoji extends Composer
      */
     public function headerEmoji()
     {
-        $emoji = [];
+        $headerEmojiList = get_field('header_emojis', 'option');
+        $header_type = get_field('header_type', 'option');
 
-            $headerEmojiList = get_field('header_emojis', 'option');
+        $array = [
+            'header_type' => $header_type,
+            'emoji' => [],
+        ];
 
-            if (get_field('has_header_unique_emoji', 'option') === true) {
-                if (get_field('unique_emoji_or_image', 'option') === true) {
-                    $emoji['emoji_or_image'] = true;
-                    $emoji['header_emoji'] = get_field('header_unique_emoji', 'option');
-                } else {
-                    $emoji['emoji_or_image'] = false;
-                    $emoji['header_image']= get_field('header_unique_image', 'option');
-                }
+        if ($header_type === 'fixed') {
+            if (get_field('unique_emoji_or_image', 'option') === true) {
+                $array['emoji']['emoji_or_image'] = true;
+                $array['emoji']['header_emoji'] = get_field('header_unique_emoji', 'option');
             } else {
-                if (!array_key_exists('header_emoji', $_SESSION)) {
-                    $_SESSION = $headerEmojiList[array_rand($headerEmojiList)];
-                }
-                $emoji= $_SESSION;
+                $array['emoji']['emoji_or_image'] = false;
+                $array['emoji']['header_image'] = get_field('header_unique_image', 'option');
             }
-        return $emoji;
+        } else if ($header_type === 'random_list') {
+            if (!array_key_exists('header_emoji', $_SESSION)) {
+                $_SESSION = $headerEmojiList[array_rand($headerEmojiList)];
+            }
+            $array['emoji'] = $_SESSION;
+        } else if ($header_type === 'slot_machine') {
+            $emoji_list = get_field('header_emojis_slot_machine', 'option');
+
+            $element_emojis = array_map(function ($emo) {
+                return $emo['emoji_or_image_slot_machine'] ? $emo['header_emoji_slot_machine'] : '<img src="' . $emo['header_image_slot_machine']['url'] . '" alt="' . $emo['header_image_slot_machine']['alt'] . '">';
+            }, $emoji_list);
+
+            $array['emoji'] = $emoji_list;
+            $array['element_emojis'] = $element_emojis;
+        }
+
+        return $array;
     }
 }
