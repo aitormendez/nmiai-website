@@ -60,7 +60,7 @@ class HeaderEmoji extends Composer
             $emoji_list = get_field('header_emojis_slot_machine', 'option');
 
             $element_emojis = array_map(function ($emo) {
-                return $emo['emoji_or_image_slot_machine'] ? $emo['header_emoji_slot_machine'] : '<img src="' . $emo['header_image_slot_machine']['url'] . '" alt="' . $emo['header_image_slot_machine']['alt'] . '">';
+                return $emo['emoji_or_image_slot_machine'] ? $emo['header_emoji_slot_machine'] : '<img class="w-6" src="' . $emo['header_image_slot_machine']['url'] . '" alt="' . $emo['header_image_slot_machine']['alt'] . '">';
             }, $emoji_list);
 
             $array['emoji'] = $emoji_list;
