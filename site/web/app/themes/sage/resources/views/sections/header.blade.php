@@ -27,7 +27,7 @@
     </a>
   @elseif($array_emoji['header_type'] === 'slot_machine')
     <a class="brand text-md relative ml-6 flex uppercase md:ml-8" href="{{ home_url('/') }}">
-      <span class="mr-2 align-middle">No</span>
+      <span class="align-middle">No</span>
       <div id="slot-machine" class="relative -top-1 h-6 w-8 overflow-hidden">
         <div id="slot-machine-content" class="absolute flex flex-col items-center text-2xl">
           @foreach ($array_emoji['element_emojis'] as $emo)
@@ -38,7 +38,7 @@
           @endforeach
         </div>
       </div>
-      <span class="ml-2 align-middle">Is An Island</span>
+      <span class="align-middle">Is An Island</span>
     </a>
   @endif
 
