@@ -29,7 +29,7 @@ module.exports = {
     'mb-56',
     'md:mb-40',
     'text-6xl',
-    '2xl:text-7xl',
+    '2xl:text-7con5xl',
   ],
   theme: {
     fontFamily: {
@@ -54,6 +54,7 @@ module.exports = {
         h2: '1.05em',
       },
       fontSize: {
+        '7con5xl': '5rem',
         '10xl': '11rem',
         '11xl': '15rem',
         footer: '7vw',

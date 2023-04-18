@@ -18,6 +18,8 @@ export class nav {
     this.direction = '';
     this.mdMin = window.matchMedia('(min-width: 768px)');
     this.doc = document.querySelector('html');
+    this.hideInMenuOpen = document.querySelectorAll('.hide-in-menu-open');
+    this.burgerIcon = document.querySelectorAll('.burger-icon');
 
     if (this.mdMin.matches) {
       this.circlePosition = 'calc(100vw - 3.75rem)';
@@ -72,6 +74,14 @@ export class nav {
     // this.body.classList.add('w-screen');
     this.body.classList.add('h-screen');
 
+    this.hideInMenuOpen.forEach((element) => {
+      element.classList.add('hidden');
+    });
+
+    this.burgerIcon.forEach((element) => {
+      element.classList.remove('hidden');
+    });
+
     this.closed = false;
   }
 
@@ -101,6 +111,14 @@ export class nav {
     // this.body.classList.remove('overflow-hidden');
     // this.body.classList.remove('w-screen');
     this.body.classList.remove('h-screen');
+
+    this.hideInMenuOpen.forEach((element) => {
+      element.classList.remove('hidden');
+    });
+
+    this.burgerIcon.forEach((element) => {
+      element.classList.add('hidden');
+    });
 
     this.closed = true;
   }

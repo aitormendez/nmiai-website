@@ -7,28 +7,30 @@
     <a class="brand text-md relative ml-6 flex uppercase md:ml-8" href="{{ home_url('/') }}">
       <span class="mr-2 align-middle">No</span>
       @if ($array_emoji['emoji']['emoji_or_image'])
-        <span class="align-middle text-xl">{{ $array_emoji['emoji']['header_emoji'] }}</span>
+        <span class="hide-in-menu-open align-middle text-xl">{{ $array_emoji['emoji']['header_emoji'] }}</span>
       @else
         <img src="{{ $array_emoji['emoji']['header_image']['url'] }}"
-          alt="{{ $array_emoji['emoji']['header_image']['alt'] }}" class="h-6 w-auto">
+          alt="{{ $array_emoji['emoji']['header_image']['alt'] }}" class="hide-in-menu-open h-6 w-auto">
       @endif
+      <span class="burger-icon hidden align-middle text-xl">🍔</span>
       <span class="ml-2 align-middle">Is An Island</span>
     </a>
   @elseif($array_emoji['header_type'] === 'random_list')
     <a class="brand text-md relative ml-6 flex uppercase md:ml-8" href="{{ home_url('/') }}">
       <span class="mr-2 align-middle">No</span>
       @if ($_SESSION['emoji_or_image'])
-        <span class="align-middle text-xl">{{ $array_emoji['emoji']['header_emoji'] }}</span>
+        <span class="hide-in-menu-open align-middle text-xl">{{ $array_emoji['emoji']['header_emoji'] }}</span>
       @else
         <img src="{{ $array_emoji['emoji']['header_image']['url'] }}"
-          alt="{{ $array_emoji['emoji']['header_image']['alt'] }}" class="h-6 w-auto">
+          alt="{{ $array_emoji['emoji']['header_image']['alt'] }}" class="hide-in-menu-open h-6 w-auto">
       @endif
+      <span class="burger-icon hidden align-middle text-xl">🍔</span>
       <span class="ml-2 align-middle">Is An Island</span>
     </a>
   @elseif($array_emoji['header_type'] === 'slot_machine')
     <a class="brand text-md relative ml-6 flex uppercase md:ml-8" href="{{ home_url('/') }}">
       <span class="align-middle">No</span>
-      <div id="slot-machine" class="relative -top-1 flex h-7 w-9 justify-center overflow-hidden">
+      <div id="slot-machine" class="hide-in-menu-open relative -top-1 flex h-7 w-9 justify-center overflow-hidden">
         <div id="slot-machine-content" class="absolute flex flex-col items-center text-2xl">
           @foreach ($array_emoji['element_emojis'] as $emo)
             <div class="h-8">{!! $emo !!}</div>
@@ -38,6 +40,7 @@
           @endforeach
         </div>
       </div>
+      <span class="burger-icon mr-[7px] ml-[6px] hidden align-middle text-xl">🍔</span>
       <span class="align-middle">Is An Island</span>
     </a>
   @endif
