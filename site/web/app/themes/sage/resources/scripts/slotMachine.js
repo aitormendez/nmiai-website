@@ -4,16 +4,16 @@ gsap.registerPlugin(CustomEase);
 
 export function slotMachine() {
   const slotMachine = document.getElementById('slot-machine-content');
-  const slotNum = Math.floor(Math.random() * 19);
+  const slotNum = Math.floor(Math.random() * 14);
   console.log(slotNum);
-  const slot = 32 * (slotNum + 20) - 30;
+  const slot = 32 * (slotNum + 15) - 30;
 
   gsap.to(slotMachine, {
     y: -slot,
     ease: CustomEase.create(
       'custom',
-      'M0,0 C0,0 0.152,0.074 0.278,0.35 0.39,0.596 0.348,1.045 0.562,1.046 0.636,1.046 0.626,0.966 0.668,0.966 0.702,0.966 0.704,1.02 0.734,1.02 0.762,1.02 0.764,0.976 0.796,0.976 0.828,0.976 0.847,0.984 0.876,0.988 0.964,1 1,1 1,1 ',
+      'M0,0 C0.126,0.382 0.451,1.031 0.668,1.032 0.756,1.032 0.742,0.978 0.804,0.978 0.844,0.978 0.873,1.013 0.926,1.014 0.968,1.014 1,1 1,1 ',
     ),
-    duration: 5,
+    duration: 3,
   });
 }
