@@ -105,6 +105,7 @@
     "wpackagist-plugin/lottiefiles": "*",
     "wpackagist-plugin/bunnycdn": "*",
     "wpackagist-plugin/complianz-gdpr": "*",
+    "wpackagist-plugin/matomo": "*",
     "log1x/navi": "^2.0",
     "log1x/acf-composer": "^2.1"
   },
