@@ -40,7 +40,7 @@
           @endforeach
         </div>
       </div>
-      <span class="burger-icon mr-[7px] ml-[6px] hidden align-middle text-xl">🍔</span>
+      <span class="burger-icon hidden w-9 text-center align-middle text-xl">🍔</span>
       <span class="align-middle">Is An Island</span>
     </a>
   @endif

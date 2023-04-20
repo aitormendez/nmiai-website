@@ -19,6 +19,8 @@ module.exports = {
     '!max-w-none',
     'py-24',
     'md:pr-12',
+    'md:pr-7',
+    'md:pl-7',
     'md:pl-12',
     'md:pr-10',
     'md:pl-10',
