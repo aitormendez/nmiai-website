@@ -1,10 +1,26 @@
+import {gsap} from 'gsap';
+
 export function people() {
   const peopleBlocks = document.querySelectorAll('.wp-block-people');
   if (peopleBlocks.length > 0) {
     const mainFlap = document.querySelector('#main-flap');
     const mainFlapContent = document.querySelector('.flap-content');
+    const mainFlapCloseBtn = document.querySelector('button svg');
+    console.log(mainFlapCloseBtn);
     const closeBtn = mainFlap.querySelector('button');
     const body = document.querySelector('body');
+
+    mainFlapCloseBtn.addEventListener('mouseenter', () => {
+      gsap.to(mainFlapCloseBtn, {
+        rotation: 360,
+      });
+    });
+
+    mainFlapCloseBtn.addEventListener('mouseleave', () => {
+      gsap.to(mainFlapCloseBtn, {
+        rotation: 0,
+      });
+    });
 
     peopleBlocks.forEach(function (block) {
       let peopleText = block.querySelector('.text').innerHTML;
