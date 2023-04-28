@@ -193,3 +193,11 @@
     }
   }
 }
+
+.accordion-group {
+  &:first-child {
+    a {
+      padding-top: 0;
+    }
+  }
+}

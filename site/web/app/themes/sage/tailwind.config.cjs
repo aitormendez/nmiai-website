@@ -32,6 +32,12 @@ module.exports = {
     'md:mb-40',
     'text-6xl',
     '2xl:text-7con5xl',
+    'mt-0',
+    'mb-0',
+    'md:-mt-6',
+    'md:mt-0',
+    'md:mt-60',
+    'md:-pt-44',
   ],
   theme: {
     fontFamily: {

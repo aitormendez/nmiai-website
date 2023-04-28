@@ -1,6 +1,6 @@
-<section class="{{ $block->classes }}">
+<section class=" md:mt-44 {{ $block->classes }}">
   <div class="" style="{{ $padding }}">
-    <div class="bottom my-6 flex flex-wrap items-center justify-between md:justify-start">
+    <div class="bottom flex flex-wrap items-center justify-between md:justify-start">
 
       <div class="progress relative mb-2 flex w-full items-center justify-between">
         <div class="progress-bar text-dark absolute h-0 w-0 border-t dark:text-white"></div>
@@ -22,7 +22,7 @@
       </div>
 
     </div>
-    <div class="">
+    <div class="md:pt-36">
       <InnerBlocks />
     </div>
   </div>

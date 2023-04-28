@@ -21,8 +21,7 @@
     </h1>
   </div>
 @else
-  <div
-    class="page-header fade not-prose is-style-column flex justify-center px-6 pt-32 text-center opacity-0 md:pt-72 md:pb-32">
+  <div class="page-header fade not-prose is-style-column flex justify-center px-6 pt-32 text-center opacity-0 md:pt-72">
     <h1 class="text-4xl font-bold uppercase md:text-5xl lg:text-7xl xl:text-8xl">
       @if ($header_html)
         {!! $header_html !!}
