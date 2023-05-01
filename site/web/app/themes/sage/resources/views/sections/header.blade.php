@@ -66,7 +66,10 @@
 
 <button id="btnDot" class="bg-light fixed top-7 z-50 h-4 w-4 rounded-full mix-blend-exclusion"></button>
 
-<svg id="cursor" class="pointer-events-none fixed z-[70] mix-blend-exclusion" width="40" height="40"
-  viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" style="top: 0px; left: 0px; display: none">
-  <circle cx="20" cy="20" r="18" fill="#000" stroke="#fff" />
+<svg id="cursor" class="pointer-events-none fixed z-[70] mix-blend-exclusion" width="60" height="60"
+  viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg" style="top: 0px; left: 0px; display: none">
+  <circle cx="30" cy="30" r="18" fill="#000" stroke="#fff" />
+  <path id="cursor-arrow" class="hidden"
+    d="M16.4146 28.0341L-13.3142 28.0341L-4.69438 19.4142L-6.1086 18L-17 28.8914L-6.1086 39.7828L-4.69438 38.3686L-13.0289 30.0341L16.4146 30.0341V28.0341Z M44.9996 29.7487H74.7285L66.1086 38.3686L67.5228 39.7828L78.4142 28.8914L67.5228 18L66.1086 19.4142L74.4431 27.7487H44.9996V29.7487Z"
+    fill="black" />
 </svg>

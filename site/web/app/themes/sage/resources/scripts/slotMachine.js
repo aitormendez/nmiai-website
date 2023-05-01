@@ -5,7 +5,6 @@ gsap.registerPlugin(CustomEase);
 export function slotMachine() {
   const slotMachine = document.getElementById('slot-machine-content');
   const slotNum = Math.floor(Math.random() * 14);
-  console.log(slotNum);
   const slot = 32 * (slotNum + 15) - 30;
 
   gsap.to(slotMachine, {

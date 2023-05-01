@@ -3,6 +3,8 @@ import gsap from 'gsap';
 export function cursor() {
   const cursor = document.getElementById('cursor');
   const cursorCircle = cursor.querySelector('circle');
+  const cursorArrow = cursor.querySelector('#cursor-arrow');
+  let dir;
   // let w = window.innerWidth;
   // let h = window.innerHeight;
 
@@ -12,8 +14,8 @@ export function cursor() {
   // };
 
   document.addEventListener('mousemove', function (event) {
-    cursor.style.top = event.clientY - 20 + 'px';
-    cursor.style.left = event.clientX - 20 + 'px';
+    cursor.style.top = event.clientY - 30 + 'px';
+    cursor.style.left = event.clientX - 30 + 'px';
 
     // if (event.clientX >= 5 && event.clientX <= w - 25 && event.clientY >= 1 && event.clientY <= h - 5) {
     //   displayCursor();
@@ -26,31 +28,85 @@ export function cursor() {
   window.addEventListener('mouseout', hiddeCursor);
 
   document.addEventListener('mouseover', (e) => {
-    if (e.target.closest('button') || e.target.closest('a') || e.target.closest('input')) {
+    if (e.target.classList.contains('swiper-button-prev')) {
+      dir = 'prev';
+      overBlockQuotes(dir);
+    } else if (e.target.classList.contains('swiper-button-next')) {
+      dir = 'next';
+      overBlockQuotes(dir);
+    } else if (e.target.closest('button') || e.target.closest('a') || e.target.closest('input')) {
       over();
     }
   });
 
   document.addEventListener('mouseout', (e) => {
-    if (e.target.closest('button') || e.target.closest('a') || e.target.closest('input')) {
+    if (e.target.classList.contains('swiper-button')) {
+      outBlockQuotes();
+    } else if (e.target.closest('button') || e.target.closest('a') || e.target.closest('input')) {
       out();
     }
   });
 
+  function overBlockQuotes(direction) {
+    direction === 'prev' ? cursorArrowToPrev() : cursorArrowToNext();
+
+    cursorArrow.classList.remove('hidden');
+
+    gsap.to(cursorCircle, {
+      attr: {
+        r: '28',
+        fill: '#fff',
+        stroke: '#000',
+      },
+      duration: '0.2',
+    });
+  }
+
+  function outBlockQuotes() {
+    cursorArrow.classList.add('hidden');
+
+    gsap.to(cursorCircle, {
+      attr: {
+        r: '18',
+        fill: '#000',
+        stroke: '#fff',
+      },
+      duration: '0.2',
+    });
+  }
+
+  function cursorArrowToPrev() {
+    gsap.to(cursorArrow, {
+      x: '-30',
+      duration: '0.2',
+    });
+  }
+
+  function cursorArrowToNext() {
+    gsap.to(cursorArrow, {
+      x: '30',
+      duration: '0.2',
+    });
+  }
+
   function over() {
     gsap.to(cursorCircle, {
-      r: '8',
-      fill: '#fff',
-      stroke: '#000',
+      attr: {
+        r: '8',
+        fill: '#fff',
+        stroke: '#000',
+      },
       duration: '0.2',
     });
   }
 
   function out() {
     gsap.to(cursorCircle, {
-      r: '18',
-      fill: '#000',
-      stroke: '#fff',
+      attr: {
+        r: '18',
+        fill: '#000',
+        stroke: '#fff',
+      },
       duration: '0.2',
     });
   }

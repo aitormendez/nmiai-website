@@ -17,6 +17,8 @@
             </div>
           @endforeach
         </div>
+        <button class="swiper-button swiper-button-next absolute top-0 z-10 h-full w-1/2"></button>
+        <button class="swiper-button swiper-button-prev absolute top-0 right-0 z-10 h-full w-1/2"></button>
       </div>
     </div>
   </div>
