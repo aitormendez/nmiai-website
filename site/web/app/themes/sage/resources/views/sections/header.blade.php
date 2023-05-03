@@ -12,7 +12,7 @@
         <img src="{{ $array_emoji['emoji']['header_image']['url'] }}"
           alt="{{ $array_emoji['emoji']['header_image']['alt'] }}" class="hide-in-menu-open h-6 w-auto">
       @endif
-      <span class="burger-icon hidden align-middle text-xl">🍔</span>
+      <span class="burger-icon relative -top-[1px] hidden w-9 text-center text-xl">🍔</span>
       <span class="ml-2 align-middle">Is An Island</span>
     </a>
   @elseif($array_emoji['header_type'] === 'random_list')
@@ -24,7 +24,7 @@
         <img src="{{ $array_emoji['emoji']['header_image']['url'] }}"
           alt="{{ $array_emoji['emoji']['header_image']['alt'] }}" class="hide-in-menu-open h-6 w-auto">
       @endif
-      <span class="burger-icon hidden align-middle text-xl">🍔</span>
+      <span class="burger-icon relative -top-[1px] hidden w-9 text-center text-xl">🍔</span>
       <span class="ml-2 align-middle">Is An Island</span>
     </a>
   @elseif($array_emoji['header_type'] === 'slot_machine')
@@ -40,7 +40,7 @@
           @endforeach
         </div>
       </div>
-      <span class="burger-icon hidden w-9 text-center align-middle text-xl">🍔</span>
+      <span class="burger-icon relative -top-[1px] hidden w-9 text-center text-xl">🍔</span>
       <span class="align-middle">Is An Island</span>
     </a>
   @endif
