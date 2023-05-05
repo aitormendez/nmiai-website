@@ -12,7 +12,7 @@ export function people() {
 
     mainFlapCloseBtn.addEventListener('mouseenter', () => {
       gsap.to(mainFlapCloseBtn, {
-        rotation: 360,
+        rotation: 180,
       });
     });
 
