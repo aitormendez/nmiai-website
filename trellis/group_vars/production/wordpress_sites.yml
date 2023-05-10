@@ -4,11 +4,11 @@
 wordpress_sites:
   nomanisanisland.com:
     site_hosts:
-    - canonical: nomanisanisland.com
-      redirects:
-      - www.nomanisanisland.com
+      - canonical: nomanisanisland.com
+        redirects:
+          - www.nomanisanisland.com
     local_path: ../site
-    branch: master
+    branch: main
     repo: git@github.com:example/example.com.git
     repo_subtree_path: site
     multisite:

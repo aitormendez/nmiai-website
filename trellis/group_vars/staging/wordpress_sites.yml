@@ -6,7 +6,7 @@ wordpress_sites:
     site_hosts:
       - canonical: nmiai.e451.net
     local_path: ../site
-    branch: master
+    branch: main
     repo: git@github.com:aitormendez/nmiai-website.git
     repo_subtree_path: site
     multisite:
