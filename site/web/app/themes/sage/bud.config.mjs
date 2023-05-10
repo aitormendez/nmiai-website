@@ -29,17 +29,21 @@ export default async (app) => {
     /**
      * Proxy origin (`WP_HOME`)
      */
-    .proxy('https://nomanisanisland.test')
+    // .proxy('https://nomanisanisland.test')
 
     /**
      * Development origin
      */
-    .serve({
-      host: '0.0.0.0',
-      port: 3000,
-      cert: app.path('/Users/aitor/Library/Application Support/mkcert/nomanisanisland.test+3.pem'),
-      key: app.path('/Users/aitor/Library/Application Support/mkcert/nomanisanisland.test+3-key.pem'),
-    })
+    // .serve({
+    //   host: '0.0.0.0',
+    //   port: 3000,
+    //   cert: app.path('/Users/aitor/Library/Application Support/mkcert/nomanisanisland.test+3.pem'),
+    //   key: app.path('/Users/aitor/Library/Application Support/mkcert/nomanisanisland.test+3-key.pem'),
+    // })
+
+    .setUrl('http://localhost:3000')
+    .setProxyUrl('http://nomanisanisland.test')
+    .watch(['resources/views', 'app'])
 
     /**
      * URI of the `public` directory

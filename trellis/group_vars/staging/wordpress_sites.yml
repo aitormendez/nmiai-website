@@ -1,12 +1,12 @@
-# Created by trellis-cli vcanary
-# Documentation: https://docs.roots.io/trellis/master/wordpress-sites/
+# Created by trellis-cli v1.11.0
+# Documentation: https://roots.io/trellis/docs/wordpress-sites/
 
 wordpress_sites:
   nmiai.e451.net:
     site_hosts:
       - canonical: nmiai.e451.net
     local_path: ../site
-    branch: main
+    branch: master
     repo: git@github.com:aitormendez/nmiai-website.git
     repo_subtree_path: site
     multisite:

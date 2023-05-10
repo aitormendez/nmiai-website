@@ -1,18 +1,18 @@
-# Created by trellis-cli vcanary
-# Documentation: https://docs.roots.io/trellis/master/wordpress-sites/
+# Created by trellis-cli v1.11.0
+# Documentation: https://roots.io/trellis/docs/wordpress-sites/
 
 wordpress_sites:
   nomanisanisland.com:
     site_hosts:
-    - canonical: nomanisanisland.test
-      redirects:
-      - www.nomanisanisland.test
+      - canonical: nomanisanisland.test
+        redirects:
+          - www.nomanisanisland.test
     local_path: ../site
     admin_email: admin@e451.net
     multisite:
       enabled: false
     ssl:
-      enabled: true
+      enabled: false
       provider: self-signed
     cache:
       enabled: false
