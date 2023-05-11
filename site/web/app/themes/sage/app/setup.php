@@ -164,16 +164,16 @@ add_action('enqueue_block_editor_assets', function () {
  * @return void
  */
 
-add_filter('upload_mimes', function($mimes) {
+add_filter('upload_mimes', function ($mimes) {
     $mimes['json'] = 'text/plain';
     return $mimes;
 });
 
 
 /**
-* For second loop in project archive
-* Finalmente se eliminó el segundo loop
-*/
+ * For second loop in project archive
+ * Finalmente se eliminó el segundo loop
+ */
 // add_action('pre_get_posts', function ($query) {
 //     if ( ! is_admin() && is_post_type_archive('project') && $query->is_main_query() ) {
 //         $query->set( 'offset', 4 );
@@ -184,19 +184,19 @@ add_filter('upload_mimes', function($mimes) {
 
 
 /**
-* Allow SVG
-*/
-add_filter('upload_mimes', 	function($mimes) {
+ * Allow SVG
+ */
+add_filter('upload_mimes', function ($mimes) {
     $mimes['svg'] = 'image/svg+xml';
     return $mimes;
 });
 
 
 /**
-* Allow HTML in post titles: [span class="outlined light"]
-*/
-add_filter( 'the_title', function($var) {
-    $var = (str_replace( '[', '<', $var ));
-    $var = (str_replace( ']', '>', $var ));
-    return $var ;
-} );
+ * Allow HTML in post titles: [span class="outlined light"]
+ */
+add_filter('the_title', function ($var) {
+    $var = (str_replace('[', '<', $var));
+    $var = (str_replace(']', '>', $var));
+    return $var;
+});

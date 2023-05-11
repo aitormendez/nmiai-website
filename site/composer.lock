@@ -4,11 +4,11 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f1d5c587fb4209ec23fa35ad992b0668",
+    "content-hash": "8f13fa206bb65fc971ef0811c5832d95",
     "packages": [
         {
             "name": "advanced-custom-fields/advanced-custom-fields-pro",
-            "version": "6.0.3",
+            "version": "6.1.6",
             "dist": {
                 "type": "zip",
                 "url": "https://connect.advancedcustomfields.com/v2/plugins/download?p=pro&k={%ACF_PRO_KEY}&t={%version}"
@@ -2933,25 +2933,6 @@
             "homepage": "https://wpml.org/"
         },
         {
-            "name": "satispress/woocommerce-multilingual",
-            "version": "5.1.3",
-            "dist": {
-                "type": "zip",
-                "url": "https://plugins.e451.net/satispress/woocommerce-multilingual/5.1.3",
-                "shasum": "9843ea7f24271051a76a78c37f0db83f57960f34"
-            },
-            "require": {
-                "composer/installers": "^1.0 || ^2.0"
-            },
-            "type": "wordpress-plugin",
-            "authors": {
-                "name": "OnTheGoSystems",
-                "homepage": "http://www.onthegosystems.com/"
-            },
-            "description": "Make your store multilingual and enable multiple currencies | <a href=\"https://wpml.org/documentation/related-projects/woocommerce-multilingual/?utm_source=plugin&utm_medium=gui&utm_campaign=wcml\">Documentation</a>",
-            "homepage": "https://wpml.org/documentation/related-projects/woocommerce-multilingual/?utm_source=plugin&utm_medium=gui&utm_campaign=wcml"
-        },
-        {
             "name": "satispress/wpml-media-translation",
             "version": "2.7.2",
             "dist": {
@@ -5183,15 +5164,15 @@
         },
         {
             "name": "wpackagist-plugin/gdpr-cookie-compliance",
-            "version": "4.12.1",
+            "version": "4.12.2",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/gdpr-cookie-compliance/",
-                "reference": "tags/4.12.1"
+                "reference": "tags/4.12.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/gdpr-cookie-compliance.4.12.1.zip"
+                "url": "https://downloads.wordpress.org/plugin/gdpr-cookie-compliance.4.12.2.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
@@ -5333,12 +5314,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Roave/SecurityAdvisories.git",
-                "reference": "f86a07b7eb07f9297e939d8c5f97178b2c189dfe"
+                "reference": "bc1d6711a0a8bb1f2db39755266a44bd74614c72"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/f86a07b7eb07f9297e939d8c5f97178b2c189dfe",
-                "reference": "f86a07b7eb07f9297e939d8c5f97178b2c189dfe",
+                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/bc1d6711a0a8bb1f2db39755266a44bd74614c72",
+                "reference": "bc1d6711a0a8bb1f2db39755266a44bd74614c72",
                 "shasum": ""
             },
             "conflict": {
@@ -5523,6 +5504,7 @@
                 "ibexa/core": ">=4,<4.0.7|>=4.1,<4.1.4|>=4.2,<4.2.3",
                 "ibexa/graphql": ">=2.5,<2.5.31|>=3.3,<3.3.28|>=4.2,<4.2.3",
                 "ibexa/post-install": "<=1.0.4",
+                "ibexa/user": ">=4,<4.4.3",
                 "icecoder/icecoder": "<=8.1",
                 "idno/known": "<=1.3.1",
                 "illuminate/auth": ">=4,<4.0.99|>=4.1,<=4.1.31|>=4.2,<=4.2.22|>=5,<=5.0.35|>=5.1,<=5.1.46|>=5.2,<=5.2.45|>=5.3,<=5.3.31|>=5.4,<=5.4.36|>=5.5,<5.5.10",
@@ -5931,7 +5913,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-05-06T00:13:11+00:00"
+            "time": "2023-05-10T22:04:31+00:00"
         },
         {
             "name": "squizlabs/php_codesniffer",

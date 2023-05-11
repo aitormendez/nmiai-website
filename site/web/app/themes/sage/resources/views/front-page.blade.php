@@ -5,7 +5,9 @@
     @php(the_post())
     @php(dynamic_sidebar('sidebar-front-page'))
     @include('partials.page-header')
-    @includeFirst(['partials.content-page', 'partials.content'])
+    <div class="content">
+      @includeFirst(['partials.content-page', 'partials.content'])
+    </div>
   @endwhile
 @endsection
 

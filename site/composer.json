@@ -37,7 +37,7 @@
       "type": "package",
       "package": {
         "name": "advanced-custom-fields/advanced-custom-fields-pro",
-        "version": "6.0.3",
+        "version": "6.1.6",
         "type": "wordpress-plugin",
         "dist": {
           "type": "zip",
@@ -89,7 +89,6 @@
     "satispress/sitepress-multilingual-cms": "*",
     "satispress/wpml-wpforms": "*",
     "satispress/acfml": "*",
-    "satispress/woocommerce-multilingual": "*",
     "satispress/wpml-media-translation": "*",
     "satispress/wpml-string-translation": "*",
     "wpackagist-plugin/html-forms": "*",
