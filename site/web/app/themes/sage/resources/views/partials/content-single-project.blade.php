@@ -8,11 +8,9 @@
   </div>
 
   <footer>
-    {!! wp_link_pages([
-        'echo' => 0,
-        'before' => '<nav class="page-nav"><p>' . __('Pages:', 'sage'),
-        'after' => '</p></nav>',
-    ]) !!}
+    <div class="next-project not-prose py-60 text-center text-3xl uppercase underline md:text-4xl">
+      {!! get_previous_post_link('%link', __('Next Project', 'sage')) !!}
+    </div>
   </footer>
 
   @php(comments_template())

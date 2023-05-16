@@ -38,6 +38,8 @@ module.exports = {
     'md:mt-0',
     'md:mt-60',
     'md:-pt-44',
+    'm text-3xl',
+    'text-3xl',
   ],
   theme: {
     fontFamily: {

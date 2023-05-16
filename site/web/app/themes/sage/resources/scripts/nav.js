@@ -6,6 +6,7 @@ export class nav {
     this.closed = true;
     this.btnDot = document.getElementById('btnDot');
     this.mainMenu = document.getElementById('main-menu');
+    this.itemsMenu = this.mainMenu.querySelectorAll('li');
     this.radio = Math.round(Math.hypot(window.innerWidth, window.innerHeight));
     this.banner = document.getElementById('banner');
     this.tagLine = document.getElementById('tagline');
@@ -36,6 +37,11 @@ export class nav {
     });
 
     this.detectScroll();
+
+    gsap.set(this.itemsMenu, {
+      y: '50px',
+      opacity: '0',
+    });
   }
 
   preventScroll(e) {
@@ -50,6 +56,12 @@ export class nav {
       overwrite: true,
       clipPath: `circle(${this.radio}px at ${this.circlePosition} 2.5rem)`,
       duration: 0.5,
+    });
+
+    gsap.to(this.itemsMenu, {
+      y: '0',
+      opacity: '1',
+      stagger: '0.2',
     });
 
     gsap.to(this.btnDot, {
@@ -92,6 +104,11 @@ export class nav {
       overwrite: true,
       clipPath: `circle(0px at ${this.circlePosition} 2.25rem)`,
       duration: 0.5,
+    });
+
+    gsap.to(this.itemsMenu, {
+      y: '50px',
+      opacity: '0',
     });
 
     gsap.to(this.btnDot, {

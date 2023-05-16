@@ -7,7 +7,7 @@ export function loadMore() {
 
   const infScroll = new InfiniteScroll(elem, {
     path: '.nav-previous a',
-    append: 'a[role="article"]',
+    append: 'article',
     history: false,
     loadOnScroll: false,
     status: '.page-load-status',

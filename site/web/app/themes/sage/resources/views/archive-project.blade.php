@@ -16,7 +16,7 @@
     $counter = 1;
   @endphp
 
-  <div class="works infinite-container flex flex-wrap px-6 pt-28 md:px-8">
+  <div class="works infinite-container flex flex-wrap px-6 md:px-8">
     @while (have_posts())
       @php(the_post())
       @includeFirst(['partials.content-' . get_post_type(), 'partials.content'])
@@ -35,7 +35,7 @@
     @php(dynamic_sidebar('sidebar-project-archive'))
   </div>
 
-  {!! get_the_posts_navigation(['class' => 'hidden']) !!}
+  {!! get_the_posts_navigation(['class' => '']) !!}
 @endsection
 
 @section('sidebar')

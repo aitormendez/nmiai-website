@@ -1,4 +1,4 @@
-<section class=" md:mt-44 {{ $block->classes }}">
+<section class="{{ $block->classes }} mt-20 md:mt-44">
   <div class="" style="{{ $padding }}">
     <div class="bottom flex flex-wrap items-center justify-between md:justify-start">
 
