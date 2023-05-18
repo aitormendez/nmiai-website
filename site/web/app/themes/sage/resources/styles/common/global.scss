@@ -103,3 +103,7 @@ h4 {
 .wpml-ls-legacy-list-horizontal a span {
   vertical-align: baseline !important;
 }
+
+.is-style-dark lottie-player {
+  filter: invert(100%) sepia(100%) saturate(2%) hue-rotate(254deg) brightness(108%) contrast(101%);
+}

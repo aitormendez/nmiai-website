@@ -1,4 +1,4 @@
-<article @php(post_class())>
+<article @php post_class('mt-16') @endphp>
   <header>
     @include('partials.page-header-project')
   </header>
