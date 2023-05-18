@@ -144,7 +144,7 @@ export class nav {
     window.addEventListener('scroll', () => {
       this.newValue = window.pageYOffset;
 
-      if (this.oldValue < this.newValue) {
+      if (this.oldValue < this.newValue && this.newValue > 100) {
         this.direction = 'down';
       } else if (this.oldValue > this.newValue) {
         this.direction = 'up';

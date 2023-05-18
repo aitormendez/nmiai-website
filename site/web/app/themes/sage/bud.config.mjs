@@ -22,35 +22,25 @@ export default async (app) => {
     .assets(['images'])
 
     /**
-     * Matched files trigger a page reload when modified
-     */
-    .watch(['resources/views/**/*', 'app/**/*'])
-
-    /**
-     * Proxy origin (`WP_HOME`)
-     */
-    // .proxy('https://nomanisanisland.test')
-
-    /**
-     * Development origin
-     */
-    // .serve({
-    //   host: '0.0.0.0',
-    //   port: 3000,
-    //   cert: app.path('/Users/aitor/Library/Application Support/mkcert/nomanisanisland.test+3.pem'),
-    //   key: app.path('/Users/aitor/Library/Application Support/mkcert/nomanisanisland.test+3-key.pem'),
-    // })
-
-    .setUrl('http://localhost:3000')
-    .setProxyUrl('http://nomanisanisland.test')
-    .watch(['resources/views', 'app'])
-
-    /**
      * URI of the `public` directory
      */
     .setPublicPath('/app/themes/sage/public/')
 
-    .wpjson.settings({
+    .setUrl('http://192.168.1.128:3000')
+    .setProxyUrl('http://nomanisanisland.test')
+    .watch(['resources/views', 'app']);
+
+  /**
+   * Generate WordPress `theme.json`
+   *
+   * @note This overwrites `theme.json` on every build.
+   *
+   * @see {@link https://bud.js.org/extensions/sage/theme.json}
+   * @see {@link https://developer.wordpress.org/block-editor/how-to-guides/themes/theme-json}
+   */
+
+  app.wpjson
+    .settings({
       layout: {
         contentSize: '840px',
         wideSize: '1100px',
