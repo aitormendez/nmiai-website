@@ -8,7 +8,7 @@
   </div>
 
   <footer>
-    <div class="next-project not-prose py-60 text-center text-3xl uppercase underline md:text-4xl">
+    <div class="next-project not-prose py-60 text-center text-2xl font-bold uppercase underline md:text-3xl">
       {!! get_previous_post_link('%link', __('Next Project', 'sage')) !!}
     </div>
   </footer>

@@ -14,9 +14,9 @@
     <div class="info-content h-0 overflow-hidden md:h-auto">
       <h1 class="inline"><strong>{!! $title !!} / </strong></h1>
       {!! wpautop(get_the_excerpt()) !!}
+      @if ($tags)
+        <div class="tags text-middle mt-6 font-serif italic">{{ $tags }}</div>
+      @endif
     </div>
-    @if ($tags)
-      <div class="tags text-middle mt-6 font-serif italic">{{ $tags }}</div>
-    @endif
   </div>
 </div>
