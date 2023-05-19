@@ -7,7 +7,7 @@ export class nav {
     this.btnDot = document.getElementById('btnDot');
     this.mainMenu = document.getElementById('main-menu');
     this.itemsMenu = this.mainMenu.querySelectorAll('li');
-    this.radio = Math.round(Math.hypot(window.innerWidth, window.innerHeight));
+    this.radio = Math.round(Math.hypot(window.innerWidth, window.innerHeight) + 100);
     this.banner = document.getElementById('banner');
     this.tagLine = document.getElementById('tagline');
     this.langMenu = document.getElementById('lang-menu');

@@ -66,7 +66,7 @@
 
 <button id="btnDot" class="bg-light fixed top-7 z-50 h-4 w-4 rounded-full mix-blend-exclusion"></button>
 
-<svg id="cursor" class="pointer-events-none fixed z-[70] mix-blend-exclusion" width="60" height="60"
+<svg id="cursor" class="pointer-events-none fixed z-[999999] mix-blend-exclusion" width="60" height="60"
   viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg" style="top: 0px; left: 0px; display: none">
   <circle cx="30" cy="30" r="18" fill="#000" stroke="#fff" />
   <path id="cursor-arrow" class="hidden"
