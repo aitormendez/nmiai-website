@@ -1,6 +1,6 @@
 <div class="page-header not-prose px-6">
   @if ($hero['type'] === 'video')
-    <video poster="{{ $hero['video_poster'] }}" autoplay muted loop class="mb- relative w-full">
+    <video poster="{{ $hero['video_poster'] }}" autoplay muted loop playsinline class="mb- relative w-full">
       <source src="https://{{ $hero['video_zone'] }}.b-cdn.net/{{ $hero['video_id'] }}/play_720p.mp4" type="video/mp4">
     </video>
   @else
