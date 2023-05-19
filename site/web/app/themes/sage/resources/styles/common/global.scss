@@ -36,7 +36,7 @@ body {
 
 @media (min-width: 768px) {
   * {
-    cursor: none !important;
+    // cursor: none !important;
   }
 }
 .outlined {
@@ -88,7 +88,7 @@ h4 {
     margin-top: 3rem;
     margin-bottom: 7rem;
 
-    @apply text-4xl uppercase font-bold md:text-5xl lg:text-7xl xl:text-8xl font-sans;
+    @apply text-4xl uppercase font-semibold md:text-5xl lg:text-7xl xl:text-8xl font-sans;
   }
 
   .link {
