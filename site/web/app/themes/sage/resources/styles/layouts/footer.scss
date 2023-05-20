@@ -1,36 +1,14 @@
 footer .down {
-  grid-template: 1fr 1fr 1fr / 1fr;
-
   .left-text {
-    grid-column-start: 1;
   }
 
   .right-text {
-    grid-row-start: 2;
   }
 
   .social {
-    grid-column-start: 1;
-    grid-row-start: 1;
-    grid-column-end: 3;
   }
 
   @media (min-width: 768px) {
-    grid-template: 1fr / 3fr 3fr 220px;
-
-    .left-text {
-      grid-column-start: 1;
-    }
-
-    .right-text {
-      grid-column-start: 2;
-      grid-row-start: 1;
-    }
-
-    .social {
-      grid-column-start: 3;
-      justify-content: end;
-    }
   }
 }
 
