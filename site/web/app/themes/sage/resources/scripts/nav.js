@@ -7,7 +7,7 @@ export class nav {
     this.btnDot = document.getElementById('btnDot');
     this.mainMenu = document.getElementById('main-menu');
     this.itemsMenu = this.mainMenu.querySelectorAll('li');
-    this.radio = Math.round(Math.hypot(window.innerWidth, window.innerHeight) + 100);
+    this.radio = Math.round(Math.hypot(window.innerWidth, window.innerHeight) + 300);
     this.banner = document.getElementById('banner');
     this.tagLine = document.getElementById('tagline');
     this.langMenu = document.getElementById('lang-menu');
@@ -44,14 +44,16 @@ export class nav {
     });
   }
 
-  preventScroll(e) {
-    e.preventDefault();
-    e.stopPropagation();
+  // preventScroll(e) {
+  //   e.preventDefault();
+  //   e.stopPropagation();
 
-    return false;
-  }
+  //   return false;
+  // }
 
   openDot() {
+    this.body.classList.add('prevent-scroll');
+
     gsap.to(this.mainMenu, {
       overwrite: true,
       clipPath: `circle(${this.radio}px at ${this.circlePosition} 2.5rem)`,
@@ -70,9 +72,9 @@ export class nav {
       duration: 0.5,
     });
 
-    this.doc.addEventListener('wheel', this.preventScroll, {
-      passive: false,
-    });
+    // this.doc.addEventListener('wheel', this.preventScroll, {
+    //   passive: false,
+    // });
 
     this.banner.classList.remove('text-dark');
     this.banner.classList.add('text-white');
@@ -98,7 +100,8 @@ export class nav {
   }
 
   closeDot() {
-    this.doc.removeEventListener('wheel', this.preventScroll);
+    // this.doc.removeEventListener('wheel', this.preventScroll);
+    this.body.classList.remove('prevent-scroll');
 
     gsap.to(this.mainMenu, {
       overwrite: true,
