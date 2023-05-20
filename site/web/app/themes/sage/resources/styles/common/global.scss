@@ -90,14 +90,24 @@ h4 {
 
 .cta {
   h2 {
-    margin-top: 3rem;
-    margin-bottom: 7rem;
+    margin-bottom: 4rem;
 
     @apply text-4xl uppercase md:text-5xl lg:text-7xl xl:text-8xl font-sans font-bold;
   }
 
   .link {
-    margin-bottom: 10rem;
+    margin-bottom: 6rem;
+  }
+
+  @media (min-width: 768px) {
+    h2 {
+      margin-top: 3rem;
+      margin-bottom: 7rem;
+    }
+
+    .link {
+      margin-bottom: 10rem;
+    }
   }
 }
 

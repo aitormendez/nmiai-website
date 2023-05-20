@@ -5,6 +5,8 @@ export function loadMore() {
   let elem = document.querySelector('.infinite-container');
   let viewMoreButton = document.querySelector('.view-more-button');
 
+  console.log(elem);
+
   const infScroll = new InfiniteScroll(elem, {
     path: '.nav-previous a',
     append: 'article',

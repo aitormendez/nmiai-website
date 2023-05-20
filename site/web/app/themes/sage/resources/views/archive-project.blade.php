@@ -35,7 +35,7 @@
     @php(dynamic_sidebar('sidebar-project-archive'))
   </div>
 
-  {!! get_the_posts_navigation(['class' => '']) !!}
+  {!! get_the_posts_navigation(['class' => 'hidden']) !!}
 @endsection
 
 @section('sidebar')
