@@ -3,9 +3,8 @@ import gsap from 'gsap';
 export function displayProjectInfo() {
   let box = document.querySelector('.info-content'),
     button = document.querySelector('.project-info button'),
+    plusSign = document.querySelector('.plus-sign'),
     isOpen = false;
-
-  console.log(button);
 
   let open = () => {
     if (!isOpen) {
@@ -15,6 +14,11 @@ export function displayProjectInfo() {
         duration: 0.8,
         overwrite: true,
         ease: 'power4.out',
+      });
+      gsap.to(plusSign, {
+        rotation: 45,
+        duration: 0.4,
+        overwrite: true,
       });
     }
   };
@@ -27,6 +31,11 @@ export function displayProjectInfo() {
         duration: 0.8,
         overwrite: true,
         ease: 'power4.out',
+      });
+      gsap.to(plusSign, {
+        rotation: 0,
+        duration: 0.4,
+        overwrite: true,
       });
     }
   };
