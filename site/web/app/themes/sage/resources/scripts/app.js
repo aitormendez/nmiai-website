@@ -42,7 +42,6 @@ const main = async (err) => {
     const {people} = await import('./people.js');
     const {beforeAfterBlock} = await import('./beforeAfterBlock.js');
     const {beforeAfterMouseBlock} = await import('./beforeAfterMouseBlock.js');
-    const {setGap} = await import('./utils/setGap.js');
     animateProject();
     quotesSlider();
     imagesSlider();
@@ -51,10 +50,9 @@ const main = async (err) => {
     people();
     beforeAfterBlock();
     beforeAfterMouseBlock();
-    setGap;
   }
 
-  if (document.body.classList.contains('single-project')) {
+  if (document.body.classList.contains('single-project') && mdMin.matches) {
     const {setGap} = await import('./utils/setGap.js');
     setGap();
   }
