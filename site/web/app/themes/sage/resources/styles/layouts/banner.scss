@@ -38,8 +38,16 @@
       color: var(--light);
 
       &:hover {
-        -webkit-text-stroke: 2px white;
+        -webkit-text-stroke: 1px white;
         color: var(--dark);
+      }
+    }
+
+    @media (min-width: 768px) {
+      a {
+        &:hover {
+          -webkit-text-stroke: 2px white;
+        }
       }
     }
   }

@@ -10,7 +10,7 @@
   @endif
 
   <div class="project-info is-style-column my-6 md:my-20">
-    <button class="underlinemd:hidden font-serif italic">Project info <svg
+    <button class="font-serif italic underline md:hidden">Project info <svg
         class="plus-sign relative -top-[2px] ml-1 inline-block" width="15" height="15" viewBox="0 0 15 15"
         fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M8 7V0H7V7H0V8H7V15H8V8H15V7H8Z" fill="black" />

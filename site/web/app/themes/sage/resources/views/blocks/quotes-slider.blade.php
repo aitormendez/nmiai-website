@@ -1,7 +1,7 @@
 @if ($quotes)
   <div class="{{ $block->classes }}">
     <div class="wrapper" style="{{ $padding }}">
-      <div class="swiper-quotes swiper leading-h2 2xl:text-7con5xl w-full !overflow-visible text-2xl md:text-6xl">
+      <div class="swiper-quotes swiper leading-h2 2xl:text-7con5xl w-full !overflow-visible text-3xl md:text-6xl">
         <div class="swiper-wrapper">
           @foreach ($quotes['quotes'] as $quote)
             <div class="swiper-slide flex flex-col justify-between">
