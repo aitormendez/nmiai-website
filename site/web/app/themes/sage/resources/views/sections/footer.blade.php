@@ -4,7 +4,7 @@
     <div class="left-text md:inline">
       ©{{ date('Y') }} @option('footer_left_text')
     </div>
-    <div class="right-text md:inline">
+    <div class="right-text md:ml-6 md:inline">
       <span>
         @option('footer_right_text')
       </span>
