@@ -13,8 +13,8 @@
   <div class="page-header not-prose relative z-20 flex justify-center px-6 mix-blend-darken">
     @if (is_front_page())
       <video class="absolute top-0 max-w-screen-md"
-        src="https://vz-3b6a9b31-e3a.b-cdn.net/e2c82ff9-7685-4612-8576-6cce287af6ba/play_720p.mp4" muted autoplay
-        disablepictureinpicture></video>
+        src="https://vz-3b6a9b31-e3a.b-cdn.net/2712ff9e-0baa-4958-bfac-5a67c16862b9/play_720p.mp4" muted autoplay
+        playsinline disablepictureinpicture></video>
     @endif
 
     <div data-json-path="{{ $header_json['url'] }}" data-json-autoplay="@field('json_header_autoplay')"
