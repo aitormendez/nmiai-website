@@ -40,6 +40,8 @@ module.exports = {
     'md:-pt-44',
     'm text-3xl',
     'text-3xl',
+    'md:gap-6',
+    'gap-0',
   ],
   theme: {
     fontFamily: {

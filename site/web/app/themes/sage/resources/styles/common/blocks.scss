@@ -201,3 +201,12 @@
     }
   }
 }
+
+@media (min-width: 768px) {
+  .awards-right {
+  }
+
+  .awards-left {
+    float: right;
+  }
+}

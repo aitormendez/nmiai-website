@@ -35,16 +35,16 @@ export function people() {
         body.classList.remove('h-screen');
         mainFlap.classList.add('flex');
         mainFlapContent.innerHTML =
-          '<div class="text-[46px] md:text-6xl mt-20 mb-4 leading-tight text-light">' +
+          '<div class="text-[46px] md:text-6xl mt-20 mb-4 leading-tight text-white">' +
           peopleName +
           '</div>' +
-          '<div class="font-serif text-light text-xl italic mb-4">' +
+          '<div class="font-serif text-white text-xl italic mb-4">' +
           peopleTitle +
           '</div>' +
           '<div class="font-serif">' +
           peopleText +
           '</div>' +
-          '<div class="text-light font-thin mt-4">' +
+          '<div class="text-white font-thin mt-4">' +
           peopleEmail +
           '</div>';
         setTimeout(function () {

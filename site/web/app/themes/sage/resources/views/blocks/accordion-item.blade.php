@@ -1,5 +1,5 @@
 <li
-  class="accordion-group {{ $block->classes }} border-midup mb-6 max-w-none border-b pb-16 transition-colors duration-1000 last:mb-0 dark:text-white">
+  class="accordion-group {{ $block->classes }} border-midup mb-6 max-w-none border-b pb-16 transition-colors duration-1000 last:mb-0 last:border-none last:pb-0 dark:text-white">
   <a class="accordion-menu block cursor-pointer select-none pt-10 pb-5">
     <h2 class="text-4xl uppercase md:text-5xl lg:text-6xl">{{ $accordion_item }}</h2>
     <div class="relative mt-10 mb-10 w-10">

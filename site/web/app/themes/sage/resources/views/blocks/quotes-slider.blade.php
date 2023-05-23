@@ -5,7 +5,7 @@
         <div class="swiper-wrapper">
           @foreach ($quotes['quotes'] as $quote)
             <div class="swiper-slide flex flex-col justify-between">
-              <div class="quote flex py-6">
+              <div class="quote flex pb-6">
                 <span class="dark:text-white">“</span><span class="dark:text-white">{!! $quote['quotes_slider_quote'] !!}”</span>
               </div>
               <div class="data ml-3 font-serif text-sm md:ml-10 md:text-2xl">

@@ -1,7 +1,7 @@
 @include('partials.navigation')
 
 <header id="banner"
-  class="banner text-dark dark:text-light fixed top-0 left-0 z-50 flex w-full justify-between bg-gradient-to-b from-white to-transparent pt-6 pb-10 transition-all duration-500">
+  class="banner text-dark fixed top-0 left-0 z-50 flex w-full justify-between bg-gradient-to-b from-white to-transparent pt-6 pb-10 transition-all duration-500 dark:text-white">
 
   @if ($array_emoji['header_type'] === 'fixed')
     <a class="brand text-md relative ml-6 flex uppercase md:ml-8" href="{{ home_url('/') }}">
@@ -46,12 +46,12 @@
   @endif
 
   <div id="tagline"
-    class="text-dark dark:text-light fixed top-6 z-40 hidden font-serif font-bold leading-5 transition-all duration-500 md:block">
+    class="text-dark fixed top-6 z-40 hidden font-serif font-bold leading-5 transition-all duration-500 dark:text-white md:block">
     {!! $tagline !!}
   </div>
 
   <div id="lang-menu"
-    class="text-light fixed top-6 z-40 hidden font-serif font-bold leading-5 transition-all duration-500">
+    class="fixed top-6 z-40 hidden font-serif font-bold leading-5 text-white transition-all duration-500">
     @php
       $args = [
           'native' => 1,
