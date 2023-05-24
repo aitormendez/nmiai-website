@@ -10,10 +10,10 @@
 
 @if ($header_json)
 
-  <div class="page-header not-prose relative z-20 flex justify-center px-6 mix-blend-darken">
+  <div class="page-header not-prose relative z-20 mt-20 flex justify-center mix-blend-darken md:mt-40">
     @if (is_front_page())
-      <video class="absolute top-0 max-w-screen-md"
-        src="https://vz-3b6a9b31-e3a.b-cdn.net/2712ff9e-0baa-4958-bfac-5a67c16862b9/play_720p.mp4" muted autoplay
+      <video class="absolute top-0 w-full max-w-screen-md"
+        src="https://vz-3b6a9b31-e3a.b-cdn.net/84ba41c1-12ad-4eb9-a4f6-5602e76dd35e/play_720p.mp4" muted autoplay
         playsinline disablepictureinpicture></video>
     @endif
 
