@@ -202,11 +202,13 @@
   }
 }
 
-@media (min-width: 768px) {
-  .awards-right {
-  }
+section.awards {
+  figure {
+    display: flex;
+    justify-content: center;
 
-  .awards-left {
-    float: right;
+    &.awards-left {
+      justify-content: right;
+    }
   }
 }
