@@ -22,7 +22,7 @@
       </div>
 
     </div>
-    <div class="pt-16 md:pt-36">
+    <div class="block-inner pt-16 md:pt-36">
       <InnerBlocks />
     </div>
   </div>

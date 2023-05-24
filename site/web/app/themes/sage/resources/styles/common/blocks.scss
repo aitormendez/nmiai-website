@@ -203,12 +203,12 @@
 }
 
 section.awards {
-  figure {
+  .block-inner {
     display: flex;
     justify-content: center;
 
-    &.awards-left {
-      justify-content: right;
+    .wp-block-columns {
+      max-width: 1000px;
     }
   }
 }
