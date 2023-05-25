@@ -1,6 +1,7 @@
 import gsap from 'gsap';
 import CustomEase from 'gsap/CustomEase';
 gsap.registerPlugin(CustomEase);
+const mdMin = window.matchMedia('(min-width: 768px)');
 
 export function beforeAfterMouseBlock() {
   const blocks = document.querySelectorAll('.wp-block-before-after-mouse');
@@ -60,16 +61,26 @@ function animateBlock(block) {
   const blockWidth = block.clientWidth;
   const blockXPos = block.getBoundingClientRect().left;
   const verticalStroke = block.querySelector('.line');
-  console.log(verticalStroke);
 
   let localMouseX;
   let percent;
 
-  block.addEventListener('mousemove', function (event) {
-    localMouseX = event.clientX - blockXPos;
-    percent = (localMouseX * 100) / blockWidth + '%';
+  if (mdMin.matches) {
+    block.addEventListener('mousemove', function (event) {
+      localMouseX = event.clientX - blockXPos;
+      percent = (localMouseX * 100) / blockWidth + '%';
 
-    imgAfter.style.clipPath = `polygon(0% 0, ${percent} 0%, ${percent} 100%, 0 100%)`;
-    verticalStroke.style.transform = `translate3d(${localMouseX}px, 0px, 0px)`;
-  });
+      imgAfter.style.clipPath = `polygon(0% 0, ${percent} 0%, ${percent} 100%, 0 100%)`;
+      verticalStroke.style.transform = `translate3d(${localMouseX}px, 0px, 0px)`;
+    });
+  } else {
+    block.addEventListener('touchmove', function (event) {
+      console.log(event);
+      localMouseX = event.targetTouches[0].clientX - blockXPos;
+      percent = (localMouseX * 100) / blockWidth + '%';
+
+      imgAfter.style.clipPath = `polygon(0% 0, ${percent} 0%, ${percent} 100%, 0 100%)`;
+      verticalStroke.style.transform = `translate3d(${localMouseX}px, 0px, 0px)`;
+    });
+  }
 }
