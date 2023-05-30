@@ -9,7 +9,7 @@
 @endphp
 
 @if ($header_json)
-  <div class="page-header not-prose relative z-20 mt-20 flex justify-center mix-blend-darken md:mb-20 md:mt-40">
+  <div class="page-header not-prose relative z-20 mt-32 flex justify-center mix-blend-darken md:mb-20 md:mt-40">
     @if (is_front_page())
       <video class="absolute top-0 w-full max-w-[900px]"
         src="https://vz-3b6a9b31-e3a.b-cdn.net/84ba41c1-12ad-4eb9-a4f6-5602e76dd35e/play_720p.mp4" muted autoplay
