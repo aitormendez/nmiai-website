@@ -29,7 +29,7 @@
   </div>
 
   <button
-    class="view-more-button mb-24 w-full text-[20px] font-bold uppercase underline">{{ __('Load more', 'sage') }}</button>
+    class="view-more-button w-full text-[20px] font-bold uppercase underline md:mb-16 md:mt-36">{{ __('Load more', 'sage') }}</button>
 
   <div class="insertions p-6">
     @php(dynamic_sidebar('sidebar-project-archive'))
