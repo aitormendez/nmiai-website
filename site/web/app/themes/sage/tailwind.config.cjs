@@ -82,6 +82,10 @@ module.exports = {
     'md:order-14',
     'md:order-15',
     'md:order-16',
+    'md:w-full',
+    'w-4/5',
+    '-mx-6',
+    'md:-mx-8',
   ],
   theme: {
     fontFamily: {

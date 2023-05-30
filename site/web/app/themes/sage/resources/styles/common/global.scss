@@ -8,13 +8,6 @@ html {
 
 body {
   min-height: 101vh;
-
-  &.home {
-    #main {
-      padding: 1.5rem;
-    }
-  }
-
   #main {
     img {
       transition: opacity 4s;

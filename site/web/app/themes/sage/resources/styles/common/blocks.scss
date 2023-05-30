@@ -59,18 +59,6 @@
   margin-bottom: var(--margin-gap);
 }
 
-.wp-block-section {
-  #main .content > & {
-    padding-right: 1.5rem;
-    padding-left: 1.5rem;
-
-    @media (min-width: 768px) {
-      padding-right: 2rem;
-      padding-left: 2rem;
-    }
-  }
-}
-
 .wp-block-people-link {
   a {
     .text-hover {
