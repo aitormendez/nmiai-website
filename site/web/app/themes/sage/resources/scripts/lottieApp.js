@@ -21,12 +21,38 @@ export function renderHeader() {
 
 export function lottieBlock() {
   const playBtn = document.getElementById('play');
-  // const explore = document.getElementById('explore');
-  // const plan = document.getElementById('plan');
+  const explore = document.getElementById('explore');
+  const plan = document.getElementById('plan');
   const create = document.getElementById('create');
+  let frPlan = 0;
+  let frameExplore = 0;
 
-  playBtn.addEventListener('click', function () {
-    create.seek('0%');
-    create.play();
+  explore.load('http://192.168.1.128:3000/app/uploads/2023/05/explore-1.json');
+  plan.load('http://192.168.1.128:3000/app/uploads/2023/05/plan-1.json');
+  create.load('http://192.168.1.128:3000/app/uploads/2023/05/create-1.json');
+
+  explore.addEventListener('frame', () => {
+    frameExplore = ++frameExplore;
+
+    if (frameExplore === 110) {
+      frPlan = 0;
+      plan.seek('0%');
+      plan.play();
+    }
+  });
+
+  plan.addEventListener('frame', () => {
+    frPlan = ++frPlan;
+
+    if (frPlan === 110) {
+      create.seek('0%');
+      create.play();
+    }
+  });
+
+  playBtn.addEventListener('click', () => {
+    frameExplore = 0;
+    explore.seek('0%');
+    explore.play();
   });
 }
