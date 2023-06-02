@@ -4,7 +4,7 @@
 
 #tagline,
 #lang-menu {
-  right: 4.25rem;
+  right: 3.5rem;
 
   .wpml-ls-legacy-list-horizontal {
     padding: 0px;
@@ -14,6 +14,10 @@
       padding: 0;
       line-height: 1.25rem;
     }
+  }
+
+  @media (min-width: 768px) {
+    right: 4.25rem;
   }
 }
 
