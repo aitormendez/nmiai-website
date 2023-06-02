@@ -7,15 +7,15 @@
     @if (array_key_exists('img', $thumb))
       <a href="{{ get_permalink() }}">
         @if ($thumb['img']['mime'] === 'image/gif')
-          <img src="{{ $thumb['img']['url'] }}" alt="{{ $thumb['img']['alt'] }}">
+          <img class="mt-0" src="{{ $thumb['img']['url'] }}" alt="{{ $thumb['img']['alt'] }}">
         @else
-          <img src="{{ $thumb['img']['url'] }}" alt="{{ $thumb['img']['alt'] }}" srcset="{{ $thumb['img']['srcset'] }}"
-            sizes="(max-width: 768px) 100vw, 50vw">
+          <img class="mt-0" src="{{ $thumb['img']['url'] }}" alt="{{ $thumb['img']['alt'] }}"
+            srcset="{{ $thumb['img']['srcset'] }}" sizes="(max-width: 768px) 100vw, 50vw">
         @endif
       </a>
     @endif
 
-    <div class="bottom my-6 flex flex-wrap items-center justify-between md:justify-start">
+    <div class="bottom mt-6 mb-12 flex flex-wrap items-center justify-between md:justify-start">
       <span
         class="start-text order-1 mr-4 font-serif font-bold md:order-none">{{ substr(str_repeat(0, 2) . $counter, -2) }}</span>
       <div class="progress text-dark relative mb-2 flex w-full items-center justify-between md:mr-4 md:mb-0 md:w-52">

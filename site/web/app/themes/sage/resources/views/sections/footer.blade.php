@@ -12,7 +12,8 @@
   </div>
 
   @hasoptions('footer_links')
-    <ul class="col-2 md:justify-left float-right mb-6 flex flex-wrap justify-center gap-x-4 text-center text-sm md:mb-0">
+    <ul
+      class="col-2 md:justify-left float-right mb-6 flex flex-wrap justify-center gap-x-4 text-center text-sm leading-loose md:mb-0">
       <li class="contact-link w-full md:w-auto">
         <script type="text/javascript">
           var email = "hello",
