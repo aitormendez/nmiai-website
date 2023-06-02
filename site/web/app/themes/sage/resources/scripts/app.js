@@ -1,6 +1,6 @@
 import {domReady} from '@roots/sage/client';
 import {nav} from './nav.js';
-import {lottieBlock, renderHeader} from './lottieApp.js';
+import {renderHeader} from './lottieApp.js';
 import {slotMachine} from './slotMachine.js';
 
 /**
@@ -19,7 +19,6 @@ const main = async (err) => {
 
   renderHeader();
   slotMachine();
-  lottieBlock();
 
   if (mdMin.matches) {
     const {cursor} = await import('./cursor.js');
@@ -29,6 +28,11 @@ const main = async (err) => {
   if (!mdMin.matches && document.body.classList.contains('single-project')) {
     const {displayProjectInfo} = await import('./singleProyect.js');
     displayProjectInfo();
+  }
+
+  if (document.body.classList.contains('what-we-do')) {
+    const {lottieWhatWeDoPage} = await import('./lottieApp.js');
+    lottieWhatWeDoPage();
   }
 
   if (

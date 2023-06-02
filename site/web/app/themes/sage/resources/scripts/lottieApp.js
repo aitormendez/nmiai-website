@@ -19,17 +19,16 @@ export function renderHeader() {
   }
 }
 
-export function lottieBlock() {
-  const playBtn = document.getElementById('play');
+export function lottieWhatWeDoPage() {
   const explore = document.getElementById('explore');
   const plan = document.getElementById('plan');
   const create = document.getElementById('create');
   let frPlan = 0;
   let frameExplore = 0;
 
-  explore.load('http://192.168.1.128:3000/app/uploads/2023/05/explore-1.json');
-  plan.load('http://192.168.1.128:3000/app/uploads/2023/05/plan-1.json');
-  create.load('http://192.168.1.128:3000/app/uploads/2023/05/create-1.json');
+  explore.load(window.location.origin + '/app/uploads/2023/05/explore-1.json');
+  plan.load(window.location.origin + '/app/uploads/2023/05/plan-1.json');
+  create.load(window.location.origin + '/app/uploads/2023/05/create-1.json');
 
   explore.addEventListener('frame', () => {
     frameExplore = ++frameExplore;
@@ -50,9 +49,33 @@ export function lottieBlock() {
     }
   });
 
-  playBtn.addEventListener('click', () => {
-    frameExplore = 0;
-    explore.seek('0%');
-    explore.play();
+  const observerAnim = new IntersectionObserver(loadAnimations, {
+    root: null,
+    // rootMargin: '100px',
+    // threshold: 0.5,
   });
+
+  observerAnim.observe(explore);
+
+  function loadAnimations(entries) {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        frameExplore = 0;
+        explore.seek('0%');
+        plan.seek('0%');
+        plan.stop('0%');
+        create.seek('0%');
+        create.stop('0%');
+        explore.play();
+      } else {
+        frameExplore = 0;
+        explore.seek('0%');
+        explore.stop();
+        plan.seek('0%');
+        plan.stop('0%');
+        create.seek('0%');
+        create.stop('0%');
+      }
+    });
+  }
 }

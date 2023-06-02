@@ -14,7 +14,10 @@ use function Roots\bundle;
  * @return void
  */
 add_action('wp_enqueue_scripts', function () {
-    bundle('app')->enqueue();
+    bundle('app')->enqueue()->localize('nmiaiData', [
+        'homeUrl' => get_home_url(),
+        'siteUrl' => get_site_url(),
+    ]);
 }, 100);
 
 /**
