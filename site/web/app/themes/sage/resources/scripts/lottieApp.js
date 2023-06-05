@@ -1,5 +1,5 @@
 import lottie from 'lottie-web';
-// import '@lottiefiles/lottie-player'; // This is loaded with lottiefiles WP plugin
+import '@lottiefiles/lottie-player';
 // import {create} from '@lottiefiles/lottie-interactivity';
 
 export function renderHeader() {
@@ -19,10 +19,40 @@ export function renderHeader() {
   }
 }
 
-export function lottieWhatWeDoPage() {
-  const explore = document.getElementById('explore');
-  const plan = document.getElementById('plan');
-  const create = document.getElementById('create');
+const explore = document.getElementById('explore');
+const plan = document.getElementById('plan');
+const create = document.getElementById('create');
+
+export function lottieWhatWeDoPageMobile() {
+  explore.load(window.location.origin + '/app/uploads/2023/05/explore-1.json');
+  plan.load(window.location.origin + '/app/uploads/2023/05/plan-1.json');
+  create.load(window.location.origin + '/app/uploads/2023/05/create-1.json');
+
+  const animations = [explore, plan, create];
+
+  const observerAnim = new IntersectionObserver(loadAnimationsMobile, {
+    root: null,
+    // rootMargin: '100px',
+    // threshold: 0.5,
+  });
+
+  animations.forEach(function (anim) {
+    observerAnim.observe(anim);
+  });
+
+  function loadAnimationsMobile(entries) {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.play();
+      } else {
+        entry.target.seek('0%');
+        entry.target.stop();
+      }
+    });
+  }
+}
+
+export function lottieWhatWeDoPageDesktop() {
   let frPlan = 0;
   let frameExplore = 0;
 
@@ -49,7 +79,7 @@ export function lottieWhatWeDoPage() {
     }
   });
 
-  const observerAnim = new IntersectionObserver(loadAnimations, {
+  const observerAnim = new IntersectionObserver(loadAnimationsDesktop, {
     root: null,
     // rootMargin: '100px',
     // threshold: 0.5,
@@ -57,7 +87,7 @@ export function lottieWhatWeDoPage() {
 
   observerAnim.observe(explore);
 
-  function loadAnimations(entries) {
+  function loadAnimationsDesktop(entries) {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         frameExplore = 0;

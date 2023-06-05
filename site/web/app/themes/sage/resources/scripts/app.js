@@ -31,8 +31,15 @@ const main = async (err) => {
   }
 
   if (document.body.classList.contains('what-we-do')) {
-    const {lottieWhatWeDoPage} = await import('./lottieApp.js');
-    lottieWhatWeDoPage();
+    if (mdMin.matches) {
+      const {lottieWhatWeDoPageDesktop} = await import('./lottieApp.js');
+      lottieWhatWeDoPageDesktop();
+    }
+
+    if (!mdMin.matches) {
+      const {lottieWhatWeDoPageMobile} = await import('./lottieApp.js');
+      lottieWhatWeDoPageMobile();
+    }
   }
 
   if (
