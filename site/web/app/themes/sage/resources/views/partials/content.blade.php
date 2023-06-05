@@ -15,7 +15,7 @@
       </a>
     @endif
 
-    <div class="bottom mt-6 mb-12 flex flex-wrap items-center justify-between md:justify-start">
+    <div class="bottom my-6 flex flex-wrap items-center justify-between md:justify-start">
       <span
         class="start-text order-1 mr-4 font-serif font-bold md:order-none">{{ substr(str_repeat(0, 2) . $counter, -2) }}</span>
       <div class="progress text-dark relative mb-2 flex w-full items-center justify-between md:mr-4 md:mb-0 md:w-52">
@@ -34,7 +34,7 @@
     </div>
 
     @if (array_key_exists('terms', $thumb))
-      <p class="terms hidden font-serif md:block">{!! $thumb['terms'] !!}</p>
+      <p class="terms my-0 hidden font-serif md:block">{!! $thumb['terms'] !!}</p>
     @endif
   </header>
 </article>
