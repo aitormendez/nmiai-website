@@ -1,5 +1,5 @@
 import lottie from 'lottie-web';
-import '@lottiefiles/lottie-player';
+// import '@lottiefiles/lottie-player';
 // import {create} from '@lottiefiles/lottie-interactivity';
 
 export function renderHeader() {

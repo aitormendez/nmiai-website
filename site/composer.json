@@ -104,6 +104,7 @@
     "wpackagist-plugin/bunnycdn": "*",
     "wpackagist-plugin/complianz-gdpr": "*",
     "wpackagist-plugin/cookie-law-info": "*",
+    "wpackagist-plugin/lottiefiles": "*",
     "log1x/navi": "^2.0",
     "log1x/acf-composer": "^2.1"
   },

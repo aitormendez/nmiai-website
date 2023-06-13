@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f031e49e3ee5edcf1693e029c90cee13",
+    "content-hash": "91691144290bf56845c224f862953b8e",
     "packages": [
         {
             "name": "advanced-custom-fields/advanced-custom-fields-pro",
@@ -5168,15 +5168,15 @@
         },
         {
             "name": "wpackagist-plugin/gdpr-cookie-compliance",
-            "version": "4.12.2",
+            "version": "4.12.3",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/gdpr-cookie-compliance/",
-                "reference": "tags/4.12.2"
+                "reference": "tags/4.12.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/gdpr-cookie-compliance.4.12.2.zip"
+                "url": "https://downloads.wordpress.org/plugin/gdpr-cookie-compliance.4.12.3.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
@@ -5203,6 +5203,24 @@
             "homepage": "https://wordpress.org/plugins/html-forms/"
         },
         {
+            "name": "wpackagist-plugin/lottiefiles",
+            "version": "2.1.0",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/lottiefiles/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/lottiefiles.zip?timestamp=1685026075"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/lottiefiles/"
+        },
+        {
             "name": "wpackagist-plugin/query-monitor",
             "version": "3.12.3",
             "source": {
@@ -5222,15 +5240,15 @@
         },
         {
             "name": "wpackagist-plugin/schema-and-structured-data-for-wp",
-            "version": "1.15",
+            "version": "1.15.1",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/schema-and-structured-data-for-wp/",
-                "reference": "tags/1.15"
+                "reference": "tags/1.15.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/schema-and-structured-data-for-wp.1.15.zip"
+                "url": "https://downloads.wordpress.org/plugin/schema-and-structured-data-for-wp.1.15.1.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
@@ -5282,12 +5300,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Roave/SecurityAdvisories.git",
-                "reference": "0feb297cb2162446e9d3334cd131d861d7d2d997"
+                "reference": "7d728f50cf52ce838ac1c1504190823b4dc06b4d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/0feb297cb2162446e9d3334cd131d861d7d2d997",
-                "reference": "0feb297cb2162446e9d3334cd131d861d7d2d997",
+                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/7d728f50cf52ce838ac1c1504190823b4dc06b4d",
+                "reference": "7d728f50cf52ce838ac1c1504190823b4dc06b4d",
                 "shasum": ""
             },
             "conflict": {
@@ -5363,7 +5381,7 @@
                 "contao/core-bundle": "<4.9.40|>=4.10,<4.11.7|>=4.13,<4.13.21|>=5.1,<5.1.4|= 4.10.0",
                 "contao/listing-bundle": ">=4,<4.4.8",
                 "contao/managed-edition": "<=1.5",
-                "craftcms/cms": "<4.4.12|>= 4.0.0-RC1, <= 4.4.5|>= 4.0.0-RC1, <= 4.4.6|>= 4.0.0-RC1, < 4.4.6|>= 4.0.0-RC1, < 4.3.7|>= 4.0.0-RC1, < 4.2.1",
+                "craftcms/cms": ">= 4.0.0-RC1, < 4.4.12|>= 4.0.0-RC1, <= 4.4.5|>= 4.0.0-RC1, <= 4.4.6|<=3.8.5|>=4,<4.4.6|>= 4.0.0-RC1, < 4.4.6|>= 4.0.0-RC1, < 4.3.7|>= 4.0.0-RC1, < 4.2.1",
                 "croogo/croogo": "<3.0.7",
                 "cuyz/valinor": "<0.12",
                 "czproject/git-php": "<4.0.3",
@@ -5371,6 +5389,7 @@
                 "datadog/dd-trace": ">=0.30,<0.30.2",
                 "david-garcia/phpwhois": "<=4.3.1",
                 "dbrisinajumi/d2files": "<1",
+                "dcat/laravel-admin": "<=2.1.3-beta",
                 "derhansen/fe_change_pwd": "<2.0.5|>=3,<3.0.3",
                 "derhansen/sf_event_mgt": "<4.3.1|>=5,<5.1.1",
                 "directmailteam/direct-mail": "<5.2.4",
@@ -5442,7 +5461,7 @@
                 "friendsofsymfony/user-bundle": ">=1.2,<1.3.5",
                 "friendsoftypo3/mediace": ">=7.6.2,<7.6.5",
                 "froala/wysiwyg-editor": "<3.2.7",
-                "froxlor/froxlor": "<2.0.16",
+                "froxlor/froxlor": "<2.1",
                 "fuel/core": "<1.8.1",
                 "funadmin/funadmin": "<=3.2",
                 "gaoming13/wechat-php-sdk": "<=1.10.2",
@@ -5544,7 +5563,7 @@
                 "melisplatform/melis-front": "<5.0.1",
                 "mezzio/mezzio-swoole": "<3.7|>=4,<4.3",
                 "mgallegos/laravel-jqgrid": "<=1.3",
-                "microweber/microweber": "<1.3.4",
+                "microweber/microweber": "<=1.3.4",
                 "miniorange/miniorange-saml": "<1.4.3",
                 "mittwald/typo3_forum": "<1.2.1",
                 "mobiledetect/mobiledetectlib": "<2.8.32",
@@ -5616,10 +5635,10 @@
                 "pimcore/customer-management-framework-bundle": "<3.3.10",
                 "pimcore/data-hub": "<1.2.4",
                 "pimcore/perspective-editor": "<1.5.1",
-                "pimcore/pimcore": "<10.5.21",
+                "pimcore/pimcore": "<10.5.23",
                 "pixelfed/pixelfed": "<=0.11.4",
                 "pocketmine/bedrock-protocol": "<8.0.2",
-                "pocketmine/pocketmine-mp": "< 4.18.0-ALPHA2|<4.12.5|>= 4.0.0-BETA5, < 4.4.2",
+                "pocketmine/pocketmine-mp": "<4.20.5|>=4.21,<4.21.1|< 4.18.0-ALPHA2|>= 4.0.0-BETA5, < 4.4.2",
                 "pressbooks/pressbooks": "<5.18",
                 "prestashop/autoupgrade": ">=4,<4.10.1",
                 "prestashop/blockwishlist": ">=2,<2.1.1",
@@ -5882,7 +5901,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-06-02T23:04:03+00:00"
+            "time": "2023-06-12T19:03:43+00:00"
         },
         {
             "name": "squizlabs/php_codesniffer",
