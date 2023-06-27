@@ -175,7 +175,7 @@ class People extends Block
                 'preview_size' => 'medium',
                 'library' => 'all',
             ])
-                ->conditional('people_content_type', '==', 'img')
+            ->conditional('people_content_type', '==', 'img')
             ->addText('people_video_zone', [
                 'label' => __('Bunny.net video zone', 'sage'),
                 'default_value' => 'vz-3b6a9b31-e3a',
@@ -184,18 +184,18 @@ class People extends Block
                 'append' => '',
                 'maxlength' => '',
             ])
-                ->conditional('people_content_type', '==', 'video')
+            ->conditional('people_content_type', '==', 'video')
             ->addText('people_video_id', [
                 'label' => __('Video ID', 'sage'),
                 'default_value' => '6ea813d4-bd21-439f-8d1a-02f0645a51fa',
                 'placeholder' => '6ea813d4-bd21-439f-8d1a-02f0645a51fa',
             ])
-                ->conditional('people_content_type', '==', 'video')
+            ->conditional('people_content_type', '==', 'video')
             ->addText('people_video_poster', [
                 'label' => __('Video poster', 'sage'),
                 'default_value' => 'https://vz-3b6a9b31-e3a.b-cdn.net/6ea813d4-bd21-439f-8d1a-02f0645a51fa/thumbnail_9e3e7e72.jpg',
             ])
-                ->conditional('people_content_type', '==', 'video')
+            ->conditional('people_content_type', '==', 'video')
             ->addText('people_short_name', [
                 'label' => __('Person short name', 'sage'),
                 'required' => 1,
