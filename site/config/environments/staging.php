@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Configuration overrides for WP_ENV === 'staging'
  */
@@ -15,3 +16,11 @@ use Roots\WPConfig\Config;
  */
 
 Config::define('DISALLOW_INDEXING', true);
+
+// Disable the plugin and theme file editor in the admin
+Config::define('DISALLOW_FILE_EDIT', false);
+
+// Disable plugin and theme updates and installation from the admin
+Config::define('DISALLOW_FILE_MODS', false);
+
+Config::define('WP_MEMORY_LIMIT', '256M');

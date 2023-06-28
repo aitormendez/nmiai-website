@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Your base production configuration goes in this file. Environment-specific
  * overrides go in their respective config/environments/{{WP_ENV}}.php file.
@@ -120,6 +121,8 @@ Config::define('DISALLOW_FILE_MODS', true);
 
 // Limit the number of post revisions
 Config::define('WP_POST_REVISIONS', env('WP_POST_REVISIONS') ?? true);
+
+Config::define('WP_MEMORY_LIMIT', '256M');
 
 /**
  * Debugging Settings
