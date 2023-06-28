@@ -36,7 +36,9 @@
 
 .is-style-aspect-h {
   img,
-  lottie-player {
+  lottie-player,
+  video,
+  .swiper-wrapper {
     aspect-ratio: 900/539;
     object-fit: cover;
   }

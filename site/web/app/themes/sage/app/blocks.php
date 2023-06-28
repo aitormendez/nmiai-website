@@ -73,6 +73,22 @@ register_block_style(
 );
 
 register_block_style(
+    'core/video',
+    [
+        'name'  => 'aspect-h',
+        'label' => __('a/r horiz', 'sage'),
+    ]
+);
+
+register_block_style(
+    'core/video',
+    [
+        'name'  => 'aspect-v',
+        'label' => __('a/r vert', 'sage'),
+    ]
+);
+
+register_block_style(
     'gb/lottiefiles',
     [
         'name'  => 'aspect-v',

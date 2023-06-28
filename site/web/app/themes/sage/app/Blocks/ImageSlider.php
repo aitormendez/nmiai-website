@@ -12,7 +12,7 @@ class ImageSlider extends Block
      *
      * @var string
      */
-    public $name = 'Image slider';
+    public $name = 'image-slider';
 
     /**
      * The block description.
@@ -113,13 +113,9 @@ class ImageSlider extends Block
      */
     public $styles = [
         [
-            'name' => 'light',
-            'label' => 'Light',
-            'isDefault' => true,
-        ],
-        [
-            'name' => 'dark',
-            'label' => 'Dark',
+            'name' => 'aspect-h',
+            'label' => 'a/r horiz',
+            'isDefault' => false,
         ]
     ];
 
@@ -189,8 +185,8 @@ class ImageSlider extends Block
         $gallery_raw = get_field('image_slider_gallery');
 
         if ($gallery_raw) {
-            $gallery = array_map(function($img) {
-                return wp_get_attachment_image($img['id'], 'full', false, ['class' => 'w-full']  );
+            $gallery = array_map(function ($img) {
+                return wp_get_attachment_image($img['id'], 'full', false, ['class' => 'w-full']);
             }, $gallery_raw);
         }
 
@@ -204,11 +200,11 @@ class ImageSlider extends Block
      */
     public function paddingStyles()
     {
-        if (property_exists($this->block, 'style') ) {
+        if (property_exists($this->block, 'style')) {
             if (array_key_exists('padding', $this->block->style['spacing'])) {
                 $padding = $this->block->style['spacing']['padding'];
-                array_walk($padding, function(&$val) {
-                    if (str_starts_with($val, 'var:preset|spacing|') ) {
+                array_walk($padding, function (&$val) {
+                    if (str_starts_with($val, 'var:preset|spacing|')) {
                         $val = 'var(--wp--preset--spacing--' . substr($val, -2) . ')';
                     };
                 });
@@ -232,7 +228,6 @@ class ImageSlider extends Block
                 }
 
                 str_replace(`;;`, ';', $padding_string);
-
             }
         } else {
             $padding_string = '';
