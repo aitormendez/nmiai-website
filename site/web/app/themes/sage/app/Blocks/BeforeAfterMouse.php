@@ -108,7 +108,13 @@ class BeforeAfterMouse extends Block
      *
      * @var array
      */
-    public $styles = [];
+    public $styles = [
+        [
+            'name' => 'aspect-h',
+            'label' => 'a/r horiz',
+            'isDefault' => false,
+        ]
+    ];
 
     /**
      * The block preview example data.
@@ -157,8 +163,7 @@ class BeforeAfterMouse extends Block
                 'return_format' => 'array',
                 'preview_size' => 'medium',
                 'library' => 'all',
-            ])
-            ;
+            ]);
 
         return $beforeafter->build();
     }
@@ -192,11 +197,11 @@ class BeforeAfterMouse extends Block
      */
     public function paddingStyles()
     {
-        if (property_exists($this->block, 'style') ) {
+        if (property_exists($this->block, 'style')) {
             if (array_key_exists('padding', $this->block->style['spacing'])) {
                 $padding = $this->block->style['spacing']['padding'];
-                array_walk($padding, function(&$val) {
-                    if (str_starts_with($val, 'var:preset|spacing|') ) {
+                array_walk($padding, function (&$val) {
+                    if (str_starts_with($val, 'var:preset|spacing|')) {
                         $val = 'var(--wp--preset--spacing--' . substr($val, -2) . ')';
                     };
                 });
@@ -220,7 +225,6 @@ class BeforeAfterMouse extends Block
                 }
 
                 str_replace(`;;`, ';', $padding_string);
-
             }
         } else {
             $padding_string = '';
