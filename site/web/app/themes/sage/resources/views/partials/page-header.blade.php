@@ -9,16 +9,16 @@
 @endphp
 
 @if ($header_json)
-  <div class="page-header not-prose relative z-20 mt-40 flex justify-center mix-blend-darken md:mb-20 md:mt-48">
+  <div class="page-header not-prose relative z-20 mt-36 flex justify-center mix-blend-darken md:mt-40 md:mb-20 md:mt-48">
     @if (is_front_page())
-      <video class="absolute top-0 w-full max-w-[60vw]"
+      <video class="absolute top-0 w-full max-w-[80vw] md:max-w-[60vw]"
         src="https://vz-3b6a9b31-e3a.b-cdn.net/84ba41c1-12ad-4eb9-a4f6-5602e76dd35e/play_720p.mp4" muted autoplay
         playsinline disablepictureinpicture></video>
     @endif
 
     <div data-json-path="{{ $header_json['url'] }}" data-json-autoplay="@field('json_header_autoplay')"
       data-json-loop="@field('json_header_loop')" id="header-animation"
-      class="{!! $div_json_classes !!} relative w-full max-w-[60vw] mix-blend-darken">
+      class="{!! $div_json_classes !!} relative w-full max-w-[80vw] mix-blend-darken md:max-w-[60vw]">
     </div>
     <h1 class="{!! $h1_classes !!} xs:text-5xl text-center text-4xl font-bold uppercase lg:text-8xl">
       @if ($header_html)
