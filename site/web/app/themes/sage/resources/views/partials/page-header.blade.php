@@ -20,6 +20,7 @@
       data-json-loop="@field('json_header_loop')" id="header-animation"
       class="{!! $div_json_classes !!} relative w-full max-w-[80vw] mix-blend-darken md:max-w-[60vw]">
     </div>
+
     <h1 class="{!! $h1_classes !!} xs:text-5xl text-center text-4xl font-bold uppercase lg:text-8xl">
       @if ($header_html)
         {!! wp_strip_all_tags($header_html) !!}

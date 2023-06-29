@@ -3,10 +3,15 @@
     <video poster="{{ $hero['video_poster'] }}" autoplay muted loop playsinline class="mb- relative w-full">
       <source src="https://{{ $hero['video_zone'] }}.b-cdn.net/{{ $hero['video_id'] }}/play_720p.mp4" type="video/mp4">
     </video>
-  @else
+  @elseif($hero['type'] === 'image')
     @if (array_key_exists('image', $hero))
       {!! $hero['image'] !!}
     @endif
+  @elseif($hero['type'] === 'json')
+    @set($header_json, get_field('single_project_json'))
+    <div data-json-path="{{ $header_json['url'] }}" data-json-autoplay="@field('single_project_json_autoplay')"
+      data-json-loop="@field('single_project_json_loop')" id="header-animation" class="relative w-full mix-blend-darken">
+    </div>
   @endif
 
   <div class="project-info is-style-column my-6 md:my-20">
