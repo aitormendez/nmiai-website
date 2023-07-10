@@ -167,6 +167,7 @@ class People extends Block
                 'default_value' => 'video',
                 'layout' => 'horizontal',
                 'return_format' => 'value',
+                'wpml_cf_preferences' => 1,
             ])
             ->addImage('people_image', [
                 'label' => __('Image', 'sage'),
@@ -174,6 +175,7 @@ class People extends Block
                 'return_format' => 'array',
                 'preview_size' => 'medium',
                 'library' => 'all',
+                'wpml_cf_preferences' => 1,
             ])
             ->conditional('people_content_type', '==', 'img')
             ->addText('people_video_zone', [
@@ -183,34 +185,42 @@ class People extends Block
                 'prepend' => '',
                 'append' => '',
                 'maxlength' => '',
+                'wpml_cf_preferences' => 1,
             ])
             ->conditional('people_content_type', '==', 'video')
             ->addText('people_video_id', [
                 'label' => __('Video ID', 'sage'),
                 'default_value' => '6ea813d4-bd21-439f-8d1a-02f0645a51fa',
                 'placeholder' => '6ea813d4-bd21-439f-8d1a-02f0645a51fa',
+                'wpml_cf_preferences' => 1,
             ])
             ->conditional('people_content_type', '==', 'video')
             ->addText('people_video_poster', [
                 'label' => __('Video poster', 'sage'),
                 'default_value' => 'https://vz-3b6a9b31-e3a.b-cdn.net/6ea813d4-bd21-439f-8d1a-02f0645a51fa/thumbnail_9e3e7e72.jpg',
+                'wpml_cf_preferences' => 1,
             ])
             ->conditional('people_content_type', '==', 'video')
             ->addText('people_short_name', [
                 'label' => __('Person short name', 'sage'),
                 'required' => 1,
+                'wpml_cf_preferences' => 1,
             ])
             ->addText('people_name', [
                 'label' => __('Person name', 'sage'),
+                'wpml_cf_preferences' => 1,
             ])
             ->addText('people_title', [
                 'label' => __('Person title', 'sage'),
+                'wpml_cf_preferences' => 2,
             ])
             ->addTextarea('people_text', [
                 'label' => __('Person text', 'sage'),
+                'wpml_cf_preferences' => 2,
             ])
             ->addText('people_email', [
                 'label' => __('Person email', 'sage'),
+                'wpml_cf_preferences' => 1,
             ]);
 
         return $people->build();
